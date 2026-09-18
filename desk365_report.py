@@ -25,7 +25,7 @@ import statistics
 import requests
 
 DESK365_BASE_URL = "https://fulfilmentplus.desk365.io/apis/v3/tickets"
-OUTPUT_FILE = "desk365_visibility_report.html"
+OUTPUT_FILE = "docs/desk365_visibility_report.html"  # docs/ is what GitHub Pages actually serves in this repo
 NZ_OFFSET_HOURS = 12  # NZST (no DST currently in effect)
 CHARTJS_CDN = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.5.0/chart.umd.min.js"
 
