@@ -37,7 +37,6 @@ jobs:
       - name: Run warehouse dashboard pipeline
         working-directory: pipeline
         run: |
-          python daily_status_snapshot.py
           python generate_warehouse_dashboard.py
 
       - name: Publish dashboard HTML to docs/ for GitHub Pages
