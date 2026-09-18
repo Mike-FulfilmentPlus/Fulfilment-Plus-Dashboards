@@ -1,0 +1,4237 @@
+{
+  "source": "NZ Post Rural Delivery Directory",
+  "postcodes": [
+    "0170",
+    "0171",
+    "0172",
+    "0173",
+    "0174",
+    "0175",
+    "0176",
+    "0178",
+    "0179",
+    "0181",
+    "0182",
+    "0184",
+    "0185",
+    "0192",
+    "0193",
+    "0272",
+    "0281",
+    "0282",
+    "0283",
+    "0293",
+    "0294",
+    "0295",
+    "0370",
+    "0371",
+    "0372",
+    "0373",
+    "0374",
+    "0376",
+    "0377",
+    "0379",
+    "0381",
+    "0391",
+    "0472",
+    "0473",
+    "0474",
+    "0475",
+    "0476",
+    "0478",
+    "0479",
+    "0481",
+    "0482",
+    "0483",
+    "0484",
+    "0486",
+    "0491",
+    "0492",
+    "0494",
+    "0496",
+    "0571",
+    "0573",
+    "0582",
+    "0583",
+    "0587",
+    "0588",
+    "0589",
+    "0591",
+    "0592",
+    "0593",
+    "0594",
+    "0772",
+    "0781",
+    "0782",
+    "0792",
+    "0793",
+    "0794",
+    "0871",
+    "0873",
+    "0874",
+    "0875",
+    "0881",
+    "0882",
+    "0883",
+    "0891",
+    "0892",
+    "0972",
+    "0973",
+    "0974",
+    "0975",
+    "0977",
+    "0981",
+    "0982",
+    "0983",
+    "0984",
+    "0985",
+    "0986",
+    "0991",
+    "0992",
+    "0993",
+    "0994",
+    "1971",
+    "2471",
+    "2472",
+    "2473",
+    "2474",
+    "2571",
+    "2576",
+    "2577",
+    "2578",
+    "2579",
+    "2580",
+    "2582",
+    "2583",
+    "2584",
+    "2585",
+    "2675",
+    "2676",
+    "2677",
+    "2678",
+    "2679",
+    "2681",
+    "2682",
+    "2683",
+    "2684",
+    "2693",
+    "2694",
+    "2695",
+    "2696",
+    "2697",
+    "3072",
+    "3073",
+    "3074",
+    "3076",
+    "3077",
+    "3078",
+    "3079",
+    "3081",
+    "3083",
+    "3096",
+    "3097",
+    "3170",
+    "3171",
+    "3172",
+    "3173",
+    "3174",
+    "3175",
+    "3176",
+    "3177",
+    "3178",
+    "3179",
+    "3180",
+    "3181",
+    "3182",
+    "3183",
+    "3186",
+    "3187",
+    "3188",
+    "3189",
+    "3191",
+    "3192",
+    "3193",
+    "3194",
+    "3196",
+    "3197",
+    "3198",
+    "3199",
+    "3281",
+    "3282",
+    "3283",
+    "3284",
+    "3285",
+    "3286",
+    "3287",
+    "3288",
+    "3289",
+    "3290",
+    "3293",
+    "3295",
+    "3296",
+    "3297",
+    "3371",
+    "3372",
+    "3373",
+    "3374",
+    "3375",
+    "3377",
+    "3378",
+    "3379",
+    "3380",
+    "3381",
+    "3382",
+    "3384",
+    "3385",
+    "3391",
+    "3392",
+    "3393",
+    "3471",
+    "3472",
+    "3473",
+    "3474",
+    "3475",
+    "3481",
+    "3482",
+    "3483",
+    "3484",
+    "3485",
+    "3491",
+    "3492",
+    "3493",
+    "3494",
+    "3495",
+    "3496",
+    "3574",
+    "3575",
+    "3576",
+    "3577",
+    "3578",
+    "3579",
+    "3581",
+    "3582",
+    "3583",
+    "3584",
+    "3591",
+    "3592",
+    "3597",
+    "3671",
+    "3672",
+    "3673",
+    "3674",
+    "3681",
+    "3682",
+    "3691",
+    "3771",
+    "3772",
+    "3781",
+    "3782",
+    "3784",
+    "3791",
+    "3792",
+    "3793",
+    "3794",
+    "3872",
+    "3873",
+    "3874",
+    "3875",
+    "3876",
+    "3877",
+    "3878",
+    "3879",
+    "3880",
+    "3881",
+    "3882",
+    "3883",
+    "3885",
+    "3886",
+    "3889",
+    "3894",
+    "3895",
+    "3970",
+    "3971",
+    "3972",
+    "3973",
+    "3974",
+    "3975",
+    "3976",
+    "3977",
+    "3978",
+    "3979",
+    "3980",
+    "3981",
+    "3982",
+    "3983",
+    "3985",
+    "3986",
+    "3987",
+    "3988",
+    "3989",
+    "3990",
+    "3991",
+    "3992",
+    "3993",
+    "3994",
+    "3995",
+    "3996",
+    "3997",
+    "3998",
+    "4071",
+    "4072",
+    "4073",
+    "4075",
+    "4077",
+    "4078",
+    "4079",
+    "4081",
+    "4082",
+    "4083",
+    "4086",
+    "4087",
+    "4091",
+    "4092",
+    "4093",
+    "4094",
+    "4171",
+    "4172",
+    "4174",
+    "4175",
+    "4178",
+    "4179",
+    "4180",
+    "4181",
+    "4182",
+    "4183",
+    "4184",
+    "4186",
+    "4188",
+    "4189",
+    "4191",
+    "4193",
+    "4195",
+    "4196",
+    "4197",
+    "4198",
+    "4271",
+    "4272",
+    "4273",
+    "4274",
+    "4275",
+    "4276",
+    "4277",
+    "4278",
+    "4279",
+    "4281",
+    "4282",
+    "4283",
+    "4284",
+    "4285",
+    "4286",
+    "4287",
+    "4288",
+    "4291",
+    "4292",
+    "4293",
+    "4294",
+    "4295",
+    "4371",
+    "4372",
+    "4373",
+    "4374",
+    "4375",
+    "4376",
+    "4377",
+    "4378",
+    "4379",
+    "4381",
+    "4382",
+    "4383",
+    "4386",
+    "4387",
+    "4388",
+    "4389",
+    "4390",
+    "4391",
+    "4392",
+    "4393",
+    "4394",
+    "4395",
+    "4396",
+    "4397",
+    "4398",
+    "4399",
+    "4470",
+    "4471",
+    "4472",
+    "4473",
+    "4474",
+    "4475",
+    "4476",
+    "4477",
+    "4478",
+    "4479",
+    "4481",
+    "4571",
+    "4572",
+    "4573",
+    "4574",
+    "4575",
+    "4576",
+    "4577",
+    "4578",
+    "4581",
+    "4582",
+    "4584",
+    "4585",
+    "4586",
+    "4587",
+    "4588",
+    "4591",
+    "4592",
+    "4597",
+    "4598",
+    "4671",
+    "4672",
+    "4673",
+    "4674",
+    "4675",
+    "4678",
+    "4679",
+    "4681",
+    "4682",
+    "4684",
+    "4685",
+    "4691",
+    "4694",
+    "4696",
+    "4771",
+    "4774",
+    "4775",
+    "4777",
+    "4779",
+    "4780",
+    "4781",
+    "4782",
+    "4783",
+    "4784",
+    "4785",
+    "4786",
+    "4787",
+    "4788",
+    "4789",
+    "4791",
+    "4792",
+    "4793",
+    "4794",
+    "4795",
+    "4796",
+    "4797",
+    "4884",
+    "4891",
+    "4893",
+    "4894",
+    "4970",
+    "4971",
+    "4972",
+    "4973",
+    "4974",
+    "4975",
+    "4976",
+    "4977",
+    "4978",
+    "4979",
+    "4981",
+    "4982",
+    "4983",
+    "4984",
+    "4985",
+    "4986",
+    "4987",
+    "4988",
+    "4989",
+    "4990",
+    "4991",
+    "4992",
+    "4993",
+    "4994",
+    "4995",
+    "4996",
+    "4997",
+    "4998",
+    "4999",
+    "5371",
+    "5372",
+    "5373",
+    "5381",
+    "5391",
+    "5570",
+    "5571",
+    "5572",
+    "5573",
+    "5574",
+    "5575",
+    "5581",
+    "5582",
+    "5583",
+    "5771",
+    "5772",
+    "5773",
+    "5781",
+    "5782",
+    "5783",
+    "5784",
+    "5791",
+    "5792",
+    "5794",
+    "5871",
+    "5872",
+    "5881",
+    "5882",
+    "5883",
+    "5884",
+    "5885",
+    "5886",
+    "5887",
+    "5888",
+    "5889",
+    "5890",
+    "5894",
+    "6972",
+    "7071",
+    "7072",
+    "7073",
+    "7077",
+    "7081",
+    "7091",
+    "7095",
+    "7096",
+    "7173",
+    "7175",
+    "7178",
+    "7182",
+    "7183",
+    "7192",
+    "7193",
+    "7194",
+    "7195",
+    "7196",
+    "7197",
+    "7198",
+    "7271",
+    "7272",
+    "7273",
+    "7274",
+    "7275",
+    "7276",
+    "7281",
+    "7282",
+    "7284",
+    "7285",
+    "7371",
+    "7373",
+    "7374",
+    "7379",
+    "7381",
+    "7382",
+    "7383",
+    "7384",
+    "7385",
+    "7387",
+    "7391",
+    "7392",
+    "7395",
+    "7471",
+    "7472",
+    "7473",
+    "7475",
+    "7476",
+    "7477",
+    "7481",
+    "7482",
+    "7483",
+    "7491",
+    "7495",
+    "7571",
+    "7572",
+    "7580",
+    "7581",
+    "7582",
+    "7583",
+    "7591",
+    "7670",
+    "7671",
+    "7672",
+    "7673",
+    "7674",
+    "7675",
+    "7676",
+    "7677",
+    "7678",
+    "7681",
+    "7682",
+    "7683",
+    "7691",
+    "7692",
+    "7771",
+    "7772",
+    "7773",
+    "7774",
+    "7775",
+    "7776",
+    "7777",
+    "7778",
+    "7781",
+    "7782",
+    "7783",
+    "7784",
+    "7791",
+    "7871",
+    "7872",
+    "7873",
+    "7875",
+    "7881",
+    "7882",
+    "7883",
+    "7884",
+    "7885",
+    "7886",
+    "7891",
+    "7892",
+    "7893",
+    "7895",
+    "7971",
+    "7972",
+    "7973",
+    "7974",
+    "7975",
+    "7977",
+    "7978",
+    "7979",
+    "7980",
+    "7982",
+    "7983",
+    "7984",
+    "7985",
+    "7986",
+    "7987",
+    "7988",
+    "7990",
+    "7991",
+    "7992",
+    "8971",
+    "8972",
+    "9073",
+    "9074",
+    "9076",
+    "9077",
+    "9081",
+    "9082",
+    "9085",
+    "9091",
+    "9092",
+    "9271",
+    "9272",
+    "9273",
+    "9274",
+    "9281",
+    "9282",
+    "9291",
+    "9292",
+    "9371",
+    "9372",
+    "9376",
+    "9377",
+    "9382",
+    "9383",
+    "9384",
+    "9386",
+    "9387",
+    "9391",
+    "9392",
+    "9393",
+    "9395",
+    "9396",
+    "9397",
+    "9398",
+    "9471",
+    "9472",
+    "9481",
+    "9482",
+    "9483",
+    "9498",
+    "9571",
+    "9572",
+    "9583",
+    "9584",
+    "9585",
+    "9586",
+    "9587",
+    "9591",
+    "9593",
+    "9596",
+    "9597",
+    "9598",
+    "9672",
+    "9679",
+    "9682",
+    "9683",
+    "9689",
+    "9691",
+    "9771",
+    "9772",
+    "9773",
+    "9774",
+    "9775",
+    "9776",
+    "9777",
+    "9778",
+    "9779",
+    "9781",
+    "9782",
+    "9783",
+    "9791",
+    "9792",
+    "9793",
+    "9794",
+    "9871",
+    "9872",
+    "9874",
+    "9875",
+    "9876",
+    "9877",
+    "9879",
+    "9881",
+    "9883",
+    "9884",
+    "9891",
+    "9892",
+    "9893"
+  ],
+  "entries": [
+    {
+      "rd": 1,
+      "mailtown": "Akaroa",
+      "postcode": "7581"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Akaroa",
+      "postcode": "7582"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Akaroa",
+      "postcode": "7583"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Albany",
+      "postcode": "0792"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Albany",
+      "postcode": "0793"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Albany",
+      "postcode": "0794"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Alexandra",
+      "postcode": "9391"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Alexandra",
+      "postcode": "9392"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Alexandra",
+      "postcode": "9393"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Amberley",
+      "postcode": "7481"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Amberley",
+      "postcode": "7482"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Amberley",
+      "postcode": "7483"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Apiti",
+      "postcode": "4771"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Aria",
+      "postcode": "3979"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Ashburton",
+      "postcode": "7771"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Ashburton",
+      "postcode": "7772"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Ashburton",
+      "postcode": "7773"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Ashburton",
+      "postcode": "7774"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Ashburton",
+      "postcode": "7775"
+    },
+    {
+      "rd": 6,
+      "mailtown": "Ashburton",
+      "postcode": "7776"
+    },
+    {
+      "rd": 7,
+      "mailtown": "Ashburton",
+      "postcode": "7777"
+    },
+    {
+      "rd": 8,
+      "mailtown": "Ashburton",
+      "postcode": "7778"
+    },
+    {
+      "rd": 14,
+      "mailtown": "Ashhurst",
+      "postcode": "4884"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Atiamuri",
+      "postcode": "3078"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Awanui",
+      "postcode": "0486"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Balclutha",
+      "postcode": "9271"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Balclutha",
+      "postcode": "9272"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Balclutha",
+      "postcode": "9273"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Balclutha",
+      "postcode": "9274"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Balfour",
+      "postcode": "9779"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Belfast",
+      "postcode": "7670"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Blackball",
+      "postcode": "7871"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Blenheim",
+      "postcode": "7271"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Blenheim",
+      "postcode": "7272"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Blenheim",
+      "postcode": "7273"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Blenheim",
+      "postcode": "7274"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Blenheim",
+      "postcode": "7275"
+    },
+    {
+      "rd": 6,
+      "mailtown": "Blenheim",
+      "postcode": "7276"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Bombay",
+      "postcode": "2675"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Brighton",
+      "postcode": "9091"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Brightwater",
+      "postcode": "7091"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Broadwood",
+      "postcode": "0496"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Bulls",
+      "postcode": "4894"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Cambridge",
+      "postcode": "3493"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Cambridge",
+      "postcode": "3494"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Cambridge",
+      "postcode": "3495"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Cambridge",
+      "postcode": "3496"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Carterton",
+      "postcode": "5791"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Carterton",
+      "postcode": "5792"
+    },
+    {
+      "rd": 14,
+      "mailtown": "Cave",
+      "postcode": "7984"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Cheviot",
+      "postcode": "7381"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Cheviot",
+      "postcode": "7382"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Cheviot",
+      "postcode": "7383"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Cheviot",
+      "postcode": "7384"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Christchurch",
+      "postcode": "7671"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Christchurch",
+      "postcode": "7672"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Christchurch",
+      "postcode": "7674"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Christchurch",
+      "postcode": "7675"
+    },
+    {
+      "rd": 6,
+      "mailtown": "Christchurch",
+      "postcode": "7676"
+    },
+    {
+      "rd": 7,
+      "mailtown": "Christchurch",
+      "postcode": "7677"
+    },
+    {
+      "rd": 8,
+      "mailtown": "Christchurch",
+      "postcode": "7678"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Clinton",
+      "postcode": "9583"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Clinton",
+      "postcode": "9584"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Coalgate",
+      "postcode": "7673"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Collingwood",
+      "postcode": "7073"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Coromandel",
+      "postcode": "3581"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Coromandel",
+      "postcode": "3582"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Coromandel",
+      "postcode": "3583"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Coromandel",
+      "postcode": "3584"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Cromwell",
+      "postcode": "9384"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Cromwell",
+      "postcode": "9383"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Culverden",
+      "postcode": "7391"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Culverden",
+      "postcode": "7392"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Dannevirke",
+      "postcode": "4971"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Dannevirke",
+      "postcode": "4972"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Dannevirke",
+      "postcode": "4973"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Dannevirke",
+      "postcode": "4975"
+    },
+    {
+      "rd": 6,
+      "mailtown": "Dannevirke",
+      "postcode": "4976"
+    },
+    {
+      "rd": 7,
+      "mailtown": "Dannevirke",
+      "postcode": "4977"
+    },
+    {
+      "rd": 8,
+      "mailtown": "Dannevirke",
+      "postcode": "4978"
+    },
+    {
+      "rd": 9,
+      "mailtown": "Dannevirke",
+      "postcode": "4979"
+    },
+    {
+      "rd": 10,
+      "mailtown": "Dannevirke",
+      "postcode": "4970"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Darfield",
+      "postcode": "7571"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Darfield",
+      "postcode": "7572"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Dargaville",
+      "postcode": "0371"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Dargaville",
+      "postcode": "0372"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Dargaville",
+      "postcode": "0373"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Dargaville",
+      "postcode": "0374"
+    },
+    {
+      "rd": 6,
+      "mailtown": "Dargaville",
+      "postcode": "0376"
+    },
+    {
+      "rd": 7,
+      "mailtown": "Dargaville",
+      "postcode": "0377"
+    },
+    {
+      "rd": 9,
+      "mailtown": "Dargaville",
+      "postcode": "0379"
+    },
+    {
+      "rd": 10,
+      "mailtown": "Dargaville",
+      "postcode": "0370"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Diamond Harbour",
+      "postcode": "8972"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Dipton",
+      "postcode": "9791"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Dobson",
+      "postcode": "7872"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Drury",
+      "postcode": "2577"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Drury",
+      "postcode": "2578"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Drury",
+      "postcode": "2579"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Dunedin",
+      "postcode": "9076"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Dunedin",
+      "postcode": "9077"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Eketahuna",
+      "postcode": "4994"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Eketahuna",
+      "postcode": "4996"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Eketahuna",
+      "postcode": "4993"
+    },
+    {
+      "rd": 6,
+      "mailtown": "Eketahuna",
+      "postcode": "4995"
+    },
+    {
+      "rd": 18,
+      "mailtown": "Eltham",
+      "postcode": "4398"
+    },
+    {
+      "rd": 19,
+      "mailtown": "Eltham",
+      "postcode": "4399"
+    },
+    {
+      "rd": 17,
+      "mailtown": "Fairlie",
+      "postcode": "7987"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Featherston",
+      "postcode": "5771"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Featherston",
+      "postcode": "5772"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Featherston",
+      "postcode": "5773"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Feilding",
+      "postcode": "4775"
+    },
+    {
+      "rd": 7,
+      "mailtown": "Feilding",
+      "postcode": "4777"
+    },
+    {
+      "rd": 9,
+      "mailtown": "Feilding",
+      "postcode": "4779"
+    },
+    {
+      "rd": 11,
+      "mailtown": "Foxton",
+      "postcode": "4891"
+    },
+    {
+      "rd": 13,
+      "mailtown": "Foxton",
+      "postcode": "4893"
+    },
+    {
+      "rd": 3,
+      "mailtown": "French Pass",
+      "postcode": "7193"
+    },
+    {
+      "rd": 21,
+      "mailtown": "Geraldine",
+      "postcode": "7991"
+    },
+    {
+      "rd": 22,
+      "mailtown": "Geraldine",
+      "postcode": "7992"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Gisborne",
+      "postcode": "4071"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Gisborne",
+      "postcode": "4072"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Gisborne",
+      "postcode": "4073"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Glenorchy",
+      "postcode": "9372"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Gore",
+      "postcode": "9771"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Gore",
+      "postcode": "9772"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Gore",
+      "postcode": "9773"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Gore",
+      "postcode": "9774"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Gore",
+      "postcode": "9775"
+    },
+    {
+      "rd": 6,
+      "mailtown": "Gore",
+      "postcode": "9776"
+    },
+    {
+      "rd": 7,
+      "mailtown": "Gore",
+      "postcode": "9777"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Great Barrier Island",
+      "postcode": "0991"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Greta Valley",
+      "postcode": "7387"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Greytown",
+      "postcode": "5794"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Hamilton",
+      "postcode": "3281"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Hamilton",
+      "postcode": "3282"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Hamilton",
+      "postcode": "3283"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Hamilton",
+      "postcode": "3284"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Hamilton",
+      "postcode": "3285"
+    },
+    {
+      "rd": 6,
+      "mailtown": "Hamilton",
+      "postcode": "3286"
+    },
+    {
+      "rd": 7,
+      "mailtown": "Hamilton",
+      "postcode": "3287"
+    },
+    {
+      "rd": 8,
+      "mailtown": "Hamilton",
+      "postcode": "3288"
+    },
+    {
+      "rd": 9,
+      "mailtown": "Hamilton",
+      "postcode": "3289"
+    },
+    {
+      "rd": 10,
+      "mailtown": "Hamilton",
+      "postcode": "3290"
+    },
+    {
+      "rd": 12,
+      "mailtown": "Hamilton",
+      "postcode": "3293"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Harihari",
+      "postcode": "7884"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Hastings",
+      "postcode": "4171"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Hastings",
+      "postcode": "4172"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Hastings",
+      "postcode": "4174"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Hastings",
+      "postcode": "4175"
+    },
+    {
+      "rd": 9,
+      "mailtown": "Hastings",
+      "postcode": "4179"
+    },
+    {
+      "rd": 10,
+      "mailtown": "Hastings",
+      "postcode": "4180"
+    },
+    {
+      "rd": 11,
+      "mailtown": "Hastings",
+      "postcode": "4178"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Havelock",
+      "postcode": "7178"
+    },
+    {
+      "rd": 12,
+      "mailtown": "Havelock North",
+      "postcode": "4294"
+    },
+    {
+      "rd": 14,
+      "mailtown": "Havelock North",
+      "postcode": "4295"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Hawarden",
+      "postcode": "7385"
+    },
+    {
+      "rd": 11,
+      "mailtown": "Hawera",
+      "postcode": "4671"
+    },
+    {
+      "rd": 12,
+      "mailtown": "Hawera",
+      "postcode": "4672"
+    },
+    {
+      "rd": 13,
+      "mailtown": "Hawera",
+      "postcode": "4673"
+    },
+    {
+      "rd": 14,
+      "mailtown": "Hawera",
+      "postcode": "4674"
+    },
+    {
+      "rd": 15,
+      "mailtown": "Hawera",
+      "postcode": "4675"
+    },
+    {
+      "rd": 28,
+      "mailtown": "Hawera",
+      "postcode": "4678"
+    },
+    {
+      "rd": 29,
+      "mailtown": "Hawera",
+      "postcode": "4679"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Helensville",
+      "postcode": "0874"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Helensville",
+      "postcode": "0875"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Henderson",
+      "postcode": "0781"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Henderson",
+      "postcode": "0782"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Hikuai",
+      "postcode": "3579"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Hikurangi",
+      "postcode": "0181"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Hikurangi",
+      "postcode": "0182"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Hikurangi",
+      "postcode": "0184"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Hokitika",
+      "postcode": "7881"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Hokitika",
+      "postcode": "7882"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Hokitika",
+      "postcode": "7883"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Howick",
+      "postcode": "2571"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Hunterville",
+      "postcode": "4781"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Hunterville",
+      "postcode": "4782"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Hunterville",
+      "postcode": "4783"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Hunterville",
+      "postcode": "4784"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Hunterville",
+      "postcode": "4785"
+    },
+    {
+      "rd": 6,
+      "mailtown": "Hunterville",
+      "postcode": "4786"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Huntly",
+      "postcode": "3771"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Huntly",
+      "postcode": "3772"
+    },
+    {
+      "rd": 6,
+      "mailtown": "Inglewood",
+      "postcode": "4386"
+    },
+    {
+      "rd": 7,
+      "mailtown": "Inglewood",
+      "postcode": "4387"
+    },
+    {
+      "rd": 8,
+      "mailtown": "Inglewood",
+      "postcode": "4388"
+    },
+    {
+      "rd": 9,
+      "mailtown": "Inglewood",
+      "postcode": "4389"
+    },
+    {
+      "rd": 10,
+      "mailtown": "Inglewood",
+      "postcode": "4390"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Invercargill",
+      "postcode": "9871"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Invercargill",
+      "postcode": "9872"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Invercargill",
+      "postcode": "9874"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Invercargill",
+      "postcode": "9875"
+    },
+    {
+      "rd": 6,
+      "mailtown": "Invercargill",
+      "postcode": "9876"
+    },
+    {
+      "rd": 9,
+      "mailtown": "Invercargill",
+      "postcode": "9879"
+    },
+    {
+      "rd": 11,
+      "mailtown": "Invercargill",
+      "postcode": "9877"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Kaeo",
+      "postcode": "0478"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Kaeo",
+      "postcode": "0479"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Kaiapoi",
+      "postcode": "7691"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Kaiapoi",
+      "postcode": "7692"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Kaikohe",
+      "postcode": "0474"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Kaikohe",
+      "postcode": "0472"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Kaikohe",
+      "postcode": "0473"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Kaikoura",
+      "postcode": "7371"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Kaikoura",
+      "postcode": "7374"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Kaikoura",
+      "postcode": "7373"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Kaitaia",
+      "postcode": "0481"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Kaitaia",
+      "postcode": "0482"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Kaitaia",
+      "postcode": "0483"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Kaitaia",
+      "postcode": "0484"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Kaitangata",
+      "postcode": "9281"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Kaitangata",
+      "postcode": "9282"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Kaiwaka",
+      "postcode": "0573"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Kamo",
+      "postcode": "0185"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Karamea",
+      "postcode": "7893"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Karori",
+      "postcode": "6972"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Katikati",
+      "postcode": "3177"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Katikati",
+      "postcode": "3178"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Katikati",
+      "postcode": "3170"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Katikati",
+      "postcode": "3181"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Kaukapakapa",
+      "postcode": "0871"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Kaukapakapa",
+      "postcode": "0873"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Kawakawa",
+      "postcode": "0281"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Kawakawa",
+      "postcode": "0282"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Kawakawa",
+      "postcode": "0283"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Kawhia",
+      "postcode": "3889"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Kerikeri",
+      "postcode": "0294"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Kerikeri",
+      "postcode": "0295"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Kerikeri",
+      "postcode": "0293"
+    },
+    {
+      "rd": 54,
+      "mailtown": "Kimbolton",
+      "postcode": "4774"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Kohukohu",
+      "postcode": "0491"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Kohukohu",
+      "postcode": "0492"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Kotemaori",
+      "postcode": "4188"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Kumara",
+      "postcode": "7875"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Kumeu",
+      "postcode": "0891"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Kumeu",
+      "postcode": "0892"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Kurow",
+      "postcode": "9498"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Lawrence",
+      "postcode": "9591"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Lawrence",
+      "postcode": "9593"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Leeston",
+      "postcode": "7682"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Leeston",
+      "postcode": "7683"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Levin",
+      "postcode": "5571"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Levin",
+      "postcode": "5574"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Levin",
+      "postcode": "5575"
+    },
+    {
+      "rd": 12,
+      "mailtown": "Levin",
+      "postcode": "5572"
+    },
+    {
+      "rd": 20,
+      "mailtown": "Levin",
+      "postcode": "5570"
+    },
+    {
+      "rd": 31,
+      "mailtown": "Levin",
+      "postcode": "5573"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Little River",
+      "postcode": "7591"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Lumsden",
+      "postcode": "9792"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Lumsden",
+      "postcode": "9793"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Lumsden",
+      "postcode": "9794"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Lyttelton",
+      "postcode": "8971"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Mahoenui",
+      "postcode": "3978"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Mangakino",
+      "postcode": "3492"
+    },
+    {
+      "rd": 7,
+      "mailtown": "Mangaweka",
+      "postcode": "4797"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Mangonui",
+      "postcode": "0494"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Manurewa",
+      "postcode": "2576"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Manutuke",
+      "postcode": "4078"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Martinborough",
+      "postcode": "5781"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Martinborough",
+      "postcode": "5782"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Martinborough",
+      "postcode": "5783"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Martinborough",
+      "postcode": "5784"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Marton",
+      "postcode": "4787"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Marton",
+      "postcode": "4788"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Marton",
+      "postcode": "4789"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Masterton",
+      "postcode": "5881"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Masterton",
+      "postcode": "5882"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Masterton",
+      "postcode": "5883"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Masterton",
+      "postcode": "5884"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Masterton",
+      "postcode": "5885"
+    },
+    {
+      "rd": 6,
+      "mailtown": "Masterton",
+      "postcode": "5886"
+    },
+    {
+      "rd": 7,
+      "mailtown": "Masterton",
+      "postcode": "5887"
+    },
+    {
+      "rd": 8,
+      "mailtown": "Masterton",
+      "postcode": "5888"
+    },
+    {
+      "rd": 9,
+      "mailtown": "Masterton",
+      "postcode": "5889"
+    },
+    {
+      "rd": 10,
+      "mailtown": "Masterton",
+      "postcode": "5890"
+    },
+    {
+      "rd": 11,
+      "mailtown": "Masterton",
+      "postcode": "5871"
+    },
+    {
+      "rd": 12,
+      "mailtown": "Masterton",
+      "postcode": "5872"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Matakohe",
+      "postcode": "0593"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Matakohe",
+      "postcode": "0594"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Matamata",
+      "postcode": "3471"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Matamata",
+      "postcode": "3472"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Matamata",
+      "postcode": "3473"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Matawai",
+      "postcode": "4075"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Matiere",
+      "postcode": "3995"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Maungaturoto",
+      "postcode": "0583"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Maungaturoto",
+      "postcode": "0587"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Maungaturoto",
+      "postcode": "0588"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Maungaturoto",
+      "postcode": "0589"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Mercer",
+      "postcode": "2474"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Methven",
+      "postcode": "7791"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Middlemarch",
+      "postcode": "9596"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Middlemarch",
+      "postcode": "9597"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Middlemarch",
+      "postcode": "9598"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Milton",
+      "postcode": "9291"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Milton",
+      "postcode": "9292"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Mokau",
+      "postcode": "4376"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Morrinsville",
+      "postcode": "3371"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Morrinsville",
+      "postcode": "3372"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Morrinsville",
+      "postcode": "3373"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Morrinsville",
+      "postcode": "3374"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Morrinsville",
+      "postcode": "3375"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Mosgiel",
+      "postcode": "9092"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Motueka",
+      "postcode": "7196"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Motueka",
+      "postcode": "7197"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Motueka",
+      "postcode": "7198"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Murchison",
+      "postcode": "7077"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Murupara",
+      "postcode": "3079"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Napier",
+      "postcode": "4181"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Napier",
+      "postcode": "4182"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Napier",
+      "postcode": "4183"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Napier",
+      "postcode": "4184"
+    },
+    {
+      "rd": 6,
+      "mailtown": "Napier",
+      "postcode": "4186"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Nelson",
+      "postcode": "7071"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Nelson",
+      "postcode": "7072"
+    },
+    {
+      "rd": 2,
+      "mailtown": "New Lynn",
+      "postcode": "0772"
+    },
+    {
+      "rd": 1,
+      "mailtown": "New Plymouth",
+      "postcode": "4371"
+    },
+    {
+      "rd": 2,
+      "mailtown": "New Plymouth",
+      "postcode": "4372"
+    },
+    {
+      "rd": 3,
+      "mailtown": "New Plymouth",
+      "postcode": "4373"
+    },
+    {
+      "rd": 4,
+      "mailtown": "New Plymouth",
+      "postcode": "4374"
+    },
+    {
+      "rd": 37,
+      "mailtown": "New Plymouth",
+      "postcode": "4381"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Ngaruawahia",
+      "postcode": "3793"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Ngaruawahia",
+      "postcode": "3794"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Ngatea",
+      "postcode": "3597"
+    },
+    {
+      "rd": 11,
+      "mailtown": "Norsewood",
+      "postcode": "4974"
+    },
+    {
+      "rd": 8,
+      "mailtown": "Nuhaka",
+      "postcode": "4198"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Ohakune",
+      "postcode": "4691"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Ohaupo",
+      "postcode": "3881"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Ohaupo",
+      "postcode": "3882"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Ohaupo",
+      "postcode": "3883"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Ohinewai",
+      "postcode": "3784"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Ohura",
+      "postcode": "3980"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Okaihau",
+      "postcode": "0475"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Okaihau",
+      "postcode": "0476"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Omakau",
+      "postcode": "9376"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Omakau",
+      "postcode": "9377"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Onerahi",
+      "postcode": "0192"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Ongaonga",
+      "postcode": "4278"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Ongaonga",
+      "postcode": "4279"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Ongarue",
+      "postcode": "3997"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Oparau",
+      "postcode": "3885"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Oparau",
+      "postcode": "3886"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Opotiki",
+      "postcode": "3197"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Opotiki",
+      "postcode": "3198"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Opotiki",
+      "postcode": "3199"
+    },
+    {
+      "rd": 31,
+      "mailtown": "Opunake",
+      "postcode": "4681"
+    },
+    {
+      "rd": 32,
+      "mailtown": "Opunake",
+      "postcode": "4682"
+    },
+    {
+      "rd": 34,
+      "mailtown": "Opunake",
+      "postcode": "4684"
+    },
+    {
+      "rd": 35,
+      "mailtown": "Opunake",
+      "postcode": "4685"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Otaki",
+      "postcode": "5581"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Otaki",
+      "postcode": "5582"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Otaki",
+      "postcode": "5583"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Otane",
+      "postcode": "4276"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Otane",
+      "postcode": "4277"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Otautau",
+      "postcode": "9689"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Otautau",
+      "postcode": "9682"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Otautau",
+      "postcode": "9683"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Otorohanga",
+      "postcode": "3972"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Otorohanga",
+      "postcode": "3973"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Otorohanga",
+      "postcode": "3974"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Otorohanga",
+      "postcode": "3975"
+    },
+    {
+      "rd": 6,
+      "mailtown": "Otorohanga",
+      "postcode": "3976"
+    },
+    {
+      "rd": 7,
+      "mailtown": "Otorohanga",
+      "postcode": "3977"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Oturehua",
+      "postcode": "9386"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Oturehua",
+      "postcode": "9387"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Outram",
+      "postcode": "9073"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Outram",
+      "postcode": "9074"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Owaka",
+      "postcode": "9585"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Owaka",
+      "postcode": "9586"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Owhango",
+      "postcode": "3989"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Owhango",
+      "postcode": "3990"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Oxford",
+      "postcode": "7495"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Paeroa",
+      "postcode": "3671"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Paeroa",
+      "postcode": "3672"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Paeroa",
+      "postcode": "3673"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Paeroa",
+      "postcode": "3674"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Pahiatua",
+      "postcode": "4981"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Pahiatua",
+      "postcode": "4982"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Pahiatua",
+      "postcode": "4983"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Pahiatua",
+      "postcode": "4984"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Pahiatua",
+      "postcode": "4985"
+    },
+    {
+      "rd": 6,
+      "mailtown": "Pahiatua",
+      "postcode": "4986"
+    },
+    {
+      "rd": 7,
+      "mailtown": "Pahiatua",
+      "postcode": "4987"
+    },
+    {
+      "rd": 8,
+      "mailtown": "Pahiatua",
+      "postcode": "4988"
+    },
+    {
+      "rd": 9,
+      "mailtown": "Pahiatua",
+      "postcode": "4989"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Palmerston",
+      "postcode": "9481"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Palmerston",
+      "postcode": "9482"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Palmerston",
+      "postcode": "9483"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Palmerston North",
+      "postcode": "4471"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Palmerston North",
+      "postcode": "4472"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Palmerston North",
+      "postcode": "4473"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Palmerston North",
+      "postcode": "4474"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Palmerston North",
+      "postcode": "4475"
+    },
+    {
+      "rd": 6,
+      "mailtown": "Palmerston North",
+      "postcode": "4476"
+    },
+    {
+      "rd": 7,
+      "mailtown": "Palmerston North",
+      "postcode": "4477"
+    },
+    {
+      "rd": 8,
+      "mailtown": "Palmerston North",
+      "postcode": "4478"
+    },
+    {
+      "rd": 9,
+      "mailtown": "Palmerston North",
+      "postcode": "4479"
+    },
+    {
+      "rd": 10,
+      "mailtown": "Palmerston North",
+      "postcode": "4470"
+    },
+    {
+      "rd": 11,
+      "mailtown": "Palmerston North",
+      "postcode": "4481"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Papakura",
+      "postcode": "2580"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Papakura",
+      "postcode": "2582"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Papakura",
+      "postcode": "2583"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Papakura",
+      "postcode": "2584"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Papakura",
+      "postcode": "2585"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Paparoa",
+      "postcode": "0571"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Patea",
+      "postcode": "4597"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Patea",
+      "postcode": "4598"
+    },
+    {
+      "rd": 20,
+      "mailtown": "Peel Forest",
+      "postcode": "7990"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Picton",
+      "postcode": "7281"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Picton",
+      "postcode": "7282"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Picton",
+      "postcode": "7284"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Piopio",
+      "postcode": "3971"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Piopio",
+      "postcode": "3970"
+    },
+    {
+      "rd": 12,
+      "mailtown": "Pleasant Point",
+      "postcode": "7982"
+    },
+    {
+      "rd": 13,
+      "mailtown": "Pleasant Point",
+      "postcode": "7983"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Pokeno",
+      "postcode": "2471"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Pokeno",
+      "postcode": "2472"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Pokeno",
+      "postcode": "2473"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Pongaroa",
+      "postcode": "4990"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Pongaroa",
+      "postcode": "4991"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Pongaroa",
+      "postcode": "4992"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Porangahau",
+      "postcode": "4291"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Porangahau",
+      "postcode": "4292"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Porangahau",
+      "postcode": "4293"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Porirua",
+      "postcode": "5381"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Port Chalmers",
+      "postcode": "9081"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Port Chalmers",
+      "postcode": "9082"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Pukeatua",
+      "postcode": "3880"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Pukekohe",
+      "postcode": "2676"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Pukekohe",
+      "postcode": "2677"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Pukekohe",
+      "postcode": "2678"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Pukekohe",
+      "postcode": "2679"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Putaruru",
+      "postcode": "3481"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Putaruru",
+      "postcode": "3482"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Putaruru",
+      "postcode": "3483"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Queenstown",
+      "postcode": "9371"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Raetihi",
+      "postcode": "4694"
+    },
+    {
+      "rd": 6,
+      "mailtown": "Raetihi",
+      "postcode": "4696"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Raglan",
+      "postcode": "3295"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Raglan",
+      "postcode": "3296"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Raglan",
+      "postcode": "3297"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Rai Valley",
+      "postcode": "7194"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Rai Valley",
+      "postcode": "7192"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Rai Valley",
+      "postcode": "7195"
+    },
+    {
+      "rd": 11,
+      "mailtown": "Rakaia",
+      "postcode": "7781"
+    },
+    {
+      "rd": 12,
+      "mailtown": "Rakaia",
+      "postcode": "7782"
+    },
+    {
+      "rd": 13,
+      "mailtown": "Rakaia",
+      "postcode": "7783"
+    },
+    {
+      "rd": 14,
+      "mailtown": "Rakaia",
+      "postcode": "7784"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Ranfurly",
+      "postcode": "9395"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Ranfurly",
+      "postcode": "9396"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Ranfurly",
+      "postcode": "9397"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Ranfurly",
+      "postcode": "9398"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Rangiora",
+      "postcode": "7471"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Rangiora",
+      "postcode": "7472"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Rangiora",
+      "postcode": "7473"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Rangiora",
+      "postcode": "7475"
+    },
+    {
+      "rd": 6,
+      "mailtown": "Rangiora",
+      "postcode": "7476"
+    },
+    {
+      "rd": 7,
+      "mailtown": "Rangiora",
+      "postcode": "7477"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Raupunga",
+      "postcode": "4189"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Reefton",
+      "postcode": "7895"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Reporoa",
+      "postcode": "3081"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Reporoa",
+      "postcode": "3083"
+    },
+    {
+      "rd": 10,
+      "mailtown": "Rewa",
+      "postcode": "4780"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Richmond",
+      "postcode": "7081"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Riverton",
+      "postcode": "9881"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Riverton",
+      "postcode": "9883"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Ross",
+      "postcode": "7885"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Rotherham",
+      "postcode": "7379"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Rotorua",
+      "postcode": "3077"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Rotorua",
+      "postcode": "3072"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Rotorua",
+      "postcode": "3073"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Rotorua",
+      "postcode": "3074"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Rotorua",
+      "postcode": "3076"
+    },
+    {
+      "rd": 6,
+      "mailtown": "Rotorua",
+      "postcode": "3096"
+    },
+    {
+      "rd": 7,
+      "mailtown": "Rotorua",
+      "postcode": "3097"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Roxburgh",
+      "postcode": "9571"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Roxburgh",
+      "postcode": "9572"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Ruatoria",
+      "postcode": "4081"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Ruatoria",
+      "postcode": "4082"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Ruatoria",
+      "postcode": "4083"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Ruawai",
+      "postcode": "0591"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Ruawai",
+      "postcode": "0592"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Runanga",
+      "postcode": "7873"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Russell",
+      "postcode": "0272"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Seddon",
+      "postcode": "7285"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Sheffield",
+      "postcode": "7580"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Silverdale",
+      "postcode": "0994"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Silverdale",
+      "postcode": "0992"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Silverdale",
+      "postcode": "0993"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Springfield",
+      "postcode": "7681"
+    },
+    {
+      "rd": 24,
+      "mailtown": "St Andrews",
+      "postcode": "7988"
+    },
+    {
+      "rd": 21,
+      "mailtown": "Stratford",
+      "postcode": "4391"
+    },
+    {
+      "rd": 22,
+      "mailtown": "Stratford",
+      "postcode": "4392"
+    },
+    {
+      "rd": 23,
+      "mailtown": "Stratford",
+      "postcode": "4393"
+    },
+    {
+      "rd": 24,
+      "mailtown": "Stratford",
+      "postcode": "4394"
+    },
+    {
+      "rd": 25,
+      "mailtown": "Stratford",
+      "postcode": "4395"
+    },
+    {
+      "rd": 26,
+      "mailtown": "Stratford",
+      "postcode": "4396"
+    },
+    {
+      "rd": 27,
+      "mailtown": "Stratford",
+      "postcode": "4397"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Taihape",
+      "postcode": "4791"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Taihape",
+      "postcode": "4792"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Taihape",
+      "postcode": "4793"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Taihape",
+      "postcode": "4794"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Taihape",
+      "postcode": "4795"
+    },
+    {
+      "rd": 6,
+      "mailtown": "Taihape",
+      "postcode": "4796"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Takaka",
+      "postcode": "7183"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Takaka",
+      "postcode": "7182"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Takapau",
+      "postcode": "4286"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Takapau",
+      "postcode": "4287"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Takapau",
+      "postcode": "4288"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Tangiteroria",
+      "postcode": "0381"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Tapanui",
+      "postcode": "9587"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Taumarunui",
+      "postcode": "3991"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Taumarunui",
+      "postcode": "3992"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Taumarunui",
+      "postcode": "3993"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Taumarunui",
+      "postcode": "3994"
+    },
+    {
+      "rd": 6,
+      "mailtown": "Taumarunui",
+      "postcode": "3996"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Taupiri",
+      "postcode": "3791"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Taupiri",
+      "postcode": "3792"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Taupo",
+      "postcode": "3377"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Taupo",
+      "postcode": "3378"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Taupo",
+      "postcode": "3379"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Taupo",
+      "postcode": "3384"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Taupo",
+      "postcode": "3385"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Tauranga",
+      "postcode": "3171"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Tauranga",
+      "postcode": "3172"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Tauranga",
+      "postcode": "3173"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Tauranga",
+      "postcode": "3174"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Tauranga",
+      "postcode": "3175"
+    },
+    {
+      "rd": 6,
+      "mailtown": "Tauranga",
+      "postcode": "3176"
+    },
+    {
+      "rd": 7,
+      "mailtown": "Tauranga",
+      "postcode": "3179"
+    },
+    {
+      "rd": 8,
+      "mailtown": "Tauranga",
+      "postcode": "3180"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Te Anau",
+      "postcode": "9679"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Te Anau",
+      "postcode": "9672"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Te Aroha",
+      "postcode": "3391"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Te Aroha",
+      "postcode": "3392"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Te Aroha",
+      "postcode": "3393"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Te Awamutu",
+      "postcode": "3879"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Te Awamutu",
+      "postcode": "3872"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Te Awamutu",
+      "postcode": "3873"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Te Awamutu",
+      "postcode": "3874"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Te Awamutu",
+      "postcode": "3875"
+    },
+    {
+      "rd": 6,
+      "mailtown": "Te Awamutu",
+      "postcode": "3876"
+    },
+    {
+      "rd": 7,
+      "mailtown": "Te Awamutu",
+      "postcode": "3877"
+    },
+    {
+      "rd": 8,
+      "mailtown": "Te Awamutu",
+      "postcode": "3878"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Te Karaka",
+      "postcode": "4091"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Te Karaka",
+      "postcode": "4092"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Te Karaka",
+      "postcode": "4093"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Te Karaka",
+      "postcode": "4094"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Te Kauwhata",
+      "postcode": "3781"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Te Kauwhata",
+      "postcode": "3782"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Te Kopuru",
+      "postcode": "0391"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Te Kuiti",
+      "postcode": "3981"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Te Kuiti",
+      "postcode": "3982"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Te Kuiti",
+      "postcode": "3983"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Te Kuiti",
+      "postcode": "3985"
+    },
+    {
+      "rd": 6,
+      "mailtown": "Te Kuiti",
+      "postcode": "3986"
+    },
+    {
+      "rd": 7,
+      "mailtown": "Te Kuiti",
+      "postcode": "3987"
+    },
+    {
+      "rd": 8,
+      "mailtown": "Te Kuiti",
+      "postcode": "3988"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Te Mata",
+      "postcode": "3894"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Te Mata",
+      "postcode": "3895"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Te Puke",
+      "postcode": "3182"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Te Puke",
+      "postcode": "3183"
+    },
+    {
+      "rd": 6,
+      "mailtown": "Te Puke",
+      "postcode": "3186"
+    },
+    {
+      "rd": 7,
+      "mailtown": "Te Puke",
+      "postcode": "3187"
+    },
+    {
+      "rd": 8,
+      "mailtown": "Te Puke",
+      "postcode": "3188"
+    },
+    {
+      "rd": 9,
+      "mailtown": "Te Puke",
+      "postcode": "3189"
+    },
+    {
+      "rd": 25,
+      "mailtown": "Temuka",
+      "postcode": "7985"
+    },
+    {
+      "rd": 26,
+      "mailtown": "Temuka",
+      "postcode": "7986"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Thames",
+      "postcode": "3578"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Thames",
+      "postcode": "3577"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Thames",
+      "postcode": "3574"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Thames",
+      "postcode": "3575"
+    },
+    {
+      "rd": 6,
+      "mailtown": "Thames",
+      "postcode": "3576"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Tikitiki",
+      "postcode": "4087"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Tikitiki",
+      "postcode": "4086"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Timaru",
+      "postcode": "7971"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Timaru",
+      "postcode": "7972"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Timaru",
+      "postcode": "7973"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Timaru",
+      "postcode": "7974"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Timaru",
+      "postcode": "7975"
+    },
+    {
+      "rd": 14,
+      "mailtown": "Tinui",
+      "postcode": "5894"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Tirau",
+      "postcode": "3484"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Tirau",
+      "postcode": "3485"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Tokanui",
+      "postcode": "9884"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Tokomaru Bay",
+      "postcode": "4079"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Tokoroa",
+      "postcode": "3491"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Tolaga Bay",
+      "postcode": "4077"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Tuakau",
+      "postcode": "2696"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Tuakau",
+      "postcode": "2697"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Tuakau",
+      "postcode": "2693"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Tuakau",
+      "postcode": "2694"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Tuakau",
+      "postcode": "2695"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Tuatapere",
+      "postcode": "9691"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Turangi",
+      "postcode": "3381"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Turangi",
+      "postcode": "3382"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Upper Hutt",
+      "postcode": "5371"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Upper Hutt",
+      "postcode": "5372"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Upper Moutere",
+      "postcode": "7173"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Upper Moutere",
+      "postcode": "7175"
+    },
+    {
+      "rd": 44,
+      "mailtown": "Urenui",
+      "postcode": "4377"
+    },
+    {
+      "rd": 45,
+      "mailtown": "Urenui",
+      "postcode": "4375"
+    },
+    {
+      "rd": 47,
+      "mailtown": "Urenui",
+      "postcode": "4379"
+    },
+    {
+      "rd": 48,
+      "mailtown": "Urenui",
+      "postcode": "4378"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Waharoa",
+      "postcode": "3474"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Waiau",
+      "postcode": "7395"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Waiheke Island",
+      "postcode": "1971"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Waihi",
+      "postcode": "3681"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Waihi",
+      "postcode": "3682"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Waikaia",
+      "postcode": "9778"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Waikanae",
+      "postcode": "5391"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Waikari",
+      "postcode": "7491"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Waikouaiti",
+      "postcode": "9471"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Waikouaiti",
+      "postcode": "9472"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Waimana",
+      "postcode": "3196"
+    },
+    {
+      "rd": 7,
+      "mailtown": "Waimate",
+      "postcode": "7977"
+    },
+    {
+      "rd": 8,
+      "mailtown": "Waimate",
+      "postcode": "7978"
+    },
+    {
+      "rd": 9,
+      "mailtown": "Waimate",
+      "postcode": "7979"
+    },
+    {
+      "rd": 10,
+      "mailtown": "Waimate",
+      "postcode": "7980"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Waimauku",
+      "postcode": "0881"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Waimauku",
+      "postcode": "0882"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Waimauku",
+      "postcode": "0883"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Waimiha",
+      "postcode": "3998"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Wainuiomata",
+      "postcode": "5373"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Waiotira",
+      "postcode": "0193"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Waipawa",
+      "postcode": "4271"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Waipawa",
+      "postcode": "4272"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Waipawa",
+      "postcode": "4273"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Waipawa",
+      "postcode": "4274"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Waipawa",
+      "postcode": "4275"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Waipu",
+      "postcode": "0582"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Waipukurau",
+      "postcode": "4281"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Waipukurau",
+      "postcode": "4282"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Waipukurau",
+      "postcode": "4283"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Waipukurau",
+      "postcode": "4284"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Waipukurau",
+      "postcode": "4285"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Wairoa",
+      "postcode": "4191"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Wairoa",
+      "postcode": "4197"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Wairoa",
+      "postcode": "4193"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Wairoa",
+      "postcode": "4195"
+    },
+    {
+      "rd": 6,
+      "mailtown": "Wairoa",
+      "postcode": "4196"
+    },
+    {
+      "rd": 42,
+      "mailtown": "Waitara",
+      "postcode": "4382"
+    },
+    {
+      "rd": 43,
+      "mailtown": "Waitara",
+      "postcode": "4383"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Waitati",
+      "postcode": "9085"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Waitoa",
+      "postcode": "3380"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Waiuku",
+      "postcode": "2681"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Waiuku",
+      "postcode": "2682"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Waiuku",
+      "postcode": "2683"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Waiuku",
+      "postcode": "2684"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Wakefield",
+      "postcode": "7095"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Wakefield",
+      "postcode": "7096"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Walton",
+      "postcode": "3475"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Wanaka",
+      "postcode": "9382"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Wanganui",
+      "postcode": "4571"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Wanganui",
+      "postcode": "4572"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Wanganui",
+      "postcode": "4573"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Wanganui",
+      "postcode": "4574"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Wanganui",
+      "postcode": "4575"
+    },
+    {
+      "rd": 6,
+      "mailtown": "Wanganui",
+      "postcode": "4576"
+    },
+    {
+      "rd": 7,
+      "mailtown": "Wanganui",
+      "postcode": "4577"
+    },
+    {
+      "rd": 8,
+      "mailtown": "Wanganui",
+      "postcode": "4578"
+    },
+    {
+      "rd": 11,
+      "mailtown": "Wanganui",
+      "postcode": "4581"
+    },
+    {
+      "rd": 12,
+      "mailtown": "Wanganui",
+      "postcode": "4582"
+    },
+    {
+      "rd": 14,
+      "mailtown": "Wanganui",
+      "postcode": "4584"
+    },
+    {
+      "rd": 15,
+      "mailtown": "Wanganui",
+      "postcode": "4585"
+    },
+    {
+      "rd": 16,
+      "mailtown": "Wanganui",
+      "postcode": "4586"
+    },
+    {
+      "rd": 17,
+      "mailtown": "Wanganui",
+      "postcode": "4587"
+    },
+    {
+      "rd": 18,
+      "mailtown": "Wanganui",
+      "postcode": "4588"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Warkworth",
+      "postcode": "0981"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Warkworth",
+      "postcode": "0982"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Warkworth",
+      "postcode": "0983"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Warkworth",
+      "postcode": "0984"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Warkworth",
+      "postcode": "0985"
+    },
+    {
+      "rd": 6,
+      "mailtown": "Warkworth",
+      "postcode": "0986"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Waverley",
+      "postcode": "4591"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Waverley",
+      "postcode": "4592"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Wellsford",
+      "postcode": "0972"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Wellsford",
+      "postcode": "0973"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Wellsford",
+      "postcode": "0974"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Wellsford",
+      "postcode": "0975"
+    },
+    {
+      "rd": 7,
+      "mailtown": "Wellsford",
+      "postcode": "0977"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Westport",
+      "postcode": "7891"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Westport",
+      "postcode": "7892"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Whakatane",
+      "postcode": "3191"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Whakatane",
+      "postcode": "3192"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Whakatane",
+      "postcode": "3193"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Whakatane",
+      "postcode": "3194"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Whangamata",
+      "postcode": "3691"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Whangarei",
+      "postcode": "0171"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Whangarei",
+      "postcode": "0172"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Whangarei",
+      "postcode": "0173"
+    },
+    {
+      "rd": 4,
+      "mailtown": "Whangarei",
+      "postcode": "0174"
+    },
+    {
+      "rd": 5,
+      "mailtown": "Whangarei",
+      "postcode": "0175"
+    },
+    {
+      "rd": 6,
+      "mailtown": "Whangarei",
+      "postcode": "0176"
+    },
+    {
+      "rd": 8,
+      "mailtown": "Whangarei",
+      "postcode": "0178"
+    },
+    {
+      "rd": 9,
+      "mailtown": "Whangarei",
+      "postcode": "0179"
+    },
+    {
+      "rd": 10,
+      "mailtown": "Whangarei",
+      "postcode": "0170"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Whataroa",
+      "postcode": "7886"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Whitianga",
+      "postcode": "3591"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Whitianga",
+      "postcode": "3592"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Winton",
+      "postcode": "9781"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Winton",
+      "postcode": "9782"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Winton",
+      "postcode": "9783"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Woodville",
+      "postcode": "4997"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Woodville",
+      "postcode": "4998"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Woodville",
+      "postcode": "4999"
+    },
+    {
+      "rd": 1,
+      "mailtown": "Wyndham",
+      "postcode": "9891"
+    },
+    {
+      "rd": 2,
+      "mailtown": "Wyndham",
+      "postcode": "9892"
+    },
+    {
+      "rd": 3,
+      "mailtown": "Wyndham",
+      "postcode": "9893"
+    }
+  ]
+}
