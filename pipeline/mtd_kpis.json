@@ -107,73 +107,61 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Gym Equip": {
-        "num": 306,
-        "den": 306
-      },
-      "Jock Freight - SECA": {
-        "num": 6,
-        "den": 6
-      },
-      "Purify Me": {
-        "num": 113,
-        "den": 113
+      "Oceanbridge": {
+        "num": 7,
+        "den": 7
       },
       "Oricom": {
         "num": 704,
         "den": 704
       },
-      "EcoPallets": {
-        "num": 351,
-        "den": 351
-      },
-      "Flo & Frankie": {
-        "num": 400,
-        "den": 400
-      },
-      "May Eleven NZ": {
-        "num": 1000,
-        "den": 1000
-      },
-      "Baking Tech": {
-        "num": 1,
-        "den": 1
-      },
-      "Logwin - Sikla": {
-        "num": 5077,
-        "den": 5077
-      },
       "Coromandel Mountains Company Limited": {
         "num": 624,
         "den": 624
-      },
-      "Interior Images": {
-        "num": 14,
-        "den": 14
-      },
-      "Salt Shark": {
-        "num": 188,
-        "den": 188
-      },
-      "Made Group NZ": {
-        "num": 10420,
-        "den": 10420
-      },
-      "Oceanbridge": {
-        "num": 7,
-        "den": 7
-      },
-      "Simply Clean": {
-        "num": 6772,
-        "den": 6772
       },
       "Samsung Batteries CP": {
         "num": 524,
         "den": 524
       },
+      "Salt Shark": {
+        "num": 188,
+        "den": 188
+      },
+      "Jock Freight - SECA": {
+        "num": 6,
+        "den": 6
+      },
+      "Gym Equip": {
+        "num": 306,
+        "den": 306
+      },
+      "Made Group NZ": {
+        "num": 10420,
+        "den": 10420
+      },
+      "EcoPallets": {
+        "num": 351,
+        "den": 351
+      },
+      "Interior Images": {
+        "num": 14,
+        "den": 14
+      },
+      "Flo & Frankie": {
+        "num": 400,
+        "den": 400
+      },
       "Aleger Studio": {
         "num": 8,
         "den": 8
+      },
+      "May Eleven NZ": {
+        "num": 1000,
+        "den": 1000
+      },
+      "Logwin - Sikla": {
+        "num": 5077,
+        "den": 5077
       },
       "Vixxen": {
         "num": 3281,
@@ -182,6 +170,18 @@
       "Stryx": {
         "num": 35,
         "den": 35
+      },
+      "Baking Tech": {
+        "num": 1,
+        "den": 1
+      },
+      "Simply Clean": {
+        "num": 6772,
+        "den": 6772
+      },
+      "Purify Me": {
+        "num": 113,
+        "den": 113
       }
     },
     "Freight DIFOT": {
