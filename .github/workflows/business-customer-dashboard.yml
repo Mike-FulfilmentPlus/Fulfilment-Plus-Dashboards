@@ -3,9 +3,7 @@ name: Business & Customer Dashboard Refresh
 on:
   workflow_dispatch: {}
   schedule:
-    - cron: '10 19 * * *'
-    - cron: '10 1 * * *'
-    - cron: '10 6 * * *'
+    - cron: '15 * * * *'   # hourly, around the clock
 
 permissions:
   contents: write
@@ -14,16 +12,11 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
-      - name: Install dependencies
-        run: pip install -r requirements.txt
+      - run: pip install -r requirements.txt
 
       - name: Write credentials.env from secrets
         working-directory: pipeline
@@ -39,7 +32,6 @@ jobs:
       - name: Run business/customer dashboard pipeline
         working-directory: pipeline
         run: |
-          python daily_status_snapshot.py
           python mtd_kpis.py
           python mtd_difot.py --fetch-only
           python mtd_difot.py --fetch-only
