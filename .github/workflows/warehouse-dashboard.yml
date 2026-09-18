@@ -1,0 +1,54 @@
+name: Warehouse Dashboard Refresh
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: '5 17-23,0-6 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Write credentials.env from secrets
+        working-directory: pipeline
+        run: |
+          cat > credentials.env << EOF
+          CARTONCLOUD_CLIENT_ID=${{ secrets.CARTONCLOUD_CLIENT_ID }}
+          CARTONCLOUD_CLIENT_SECRET=${{ secrets.CARTONCLOUD_CLIENT_SECRET }}
+          CARTONCLOUD_TENANT_ID=${{ secrets.CARTONCLOUD_TENANT_ID }}
+          STARSHIPIT_API_KEY=${{ secrets.STARSHIPIT_API_KEY }}
+          STARSHIPIT_SUBSCRIPTION_KEY=${{ secrets.STARSHIPIT_SUBSCRIPTION_KEY }}
+          EOF
+
+      - name: Run warehouse dashboard pipeline
+        working-directory: pipeline
+        run: |
+          python daily_status_snapshot.py
+          python generate_warehouse_dashboard.py
+
+      - name: Publish dashboard HTML to docs/ for GitHub Pages
+        run: |
+          mkdir -p docs
+          cp pipeline/warehouse_dashboard.html docs/warehouse_dashboard.html
+
+      - name: Commit updated files back to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add pipeline/*.json pipeline/*.csv docs/warehouse_dashboard.html
+          git diff --cached --quiet || git commit -m "Auto-refresh warehouse dashboard"
+          git push
