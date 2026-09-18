@@ -1,0 +1,42 @@
+name: Daily Status Snapshot
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: '0 17 * * *'   # once a day, ~5am NZT
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+
+      - name: Write credentials.env from secrets
+        working-directory: pipeline
+        run: |
+          cat > credentials.env << EOF
+          CARTONCLOUD_CLIENT_ID=${{ secrets.CARTONCLOUD_CLIENT_ID }}
+          CARTONCLOUD_CLIENT_SECRET=${{ secrets.CARTONCLOUD_CLIENT_SECRET }}
+          CARTONCLOUD_TENANT_ID=${{ secrets.CARTONCLOUD_TENANT_ID }}
+          STARSHIPIT_API_KEY=${{ secrets.STARSHIPIT_API_KEY }}
+          STARSHIPIT_SUBSCRIPTION_KEY=${{ secrets.STARSHIPIT_SUBSCRIPTION_KEY }}
+          EOF
+
+      - name: Run daily status snapshot
+        working-directory: pipeline
+        run: python daily_status_snapshot.py
+
+      - name: Commit updated log back to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add pipeline/awaiting_stock_log.csv
+          git diff --cached --quiet || git commit -m "Daily status snapshot update"
+          git push
