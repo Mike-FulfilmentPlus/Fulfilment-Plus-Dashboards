@@ -107,65 +107,9 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Samsung Batteries CP": {
-        "num": 524,
-        "den": 524
-      },
       "Salt Shark": {
         "num": 188,
         "den": 188
-      },
-      "Made Group NZ": {
-        "num": 10420,
-        "den": 10420
-      },
-      "Baking Tech": {
-        "num": 1,
-        "den": 1
-      },
-      "Jock Freight - SECA": {
-        "num": 6,
-        "den": 6
-      },
-      "Vixxen": {
-        "num": 3281,
-        "den": 3281
-      },
-      "Aleger Studio": {
-        "num": 8,
-        "den": 8
-      },
-      "EcoPallets": {
-        "num": 351,
-        "den": 351
-      },
-      "Gym Equip": {
-        "num": 306,
-        "den": 306
-      },
-      "Simply Clean": {
-        "num": 6772,
-        "den": 6772
-      },
-      "Oceanbridge": {
-        "num": 7,
-        "den": 7
-      },
-      "Stryx": {
-        "num": 35,
-        "den": 35
-      },
-      "Flo & Frankie": {
-        "num": 400,
-        "den": 400
-      },
-      "Logwin - Sikla": {
-        "num": 5077,
-        "den": 5077
-      },
-      "May Eleven NZ": {
-        "num": 1000,
-        "den": 1000
       },
       "Oricom": {
         "num": 704,
@@ -175,13 +119,69 @@
         "num": 624,
         "den": 624
       },
+      "Oceanbridge": {
+        "num": 7,
+        "den": 7
+      },
+      "Simply Clean": {
+        "num": 6772,
+        "den": 6772
+      },
+      "Stryx": {
+        "num": 35,
+        "den": 35
+      },
+      "Logwin - Sikla": {
+        "num": 5077,
+        "den": 5077
+      },
+      "EcoPallets": {
+        "num": 351,
+        "den": 351
+      },
+      "Gym Equip": {
+        "num": 306,
+        "den": 306
+      },
+      "Flo & Frankie": {
+        "num": 400,
+        "den": 400
+      },
+      "Vixxen": {
+        "num": 3281,
+        "den": 3281
+      },
+      "Samsung Batteries CP": {
+        "num": 524,
+        "den": 524
+      },
+      "May Eleven NZ": {
+        "num": 1000,
+        "den": 1000
+      },
       "Purify Me": {
         "num": 113,
         "den": 113
       },
+      "Aleger Studio": {
+        "num": 8,
+        "den": 8
+      },
+      "Jock Freight - SECA": {
+        "num": 6,
+        "den": 6
+      },
       "Interior Images": {
         "num": 14,
         "den": 14
+      },
+      "Made Group NZ": {
+        "num": 10420,
+        "den": 10420
+      },
+      "Baking Tech": {
+        "num": 1,
+        "den": 1
       }
     },
     "Freight DIFOT": {
