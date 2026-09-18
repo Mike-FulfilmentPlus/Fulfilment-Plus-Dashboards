@@ -1,0 +1,61 @@
+name: Business & Customer Dashboard Refresh
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: '10 19 * * *'
+    - cron: '10 1 * * *'
+    - cron: '10 6 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Write credentials.env from secrets
+        working-directory: pipeline
+        run: |
+          cat > credentials.env << EOF
+          CARTONCLOUD_CLIENT_ID=${{ secrets.CARTONCLOUD_CLIENT_ID }}
+          CARTONCLOUD_CLIENT_SECRET=${{ secrets.CARTONCLOUD_CLIENT_SECRET }}
+          CARTONCLOUD_TENANT_ID=${{ secrets.CARTONCLOUD_TENANT_ID }}
+          STARSHIPIT_API_KEY=${{ secrets.STARSHIPIT_API_KEY }}
+          STARSHIPIT_SUBSCRIPTION_KEY=${{ secrets.STARSHIPIT_SUBSCRIPTION_KEY }}
+          EOF
+
+      - name: Run business/customer dashboard pipeline
+        working-directory: pipeline
+        run: |
+          python daily_status_snapshot.py
+          python mtd_kpis.py
+          python mtd_difot.py --fetch-only
+          python mtd_difot.py --fetch-only
+          python mtd_difot.py --compute-only
+          python generate_dashboards.py
+
+      - name: Publish dashboard HTML to docs/ for GitHub Pages
+        run: |
+          mkdir -p docs
+          cp pipeline/business_dashboard.html docs/business_dashboard.html
+          cp pipeline/customer_dashboard.html docs/customer_dashboard.html
+
+      - name: Commit updated files back to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add pipeline/*.json pipeline/*.csv docs/business_dashboard.html docs/customer_dashboard.html
+          git diff --cached --quiet || git commit -m "Auto-refresh business/customer dashboards"
+          git push
