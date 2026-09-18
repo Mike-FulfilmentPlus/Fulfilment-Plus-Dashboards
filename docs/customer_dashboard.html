@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Customer KPI Dashboard - Fulfilment Plus</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg: #f4f6f8;
+    --card: #ffffff;
+    --text: #1f2933;
+    --muted: #6b7280;
+    --border: #e2e8f0;
+    --accent: #1d4ed8;
+    --good: #16a34a;
+    --good-bg: #dcfce7;
+    --bad: #dc2626;
+    --bad-bg: #fee2e2;
+    --neutral-bg: #f1f5f9;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+  header {
+    background: #ffffff;
+    border-bottom: 1px solid var(--border);
+    padding: 20px 28px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  header h1 { margin: 0; font-size: 1.4rem; }
+  header .meta { color: var(--muted); font-size: 0.85rem; }
+  nav.tabs { display: flex; gap: 8px; }
+  nav.tabs a {
+    padding: 6px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    background: #fff;
+  }
+  nav.tabs a.active { color: var(--accent); border-color: var(--accent); font-weight: 600; }
+  main { padding: 24px 28px 60px; max-width: 1200px; margin: 0 auto; }
+  select {
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--text);
+  }
+  .controls { margin-bottom: 20px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+  }
+  .card h3 { margin: 0 0 4px; font-size: 0.95rem; }
+  .card .freq { color: var(--muted); font-size: 0.75rem; margin-bottom: 10px; }
+  .card .figure { font-size: 2rem; font-weight: 700; line-height: 1; }
+  .card .target { color: var(--muted); font-size: 0.8rem; margin-top: 4px; }
+  .badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 999px;
+    margin-top: 10px;
+  }
+  .badge.good { background: var(--good-bg); color: var(--good); }
+  .badge.bad { background: var(--bad-bg); color: var(--bad); }
+  .badge.neutral { background: var(--neutral-bg); color: var(--muted); }
+  .card.met { border-left: 4px solid var(--good); }
+  .card.unmet { border-left: 4px solid var(--bad); }
+  .card.nodata { border-left: 4px solid var(--border); opacity: 0.7; }
+  .card .note { font-size: 0.8rem; color: var(--bad); margin-top: 10px; }
+  .mtd {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border);
+  }
+  .mtd .mtd-label { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 2px; }
+  .mtd .mtd-figure { font-size: 1.2rem; font-weight: 700; }
+  .mtd .mtd-frac { font-size: 0.75rem; font-weight: 400; color: var(--muted); }
+  .mtd .mtd-na { font-size: 0.8rem; color: var(--muted); }
+  .ring-card { display: flex; flex-direction: column; align-items: center; text-align: center; }
+  .ring-card h3 { margin: 10px 0 2px; font-size: 0.95rem; }
+  .ring-card .ring-target-label { color: var(--muted); font-size: 0.78rem; margin-bottom: 2px; }
+  .ring-card .ring-last-label { color: var(--muted); font-size: 0.78rem; }
+  .ring-track { stroke: var(--border); stroke-width: 7; }
+  .ring-track-dashed { stroke-dasharray: 4 6; }
+  .ring-progress { stroke-width: 7; stroke-linecap: round; transition: stroke-dashoffset 0.4s ease; }
+  .ring-progress.ring-good { stroke: var(--good); }
+  .ring-progress.ring-bad { stroke: var(--bad); }
+  .ring-pct { font-size: 19px; font-weight: 700; fill: var(--text); }
+  .ring-frac { font-size: 11px; fill: var(--muted); }
+  .ring-empty { font-size: 11px; fill: var(--muted); }
+  .chart-section { margin-bottom: 32px; }
+  .chart-section h2 { font-size: 1.05rem; margin: 0 0 12px; }
+  .chart-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 16px;
+  }
+  .chart-card h3 { margin: 0 0 10px; font-size: 0.95rem; }
+  .chart-wrap { position: relative; height: 240px; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.85rem; background: var(--card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+  th, td { padding: 8px 12px; text-align: left; border-bottom: 1px solid var(--border); }
+  th { background: var(--neutral-bg); color: var(--muted); font-weight: 600; }
+  tr:last-child td { border-bottom: none; }
+  .pill { font-size: 0.7rem; font-weight: 600; padding: 2px 8px; border-radius: 999px; }
+  .pill.good { background: var(--good-bg); color: var(--good); }
+  .pill.bad { background: var(--bad-bg); color: var(--bad); }
+  .empty { color: var(--muted); font-size: 0.85rem; padding: 8px 0; }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Customer KPI Dashboard</h1>
+    <div class="meta">Fulfilment Plus &middot; generated 2026-09-18</div>
+  </div>
+  <nav class="tabs">
+    <a href="customer_dashboard.html" class="active">Customer view</a>
+    <a href="business_dashboard.html" class="">Business view</a>
+  </nav>
+</header>
+<main>
+
+  <div class="controls">
+    <label for="customer-select"><strong>Customer:</strong></label>
+    <select id="customer-select" onchange="render()"></select>
+  </div>
+  <div id="cards" class="grid"></div>
+  <div id="charts"></div>
+  <div class="chart-section">
+    <h2>Pick &amp; Pack Times</h2>
+    <div id="pickpack"></div>
+    <h3 style="margin:24px 0 10px;">Avg Time Per Order</h3>
+    <div id="pickpack-per-order"></div>
+  </div>
+  <div class="chart-section">
+    <h2>Action plan notes</h2>
+    <div id="notes"></div>
+  </div>
+
+</main>
+<script>
+const DATA = {"records": [{"month": "2026-05", "customer": "Aleger Studio", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-05", "customer": "Coromandel Mountains Company Limited", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 2, "den": 3, "actual": 0.6666666666666666, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-05", "customer": "Interior Images", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 2, "den": 3, "actual": 0.6666666666666666, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-05", "customer": "Jock Freight - SECA", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 3, "den": 4, "actual": 0.75, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-05", "customer": "Logwin - Sikla", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 0, "den": 2, "actual": 0.0, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-05", "customer": "Made Group NZ", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 0, "den": 10, "actual": 0.0, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-05", "customer": "May Eleven NZ", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-05", "customer": "Oricom", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 0, "den": 1, "actual": 0.0, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-05", "customer": "Salt Shark", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 5, "den": 5, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-05", "customer": "Stryx", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-05", "customer": "Vixxen", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 3, "den": 4, "actual": 0.75, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-05", "customer": "Aleger Studio", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 8, "den": 8, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-05", "customer": "Coromandel Mountains Company Limited", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 3, "den": 6, "actual": 0.5, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-05", "customer": "Interior Images", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 1, "den": 2, "actual": 0.5, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-05", "customer": "Jock Freight - SECA", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 5, "den": 12, "actual": 0.4166666666666667, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-05", "customer": "Logwin - Sikla", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 2, "den": 3, "actual": 0.6666666666666666, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-05", "customer": "May Eleven NZ", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-05", "customer": "Oricom", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 40, "den": 51, "actual": 0.7843137254901961, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-05", "customer": "Salt Shark", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 25, "den": 79, "actual": 0.31645569620253167, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-05", "customer": "Vixxen", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 235, "den": 298, "actual": 0.7885906040268457, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-06", "customer": "Oricom", "kpi": "Stock Accuracy", "carrier": null, "target": 0.995, "num": 9994, "den": 10000, "actual": 0.9994, "met": true, "notes": null}, {"month": "2026-03", "customer": "Coromandel Mountains Company Limited", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 0, "den": 1, "actual": 0.0, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-03", "customer": "Jock Freight - SECA", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 9, "den": 10, "actual": 0.9, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-03", "customer": "May Eleven NZ", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-03", "customer": "Oricom", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 3, "den": 3, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-03", "customer": "Salt Shark", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 13, "den": 18, "actual": 0.7222222222222222, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-04", "customer": "Aleger Studio", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 6, "den": 16, "actual": 0.375, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-04", "customer": "Coromandel Mountains Company Limited", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 4, "den": 5, "actual": 0.8, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-04", "customer": "Jock Freight - SECA", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 9, "den": 10, "actual": 0.9, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-04", "customer": "Oricom", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 22, "den": 28, "actual": 0.7857142857142857, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-04", "customer": "Salt Shark", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 37, "den": 45, "actual": 0.8222222222222222, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-05", "customer": "Coromandel Mountains Company Limited", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 6, "den": 7, "actual": 0.8571428571428571, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-05", "customer": "Interior Images", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-05", "customer": "Jock Freight - SECA", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 5, "den": 6, "actual": 0.8333333333333334, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-05", "customer": "May Eleven NZ", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-05", "customer": "Oricom", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 21, "den": 22, "actual": 0.9545454545454546, "met": true, "notes": null}, {"month": "2026-05", "customer": "Salt Shark", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 45, "den": 49, "actual": 0.9183673469387755, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-05", "customer": "Vixxen", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 78, "den": 82, "actual": 0.9512195121951219, "met": true, "notes": null}, {"month": "2026-03", "customer": "Coromandel Mountains Company Limited", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 3, "den": 3, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-03", "customer": "Jock Freight - SECA", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 2, "den": 6, "actual": 0.3333333333333333, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-03", "customer": "May Eleven NZ", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-03", "customer": "Oricom", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 4, "den": 5, "actual": 0.8, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-03", "customer": "Salt Shark", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-03", "customer": "Aleger Studio", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 0, "den": 11, "actual": 0.0, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-03", "customer": "Coromandel Mountains Company Limited", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 1, "den": 2, "actual": 0.5, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-03", "customer": "Jock Freight - SECA", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 11, "den": 25, "actual": 0.44, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-03", "customer": "May Eleven NZ", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 0, "den": 1, "actual": 0.0, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-03", "customer": "Oricom", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 9, "den": 10, "actual": 0.9, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-03", "customer": "Salt Shark", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 73, "den": 79, "actual": 0.9240506329113924, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-04", "customer": "Aleger Studio", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 2, "den": 2, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-04", "customer": "Coromandel Mountains Company Limited", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 2, "den": 3, "actual": 0.6666666666666666, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-04", "customer": "Jock Freight - SECA", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 0, "den": 1, "actual": 0.0, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-04", "customer": "May Eleven NZ", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-04", "customer": "Oricom", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 5, "den": 7, "actual": 0.7142857142857143, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-04", "customer": "Salt Shark", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-04", "customer": "Vixxen", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 2, "den": 2, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-04", "customer": "Aleger Studio", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 6, "den": 6, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-04", "customer": "Coromandel Mountains Company Limited", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 1, "den": 10, "actual": 0.1, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-04", "customer": "Interior Images", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 0, "den": 1, "actual": 0.0, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-04", "customer": "Jock Freight - SECA", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 7, "den": 15, "actual": 0.4666666666666667, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-04", "customer": "May Eleven NZ", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-04", "customer": "Oricom", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 15, "den": 19, "actual": 0.7894736842105263, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-04", "customer": "Salt Shark", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 45, "den": 59, "actual": 0.7627118644067796, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-04", "customer": "Vixxen", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 13, "den": 16, "actual": 0.8125, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-06", "customer": "Aleger Studio", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 1, "den": 2, "actual": 0.5, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-06", "customer": "Cotton Soft  - Christchurch", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 2, "den": 2, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-06", "customer": "Flo & Frankie", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 9, "den": 9, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-06", "customer": "Gym Equip", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 0, "den": 1, "actual": 0.0, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-06", "customer": "Interior Images", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 3, "den": 3, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-06", "customer": "Jock Freight - SECA", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-06", "customer": "Logwin - Sikla", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 4, "den": 4, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-06", "customer": "Made Group NZ", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 11, "den": 11, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-06", "customer": "Oricom", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 5, "den": 6, "actual": 0.8333333333333334, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-06", "customer": "Purify Me", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 2, "den": 2, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-06", "customer": "Salt Shark", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-06", "customer": "Stryx", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-06", "customer": "Vixxen", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 2, "den": 2, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-06", "customer": "Aleger Studio", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 6, "den": 6, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-06", "customer": "Coromandel Mountains Company Limited", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 65, "den": 85, "actual": 0.7647058823529411, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-06", "customer": "Flo & Frankie", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 4, "den": 4, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-06", "customer": "Gym Equip", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 2, "den": 9, "actual": 0.2222222222222222, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-06", "customer": "Interior Images", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 2, "den": 6, "actual": 0.3333333333333333, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-06", "customer": "Jock Freight - SECA", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 5, "den": 15, "actual": 0.3333333333333333, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-06", "customer": "Logwin - Sikla", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 1, "den": 8, "actual": 0.125, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-06", "customer": "Made Group NZ", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 2, "den": 2, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-06", "customer": "Oricom", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 130, "den": 152, "actual": 0.8552631578947368, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-06", "customer": "Purify Me", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 24, "den": 30, "actual": 0.8, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-06", "customer": "Salt Shark", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 33, "den": 53, "actual": 0.6226415094339622, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-06", "customer": "Stryx", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 22, "den": 22, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-06", "customer": "Vixxen", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 324, "den": 331, "actual": 0.9788519637462235, "met": true, "notes": null}, {"month": "2026-07", "customer": "Aleger Studio", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 1, "den": 2, "actual": 0.5, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-07", "customer": "Baking Tech", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 0, "den": 1, "actual": 0.0, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-07", "customer": "Coromandel Mountains Company Limited", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 3, "den": 4, "actual": 0.75, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-07", "customer": "EcoPallets", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 0, "den": 1, "actual": 0.0, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-07", "customer": "Flo & Frankie", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 14, "den": 14, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Geodis", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 1, "den": 2, "actual": 0.5, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-07", "customer": "Jock Freight - SECA", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Logwin - Sikla", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 5, "den": 5, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Made Group NZ", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 15, "den": 15, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Madigan Freight Services", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 0, "den": 1, "actual": 0.0, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-07", "customer": "Method Global", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 0, "den": 1, "actual": 0.0, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-07", "customer": "Oricom", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 4, "den": 5, "actual": 0.8, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-07", "customer": "Purify Me", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Salt Shark", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 2, "den": 2, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Simply Clean", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 4, "den": 5, "actual": 0.8, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-07", "customer": "Vixxen", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 2, "den": 2, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Aleger Studio", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 8, "den": 9, "actual": 0.8888888888888888, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-07", "customer": "Baking Tech", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Coromandel Mountains Company Limited", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 64, "den": 67, "actual": 0.9552238805970149, "met": true, "notes": null}, {"month": "2026-07", "customer": "Flo & Frankie", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 15, "den": 15, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Geodis", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 0, "den": 1, "actual": 0.0, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-07", "customer": "Gym Equip", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 2, "den": 3, "actual": 0.6666666666666666, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-07", "customer": "Interior Images", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 2, "den": 6, "actual": 0.3333333333333333, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-07", "customer": "Jock Freight - SECA", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 12, "den": 12, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Logwin - Sikla", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 12, "den": 15, "actual": 0.8, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-07", "customer": "Made Group NZ", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 14, "den": 14, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Oricom", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 174, "den": 181, "actual": 0.9613259668508287, "met": true, "notes": null}, {"month": "2026-07", "customer": "Purify Me", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 91, "den": 92, "actual": 0.9891304347826086, "met": true, "notes": null}, {"month": "2026-07", "customer": "Salt Shark", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 16, "den": 16, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Stryx", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 14, "den": 18, "actual": 0.7777777777777778, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-07", "customer": "Vixxen", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 396, "den": 398, "actual": 0.9949748743718593, "met": true, "notes": null}, {"month": "2026-07", "customer": "Aleger Studio", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Baking Tech", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Coromandel Mountains Company Limited", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "EcoPallets", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Flo & Frankie", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Geodis", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Gym Equip", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Interior Images", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Jock Freight - SECA", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Logwin - Sikla", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Made Group NZ", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Madigan Freight Services", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Method Global", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Oricom", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Purify Me", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Salt Shark", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Simply Clean", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Stryx", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Vixxen", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-06", "customer": "Aleger Studio", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 4, "den": 4, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-06", "customer": "Coromandel Mountains Company Limited", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 26, "den": 26, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-06", "customer": "Interior Images", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 0, "den": 1, "actual": 0.0, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-06", "customer": "Jock Freight - SECA", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 2, "den": 2, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-06", "customer": "Logwin - Sikla", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-06", "customer": "Made Group NZ", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 2, "den": 2, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-06", "customer": "Oricom", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 30, "den": 36, "actual": 0.8333333333333334, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-06", "customer": "Purify Me", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-06", "customer": "Salt Shark", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 15, "den": 16, "actual": 0.9375, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-06", "customer": "Stryx", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 8, "den": 9, "actual": 0.8888888888888888, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-06", "customer": "Vixxen", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 80, "den": 87, "actual": 0.9195402298850575, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-07", "customer": "Aleger Studio", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 3, "den": 3, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Coromandel Mountains Company Limited", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 40, "den": 47, "actual": 0.851063829787234, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-07", "customer": "Flo & Frankie", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 5, "den": 8, "actual": 0.625, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-07", "customer": "Gym Equip", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 3, "den": 3, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Interior Images", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 2, "den": 2, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Jock Freight - SECA", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 11, "den": 12, "actual": 0.9166666666666666, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-07", "customer": "Logwin - Sikla", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 5, "den": 6, "actual": 0.8333333333333334, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-07", "customer": "Made Group NZ", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 14, "den": 14, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Oricom", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 113, "den": 117, "actual": 0.9658119658119658, "met": true, "notes": null}, {"month": "2026-07", "customer": "Purify Me", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 49, "den": 58, "actual": 0.8448275862068966, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-07", "customer": "Salt Shark", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 10, "den": 10, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Stryx", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 13, "den": 13, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-07", "customer": "Vixxen", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 180, "den": 208, "actual": 0.8653846153846154, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-08", "customer": "Coromandel Mountains Company Limited", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 37, "den": 41, "actual": 0.9024390243902439, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-08", "customer": "EcoPallets", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 6, "den": 6, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Flo & Frankie", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 4, "den": 6, "actual": 0.6666666666666666, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-08", "customer": "Geodis", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Gym Equip", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 2, "den": 2, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Interior Images", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 2, "den": 2, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Jock Freight - SECA", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 4, "den": 6, "actual": 0.6666666666666666, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-08", "customer": "Logwin - Sikla", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 13, "den": 13, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Made Group NZ", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Madigan Freight Services", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Method Global", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Oricom", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 79, "den": 85, "actual": 0.9294117647058824, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-08", "customer": "Purify Me", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 44, "den": 50, "actual": 0.88, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-08", "customer": "Salt Shark", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 24, "den": 25, "actual": 0.96, "met": true, "notes": null}, {"month": "2026-08", "customer": "Simply Clean", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 67, "den": 71, "actual": 0.9436619718309859, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-08", "customer": "Stryx", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 10, "den": 10, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Vixxen", "kpi": "Freight DIFOT", "carrier": null, "target": 0.95, "num": 209, "den": 230, "actual": 0.908695652173913, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-08", "customer": "Aleger Studio", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 2, "den": 2, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Coromandel Mountains Company Limited", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 2, "den": 2, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "EcoPallets", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Flo & Frankie", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 17, "den": 17, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Gym Equip", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Logwin - Sikla", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 2, "den": 3, "actual": 0.6666666666666666, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-08", "customer": "Made Group NZ", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 10, "den": 10, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "May Eleven NZ", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Oceanbridge", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Oricom", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 5, "den": 5, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Salt Shark", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Simply Clean", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 3, "den": 3, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Stryx", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Tesx", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Vixxen", "kpi": "Dock to Stock", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Aleger Studio", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 3, "den": 3, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Coromandel Mountains Company Limited", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 66, "den": 66, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "EcoPallets", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 8, "den": 10, "actual": 0.8, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-08", "customer": "Flo & Frankie", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 17, "den": 17, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Gym Equip", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 10, "den": 10, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Interior Images", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 4, "den": 7, "actual": 0.5714285714285714, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-08", "customer": "Jock Freight - SECA", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 17, "den": 18, "actual": 0.9444444444444444, "met": false, "notes": "Below target - investigate root cause and add to next month's action plan"}, {"month": "2026-08", "customer": "Logwin - Sikla", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 17, "den": 17, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Made Group NZ", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Madigan Freight Services", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "May Eleven NZ", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Method Global", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Oricom", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 114, "den": 118, "actual": 0.9661016949152542, "met": true, "notes": null}, {"month": "2026-08", "customer": "Purify Me", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 77, "den": 78, "actual": 0.9871794871794872, "met": true, "notes": null}, {"month": "2026-08", "customer": "Salt Shark", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 68, "den": 68, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Samsung Batteries CP", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Simply Clean", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 154, "den": 161, "actual": 0.9565217391304348, "met": true, "notes": null}, {"month": "2026-08", "customer": "Stryx", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 35, "den": 35, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Vixxen", "kpi": "Order Cut Off", "carrier": null, "target": 0.95, "num": 417, "den": 418, "actual": 0.9976076555023924, "met": true, "notes": null}, {"month": "2026-08", "customer": "Aleger Studio", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 8, "den": 8, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Coromandel Mountains Company Limited", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 380, "den": 380, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "EcoPallets", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 192, "den": 192, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Flo & Frankie", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 724, "den": 724, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Geodis", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 330050, "den": 330050, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Gym Equip", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Interior Images", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 158, "den": 158, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Jock Freight - SECA", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 86, "den": 86, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Logwin - Sikla", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 5971, "den": 5971, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Made Group NZ", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 82361, "den": 82361, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Madigan Freight Services", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 120, "den": 120, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "May Eleven NZ", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 500, "den": 500, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Method Global", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 4, "den": 4, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Oceanbridge", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Oricom", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 368, "den": 368, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Purify Me", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 170, "den": 170, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Salt Shark", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 781, "den": 781, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Samsung Batteries CP", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Simply Clean", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 3398, "den": 3399, "actual": 0.9997057958223007, "met": true, "notes": null}, {"month": "2026-08", "customer": "Stryx", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 35, "den": 35, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Tesx", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 1, "den": 1, "actual": 1.0, "met": true, "notes": null}, {"month": "2026-08", "customer": "Vixxen", "kpi": "Order Accuracy by Unit", "carrier": null, "target": 0.995, "num": 5710, "den": 5721, "actual": 0.998077259220416, "met": true, "notes": null}], "kpi_schedule": [{"kpi": "Dock to Stock", "target": 0.95, "frequency": "Monthly", "measure": "Shipments processed in 48hrs", "notes": "Measured Monthly. Max 3 shipments per day. All docs must be available before arrival."}, {"kpi": "Stock Accuracy", "target": 0.995, "frequency": "Annual", "measure": "Stock Accuracy as a percentage of throughput", "notes": "Measured Annually based on an annual stock take. Warehouse related issues only."}, {"kpi": "Cycle Count", "target": 0.995, "frequency": "Monthly", "measure": "Monthly count", "notes": "Measured Monthly. Counts are performed through the month."}, {"kpi": "Order Cut Off", "target": 0.95, "frequency": "Monthly", "measure": "Orders in by 2pm will be ready for despatch same day", "notes": "Measured Monthly based on forecast and a steady order flow."}, {"kpi": "Order Accuracy by Unit", "target": 0.995, "frequency": "Monthly", "measure": "Issues vs units despatched", "notes": "Measured Monthly. Issues need to be lodged and investigated."}, {"kpi": "Freight DIFOT", "target": 0.95, "frequency": "Monthly", "measure": "Consignments delivered on time", "notes": "Measured Monthly based on carrier milestones. Separated by carrier."}], "customers": ["Aleger Studio", "Baking Tech", "Coromandel Mountains Company Limited", "Cotton Soft  - Christchurch", "EcoPallets", "Flo & Frankie", "Geodis", "Gym Equip", "Interior Images", "Jock Freight - SECA", "Logwin - Sikla", "Made Group NZ", "Madigan Freight Services", "May Eleven NZ", "Method Global", "MR Shoes Limited", "Oceanbridge", "Oricom", "Purify Me", "Purus / Purple Universe", "Salt Shark", "Samsung Batteries CP", "Simply Clean", "Stryx", "Tesx", "Vixxen"], "mtd": {"month": "2026-09", "as_of": "2026-09-18", "kpis": {"Dock to Stock": {"Jock Freight - SECA": {"num": 1, "den": 1}, "Aleger Studio": {"num": 3, "den": 3}, "May Eleven NZ": {"num": 3, "den": 3}, "Flo & Frankie": {"num": 9, "den": 9}, "Baking Tech": {"num": 1, "den": 1}, "Oricom": {"num": 3, "den": 4}, "Coromandel Mountains Company Limited": {"num": 1, "den": 1}, "Salt Shark": {"num": 2, "den": 2}, "Vixxen": {"num": 1, "den": 1}}, "Order Cut Off": {"Simply Clean": {"num": 111, "den": 112}, "Gym Equip": {"num": 13, "den": 14}, "Vixxen": {"num": 212, "den": 212}, "Salt Shark": {"num": 33, "den": 33}, "Purify Me": {"num": 61, "den": 61}, "Oricom": {"num": 86, "den": 86}, "Stryx": {"num": 21, "den": 24}, "Coromandel Mountains Company Limited": {"num": 49, "den": 49}, "EcoPallets": {"num": 8, "den": 9}, "Aleger Studio": {"num": 6, "den": 6}, "Flo & Frankie": {"num": 8, "den": 9}, "Jock Freight - SECA": {"num": 2, "den": 3}, "Logwin - Sikla": {"num": 6, "den": 6}, "Made Group NZ": {"num": 3, "den": 3}, "Samsung Batteries CP": {"num": 1, "den": 1}, "Oceanbridge": {"num": 1, "den": 1}}, "Order Accuracy by Unit": {"EcoPallets": {"num": 351, "den": 351}, "Simply Clean": {"num": 6772, "den": 6772}, "Salt Shark": {"num": 188, "den": 188}, "Oricom": {"num": 704, "den": 704}, "Logwin - Sikla": {"num": 5077, "den": 5077}, "Made Group NZ": {"num": 10420, "den": 10420}, "Purify Me": {"num": 113, "den": 113}, "Interior Images": {"num": 14, "den": 14}, "Vixxen": {"num": 3281, "den": 3281}, "Coromandel Mountains Company Limited": {"num": 624, "den": 624}, "Baking Tech": {"num": 1, "den": 1}, "Samsung Batteries CP": {"num": 524, "den": 524}, "May Eleven NZ": {"num": 1000, "den": 1000}, "Stryx": {"num": 35, "den": 35}, "Oceanbridge": {"num": 7, "den": 7}, "Aleger Studio": {"num": 8, "den": 8}, "Flo & Frankie": {"num": 400, "den": 400}, "Jock Freight - SECA": {"num": 6, "den": 6}, "Gym Equip": {"num": 306, "den": 306}}, "Freight DIFOT": {"Simply Clean": {"num": 96, "den": 97}, "Vixxen": {"num": 57, "den": 60}, "Salt Shark": {"num": 26, "den": 28}, "Purify Me": {"num": 46, "den": 51}, "Oricom": {"num": 47, "den": 57}, "Stryx": {"num": 9, "den": 10}, "Coromandel Mountains Company Limited": {"num": 33, "den": 34}, "Aleger Studio": {"num": 6, "den": 6}, "Jock Freight - SECA": {"num": 1, "den": 1}, "Made Group NZ": {"num": 3, "den": 3}}}}, "difot_carriers": {"2026-03": {"_total": {"NZ Couriers": {"num": 20, "den": 25, "days_total": 57, "days_count": 22}, "Post Haste": {"num": 6, "den": 8, "days_total": 35, "days_count": 8}}, "May Eleven NZ": {"NZ Couriers": {"num": 1, "den": 1, "days_total": 4, "days_count": 1}}, "Salt Shark": {"Post Haste": {"num": 4, "den": 5, "days_total": 20, "days_count": 5}, "NZ Couriers": {"num": 9, "den": 13, "days_total": 32, "days_count": 13}}, "Jock Freight - SECA": {"NZ Couriers": {"num": 7, "den": 8, "days_total": 21, "days_count": 8}, "Post Haste": {"num": 2, "den": 2, "days_total": 7, "days_count": 2}}, "Coromandel Mountains Company Limited": {"Post Haste": {"num": 0, "den": 1, "days_total": 8, "days_count": 1}}, "Oricom": {"NZ Couriers": {"num": 3, "den": 3, "days_total": 0, "days_count": 0}}}, "2026-04": {"_total": {"NZ Couriers": {"num": 66, "den": 89, "days_total": 175, "days_count": 81}, "Post Haste": {"num": 12, "den": 15, "days_total": 55, "days_count": 14}}, "Oricom": {"NZ Couriers": {"num": 18, "den": 24, "days_total": 38, "days_count": 16}, "Post Haste": {"num": 4, "den": 4, "days_total": 7, "days_count": 3}}, "Salt Shark": {"NZ Couriers": {"num": 30, "den": 36, "days_total": 65, "days_count": 36}, "Post Haste": {"num": 7, "den": 9, "days_total": 40, "days_count": 9}}, "Coromandel Mountains Company Limited": {"NZ Couriers": {"num": 4, "den": 4, "days_total": 4, "days_count": 4}, "Post Haste": {"num": 0, "den": 1, "days_total": 7, "days_count": 1}}, "Aleger Studio": {"NZ Couriers": {"num": 5, "den": 15, "days_total": 53, "days_count": 15}, "Post Haste": {"num": 1, "den": 1, "days_total": 1, "days_count": 1}}, "Jock Freight - SECA": {"NZ Couriers": {"num": 9, "den": 10, "days_total": 15, "days_count": 10}}}, "2026-05": {"_total": {"FedEx": {"num": 50, "den": 53, "days_total": 138, "days_count": 53}, "NZ Couriers": {"num": 75, "den": 83, "days_total": 131, "days_count": 78}, "Post Haste": {"num": 32, "den": 32, "days_total": 96, "days_count": 32}}, "May Eleven NZ": {"FedEx": {"num": 1, "den": 1, "days_total": 4, "days_count": 1}}, "Salt Shark": {"FedEx": {"num": 11, "den": 12, "days_total": 36, "days_count": 12}, "NZ Couriers": {"num": 25, "den": 28, "days_total": 52, "days_count": 28}, "Post Haste": {"num": 9, "den": 9, "days_total": 28, "days_count": 9}}, "Coromandel Mountains Company Limited": {"FedEx": {"num": 2, "den": 2, "days_total": 3, "days_count": 2}, "NZ Couriers": {"num": 4, "den": 5, "days_total": 8, "days_count": 5}}, "Vixxen": {"FedEx": {"num": 32, "den": 34, "days_total": 87, "days_count": 34}, "NZ Couriers": {"num": 31, "den": 33, "days_total": 51, "days_count": 33}, "Post Haste": {"num": 15, "den": 15, "days_total": 39, "days_count": 15}}, "Oricom": {"FedEx": {"num": 3, "den": 3, "days_total": 6, "days_count": 3}, "NZ Couriers": {"num": 13, "den": 14, "days_total": 14, "days_count": 9}, "Post Haste": {"num": 5, "den": 5, "days_total": 19, "days_count": 5}}, "Interior Images": {"NZ Couriers": {"num": 1, "den": 1, "days_total": 1, "days_count": 1}}, "Jock Freight - SECA": {"NZ Couriers": {"num": 1, "den": 2, "days_total": 5, "days_count": 2}, "Post Haste": {"num": 3, "den": 3, "days_total": 10, "days_count": 3}, "FedEx": {"num": 1, "den": 1, "days_total": 2, "days_count": 1}}}, "2026-06": {"_total": {"NZ Couriers": {"num": 101, "den": 111, "days_total": 170, "days_count": 110}, "Post Haste": {"num": 41, "den": 44, "days_total": 151, "days_count": 43}, "FedEx": {"num": 25, "den": 28, "days_total": 90, "days_count": 28}, "Cargo Plus": {"num": 2, "den": 2, "days_total": 0, "days_count": 0}}, "Vixxen": {"NZ Couriers": {"num": 48, "den": 53, "days_total": 76, "days_count": 53}, "Post Haste": {"num": 17, "den": 19, "days_total": 72, "days_count": 19}, "FedEx": {"num": 15, "den": 15, "days_total": 32, "days_count": 15}}, "Oricom": {"NZ Couriers": {"num": 21, "den": 23, "days_total": 40, "days_count": 22}, "Post Haste": {"num": 6, "den": 7, "days_total": 21, "days_count": 6}, "FedEx": {"num": 3, "den": 6, "days_total": 43, "days_count": 6}}, "Coromandel Mountains Company Limited": {"Post Haste": {"num": 12, "den": 12, "days_total": 42, "days_count": 12}, "NZ Couriers": {"num": 13, "den": 13, "days_total": 20, "days_count": 13}, "FedEx": {"num": 1, "den": 1, "days_total": 1, "days_count": 1}}, "Salt Shark": {"Post Haste": {"num": 3, "den": 3, "days_total": 9, "days_count": 3}, "NZ Couriers": {"num": 9, "den": 10, "days_total": 14, "days_count": 10}, "FedEx": {"num": 3, "den": 3, "days_total": 10, "days_count": 3}}, "Jock Freight - SECA": {"NZ Couriers": {"num": 1, "den": 1, "days_total": 2, "days_count": 1}, "Post Haste": {"num": 1, "den": 1, "days_total": 2, "days_count": 1}}, "Stryx": {"Post Haste": {"num": 1, "den": 1, "days_total": 2, "days_count": 1}, "NZ Couriers": {"num": 5, "den": 6, "days_total": 12, "days_count": 6}, "FedEx": {"num": 2, "den": 2, "days_total": 2, "days_count": 2}}, "Interior Images": {"NZ Couriers": {"num": 0, "den": 1, "days_total": 2, "days_count": 1}}, "Logwin - Sikla": {"NZ Couriers": {"num": 1, "den": 1, "days_total": 1, "days_count": 1}}, "Aleger Studio": {"NZ Couriers": {"num": 2, "den": 2, "days_total": 2, "days_count": 2}, "FedEx": {"num": 1, "den": 1, "days_total": 2, "days_count": 1}, "Post Haste": {"num": 1, "den": 1, "days_total": 3, "days_count": 1}}, "Purify Me": {"NZ Couriers": {"num": 1, "den": 1, "days_total": 1, "days_count": 1}}, "Made Group NZ": {"Cargo Plus": {"num": 2, "den": 2, "days_total": 0, "days_count": 0}}}, "2026-07": {"_total": {"Post Haste": {"num": 103, "den": 122, "days_total": 466, "days_count": 121}, "NZ Couriers": {"num": 245, "den": 266, "days_total": 431, "days_count": 259}, "FedEx": {"num": 86, "den": 99, "days_total": 282, "days_count": 99}, "Cargo Plus": {"num": 14, "den": 14, "days_total": 0, "days_count": 0}}, "Stryx": {"Post Haste": {"num": 4, "den": 4, "days_total": 11, "days_count": 4}, "NZ Couriers": {"num": 7, "den": 7, "days_total": 9, "days_count": 7}, "FedEx": {"num": 2, "den": 2, "days_total": 3, "days_count": 2}}, "Coromandel Mountains Company Limited": {"NZ Couriers": {"num": 18, "den": 19, "days_total": 27, "days_count": 19}, "FedEx": {"num": 11, "den": 14, "days_total": 55, "days_count": 14}, "Post Haste": {"num": 11, "den": 14, "days_total": 60, "days_count": 14}}, "Vixxen": {"FedEx": {"num": 26, "den": 31, "days_total": 86, "days_count": 31}, "NZ Couriers": {"num": 109, "den": 121, "days_total": 210, "days_count": 121}, "Post Haste": {"num": 45, "den": 56, "days_total": 223, "days_count": 56}}, "Oricom": {"NZ Couriers": {"num": 61, "den": 62, "days_total": 96, "days_count": 55}, "FedEx": {"num": 27, "den": 30, "days_total": 81, "days_count": 30}, "Post Haste": {"num": 25, "den": 25, "days_total": 71, "days_count": 24}}, "Interior Images": {"NZ Couriers": {"num": 2, "den": 2, "days_total": 4, "days_count": 2}}, "Purify Me": {"NZ Couriers": {"num": 21, "den": 24, "days_total": 36, "days_count": 24}, "Post Haste": {"num": 14, "den": 18, "days_total": 79, "days_count": 18}, "FedEx": {"num": 14, "den": 16, "days_total": 46, "days_count": 16}}, "Aleger Studio": {"NZ Couriers": {"num": 3, "den": 3, "days_total": 6, "days_count": 3}}, "Jock Freight - SECA": {"NZ Couriers": {"num": 8, "den": 8, "days_total": 9, "days_count": 8}, "Post Haste": {"num": 2, "den": 3, "days_total": 18, "days_count": 3}, "FedEx": {"num": 1, "den": 1, "days_total": 2, "days_count": 1}}, "Flo & Frankie": {"NZ Couriers": {"num": 5, "den": 8, "days_total": 16, "days_count": 8}}, "Salt Shark": {"NZ Couriers": {"num": 6, "den": 6, "days_total": 9, "days_count": 6}, "FedEx": {"num": 3, "den": 3, "days_total": 7, "days_count": 3}, "Post Haste": {"num": 1, "den": 1, "days_total": 2, "days_count": 1}}, "Gym Equip": {"FedEx": {"num": 1, "den": 1, "days_total": 1, "days_count": 1}, "NZ Couriers": {"num": 1, "den": 1, "days_total": 3, "days_count": 1}, "Post Haste": {"num": 1, "den": 1, "days_total": 2, "days_count": 1}}, "Logwin - Sikla": {"NZ Couriers": {"num": 4, "den": 5, "days_total": 6, "days_count": 5}, "FedEx": {"num": 1, "den": 1, "days_total": 1, "days_count": 1}}, "Made Group NZ": {"Cargo Plus": {"num": 14, "den": 14, "days_total": 0, "days_count": 0}}}, "2026-08": {"_total": {"Post Haste": {"num": 110, "den": 125, "days_total": 439, "days_count": 123}, "NZ Couriers": {"num": 320, "den": 339, "days_total": 472, "days_count": 333}, "FedEx": {"num": 74, "den": 86, "days_total": 228, "days_count": 86}, "Cargo Plus": {"num": 1, "den": 1, "days_total": 0, "days_count": 0}}, "Vixxen": {"Post Haste": {"num": 47, "den": 53, "days_total": 187, "days_count": 53}, "NZ Couriers": {"num": 125, "den": 135, "days_total": 211, "days_count": 135}, "FedEx": {"num": 37, "den": 42, "days_total": 97, "days_count": 42}}, "Oricom": {"NZ Couriers": {"num": 54, "den": 54, "days_total": 57, "days_count": 48}, "Post Haste": {"num": 20, "den": 26, "days_total": 114, "days_count": 24}, "FedEx": {"num": 5, "den": 5, "days_total": 13, "days_count": 5}}, "Salt Shark": {"NZ Couriers": {"num": 16, "den": 16, "days_total": 22, "days_count": 16}, "FedEx": {"num": 3, "den": 4, "days_total": 14, "days_count": 4}, "Post Haste": {"num": 5, "den": 5, "days_total": 17, "days_count": 5}}, "Interior Images": {"NZ Couriers": {"num": 2, "den": 2, "days_total": 4, "days_count": 2}}, "Stryx": {"NZ Couriers": {"num": 9, "den": 9, "days_total": 13, "days_count": 9}, "FedEx": {"num": 1, "den": 1, "days_total": 0, "days_count": 1}}, "Simply Clean": {"NZ Couriers": {"num": 38, "den": 42, "days_total": 49, "days_count": 42}, "Post Haste": {"num": 21, "den": 21, "days_total": 50, "days_count": 21}, "FedEx": {"num": 8, "den": 8, "days_total": 16, "days_count": 8}}, "Coromandel Mountains Company Limited": {"NZ Couriers": {"num": 26, "den": 29, "days_total": 43, "days_count": 29}, "Post Haste": {"num": 8, "den": 9, "days_total": 29, "days_count": 9}, "FedEx": {"num": 3, "den": 3, "days_total": 5, "days_count": 3}}, "Logwin - Sikla": {"NZ Couriers": {"num": 6, "den": 6, "days_total": 10, "days_count": 6}, "Post Haste": {"num": 3, "den": 3, "days_total": 10, "days_count": 3}, "FedEx": {"num": 4, "den": 4, "days_total": 6, "days_count": 4}}, "Flo & Frankie": {"FedEx": {"num": 1, "den": 3, "days_total": 19, "days_count": 3}, "NZ Couriers": {"num": 2, "den": 2, "days_total": 2, "days_count": 2}, "Post Haste": {"num": 1, "den": 1, "days_total": 3, "days_count": 1}}, "Purify Me": {"FedEx": {"num": 8, "den": 12, "days_total": 50, "days_count": 12}, "NZ Couriers": {"num": 31, "den": 31, "days_total": 41, "days_count": 31}, "Post Haste": {"num": 5, "den": 7, "days_total": 29, "days_count": 7}}, "Method Global": {"FedEx": {"num": 1, "den": 1, "days_total": 3, "days_count": 1}}, "Jock Freight - SECA": {"NZ Couriers": {"num": 3, "den": 5, "days_total": 11, "days_count": 5}, "FedEx": {"num": 1, "den": 1, "days_total": 1, "days_count": 1}}, "EcoPallets": {"NZ Couriers": {"num": 6, "den": 6, "days_total": 7, "days_count": 6}}, "Madigan Freight Services": {"NZ Couriers": {"num": 1, "den": 1, "days_total": 1, "days_count": 1}}, "Gym Equip": {"NZ Couriers": {"num": 1, "den": 1, "days_total": 1, "days_count": 1}, "FedEx": {"num": 1, "den": 1, "days_total": 1, "days_count": 1}}, "Geodis": {"FedEx": {"num": 1, "den": 1, "days_total": 3, "days_count": 1}}, "Made Group NZ": {"Cargo Plus": {"num": 1, "den": 1, "days_total": 0, "days_count": 0}}}}, "pick_stats": null};
+
+const monthLabel = (m) => {
+  const [y, mo] = m.split('-');
+  return new Date(y, mo - 1, 1).toLocaleString('en-NZ', { month: 'short', year: 'numeric' });
+};
+
+const asOfLabel = (iso) => {
+  const d = new Date(iso);
+  return d.toLocaleString('en-NZ', { day: 'numeric', month: 'short', year: 'numeric' });
+};
+
+// ── Circular KPI ring (this month's headline figure) ────────────────────
+// pct: 0-100 or null (no data yet). frac: "num/den" string. met: whether
+// pct clears the KPI's target - drives the ring colour (green/red).
+function ringSvg(pct, frac, met) {
+  const r = 49, c = 2 * Math.PI * r;
+  if (pct === null) {
+    return `<svg width="112" height="112" viewBox="0 0 112 112">
+      <circle cx="56" cy="56" r="${r}" fill="none" class="ring-track ring-track-dashed"></circle>
+      <text x="56" y="58" text-anchor="middle" class="ring-empty">No orders yet</text>
+    </svg>`;
+  }
+  const filled = Math.max(0, Math.min(1, pct / 100));
+  const offset = (c * (1 - filled)).toFixed(1);
+  const colorClass = met ? 'ring-good' : 'ring-bad';
+  return `<svg width="112" height="112" viewBox="0 0 112 112">
+    <circle cx="56" cy="56" r="${r}" fill="none" class="ring-track"></circle>
+    <circle cx="56" cy="56" r="${r}" fill="none" class="ring-progress ${colorClass}" stroke-dasharray="${c.toFixed(1)}" stroke-dashoffset="${offset}" transform="rotate(-90 56 56)"></circle>
+    <text x="56" y="54" text-anchor="middle" class="ring-pct">${pct.toFixed(1)}%</text>
+    <text x="56" y="70" text-anchor="middle" class="ring-frac">${frac}</text>
+  </svg>`;
+}
+
+// ── Pick/pack time helpers ──────────────────────────────────────────────
+// The time-tracking app's customerName doesn't always exactly match the
+// KPI dashboard's customer names (e.g. "Jock Freight" vs "Jock Freight -
+// SECA"). Known spelling mismatches that fuzzy matching can't catch go here.
+const PICK_NAME_OVERRIDES = { "Coromandal Mountain": "Coromandel Mountains Company Limited" };
+
+function normalizeName(s) {
+  return (s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+}
+
+function findPickStats(customerName) {
+  if (!DATA.pick_stats) return null;
+  const norm = normalizeName(customerName);
+  return DATA.pick_stats.find(p => {
+    const aliased = PICK_NAME_OVERRIDES[p.customerName] || p.customerName;
+    const pn = normalizeName(aliased);
+    return pn === norm || norm.includes(pn) || pn.includes(norm);
+  }) || null;
+}
+
+function fmtSeconds(totalSeconds) {
+  if (totalSeconds === null || totalSeconds === undefined) return '–';
+  const s = Math.round(totalSeconds);
+  const h = Math.floor(s / 3600);
+  const m = Math.floor((s % 3600) / 60);
+  const sec = s % 60;
+  const pad = (n) => String(n).padStart(2, '0');
+  if (h > 0) return `${h}:${pad(m)}:${pad(sec)}`;
+  if (m > 0) return `${m}:${pad(sec)}`;
+  return `${sec}s`;
+}
+
+function renderPickPack(customer) {
+  const el = document.getElementById('pickpack');
+  if (!el) return;
+  el.innerHTML = '';
+  const stats = findPickStats(customer);
+  if (!stats) {
+    el.innerHTML = '<div class="empty">No pick/pack time data for this customer yet.</div>';
+    return;
+  }
+  const grid = document.createElement('div');
+  grid.className = 'grid';
+  [
+    { label: 'Previous month', data: stats.previousMonth },
+    { label: 'This month to date', data: stats.currentMonthToDate },
+  ].forEach(({ label, data }) => {
+    ['picking', 'packing'].forEach(stage => {
+      const s = data[stage];
+      const stageLabel = stage === 'picking' ? 'Picking' : 'Packing';
+      const card = document.createElement('div');
+      card.className = 'card' + (!s ? ' nodata' : '');
+      if (!s) {
+        card.innerHTML = `<h3>${stageLabel}</h3>
+          <div class="freq">${label}</div>
+          <div class="empty">No orders recorded</div>`;
+      } else {
+        card.innerHTML = `<h3>${stageLabel}</h3>
+          <div class="freq">${label}</div>
+          <div class="figure">${fmtSeconds(s.avgSeconds)}</div>
+          <div class="target">avg per time entry &middot; ${s.count} time entr${s.count === 1 ? 'y' : 'ies'} &middot; ${fmtSeconds(s.totalSeconds)} total</div>`;
+      }
+      grid.appendChild(card);
+    });
+  });
+  el.appendChild(grid);
+}
+
+function mtdHtml(kpiDef, customer) {
+  const mtd = DATA.mtd;
+  if (!mtd) return '';
+  const kpiData = mtd.kpis[kpiDef.kpi];
+  if (!kpiData) return '';
+  const rec = kpiData[customer];
+  const label = `Month to date · ${monthLabel(mtd.month)} (as of ${asOfLabel(mtd.as_of)})`;
+  if (!rec || rec.den === 0) {
+    return `<div class="mtd"><div class="mtd-label">${label}</div><div class="mtd-na">No orders yet this month</div></div>`;
+  }
+  const pct = (rec.num / rec.den * 100).toFixed(1) + '%';
+  return `<div class="mtd"><div class="mtd-label">${label}</div><div class="mtd-figure">${pct} <span class="mtd-frac">(${rec.num}/${rec.den})</span></div></div>`;
+}
+
+// ── Avg time per order (uses CartonCloud order counts already pulled in
+// for the Order Cut Off KPI - "den" there is the total orders evaluated
+// that month, used here as a proxy for orders shipped, so no extra
+// CartonCloud API calls are needed). ─────────────────────────────────────
+function orderCountFor(customer, mtdMode) {
+  if (mtdMode) {
+    const mtd = DATA.mtd;
+    if (!mtd || !mtd.kpis['Order Cut Off']) return null;
+    const rec = mtd.kpis['Order Cut Off'][customer];
+    if (!rec || !rec.den) return null;
+    return { den: rec.den, label: `${monthLabel(mtd.month)} MTD (as of ${asOfLabel(mtd.as_of)})` };
+  }
+  const recs = DATA.records
+    .filter(r => r.customer === customer && r.kpi === 'Order Cut Off')
+    .sort((a, b) => a.month.localeCompare(b.month));
+  if (recs.length === 0) return null;
+  const latest = recs[recs.length - 1];
+  if (!latest.den) return null;
+  return { den: latest.den, label: monthLabel(latest.month) };
+}
+
+function renderPickPackPerOrder(customer) {
+  const el = document.getElementById('pickpack-per-order');
+  if (!el) return;
+  el.innerHTML = '';
+  const stats = findPickStats(customer);
+  if (!stats) {
+    el.innerHTML = '<div class="empty">No pick/pack time data for this customer yet.</div>';
+    return;
+  }
+  const grid = document.createElement('div');
+  grid.className = 'grid';
+  [
+    { label: 'Previous month', data: stats.previousMonth, orderInfo: orderCountFor(customer, false) },
+    { label: 'This month to date', data: stats.currentMonthToDate, orderInfo: orderCountFor(customer, true) },
+  ].forEach(({ label, data, orderInfo }) => {
+    ['picking', 'packing'].forEach(stage => {
+      const s = data[stage];
+      const stageLabel = stage === 'picking' ? 'Picking' : 'Packing';
+      const card = document.createElement('div');
+      if (!s || !orderInfo) {
+        card.className = 'card nodata';
+        const reason = !s ? 'No time entries recorded' : 'No CartonCloud order count for this period';
+        card.innerHTML = `<h3>${stageLabel}</h3>
+          <div class="freq">${label}</div>
+          <div class="empty">${reason}</div>`;
+      } else {
+        const perOrder = s.totalSeconds / orderInfo.den;
+        card.className = 'card';
+        card.innerHTML = `<h3>${stageLabel}</h3>
+          <div class="freq">${label} &middot; ${orderInfo.den} order${orderInfo.den === 1 ? '' : 's'} shipped (${orderInfo.label})</div>
+          <div class="figure">${fmtSeconds(perOrder)}</div>
+          <div class="target">avg per order &middot; ${fmtSeconds(s.totalSeconds)} total time entries</div>`;
+      }
+      grid.appendChild(card);
+    });
+  });
+  el.appendChild(grid);
+  const note = document.createElement('div');
+  note.className = 'empty';
+  note.style.marginTop = '8px';
+  note.textContent = 'Order counts come from each customer\'s Order Cut Off KPI figures (already pulled from CartonCloud) as a proxy for orders shipped that month.';
+  el.appendChild(note);
+}
+
+function populateSelect() {
+  const sel = document.getElementById('customer-select');
+  DATA.customers.forEach(c => {
+    const opt = document.createElement('option');
+    opt.value = c;
+    opt.textContent = c;
+    sel.appendChild(opt);
+  });
+}
+
+let charts = [];
+
+function render() {
+  const customer = document.getElementById('customer-select').value;
+  const cardsEl = document.getElementById('cards');
+  const chartsEl = document.getElementById('charts');
+  const notesEl = document.getElementById('notes');
+  cardsEl.innerHTML = '';
+  chartsEl.innerHTML = '';
+  notesEl.innerHTML = '';
+  charts.forEach(c => c.destroy());
+  charts = [];
+
+  const custRecords = DATA.records.filter(r => r.customer === customer);
+
+  DATA.kpi_schedule.forEach(kpiDef => {
+    const recs = custRecords.filter(r => r.kpi === kpiDef.kpi).sort((a, b) => a.month.localeCompare(b.month));
+    const card = document.createElement('div');
+
+    // MTD is now the headline figure on the card, with last month shown
+    // smaller underneath - computed up front so both branches below can use it.
+    const mtd = DATA.mtd;
+    const mtdRec = (mtd && mtd.kpis[kpiDef.kpi]) ? mtd.kpis[kpiDef.kpi][customer] : null;
+    const mtdPct = (mtdRec && mtdRec.den > 0) ? (mtdRec.num / mtdRec.den) : null;
+    const mtdMet = mtdPct !== null && mtdPct >= kpiDef.target;
+    const mtdLabel = mtd ? `MTD · ${monthLabel(mtd.month)} (as of ${asOfLabel(mtd.as_of)})` : '';
+
+    card.className = 'card ring-card';
+
+    if (recs.length === 0) {
+      if (mtdPct === null) {
+        card.innerHTML = `${ringSvg(null, null, false)}
+          <h3>${kpiDef.kpi}</h3>
+          <div class="ring-target-label">Target ${(kpiDef.target*100).toFixed(1)}%</div>
+          <div class="ring-last-label">No data yet</div>`;
+      } else {
+        card.innerHTML = `${ringSvg(mtdPct * 100, `${mtdRec.num}/${mtdRec.den}`, mtdMet)}
+          <h3>${kpiDef.kpi}</h3>
+          <div class="ring-target-label">Target ${(kpiDef.target*100).toFixed(1)}%</div>
+          <div class="ring-last-label">No closed-month data yet</div>`;
+      }
+      cardsEl.appendChild(card);
+      return;
+    }
+    const latest = recs[recs.length - 1];
+    // Primary (ring) figure is always month-to-date - if this customer/KPI
+    // has no orders yet this month, the ring shows its own "no orders yet"
+    // state rather than silently substituting last month's number.
+    const primaryPctNum = mtdPct !== null ? mtdPct * 100 : null;
+    const primaryFrac = mtdPct !== null ? `${mtdRec.num}/${mtdRec.den}` : null;
+    const primaryMet = mtdMet;
+    // Carrier breakdown for DIFOT on customer dashboard
+    let custCarrierHtml = '';
+    let custDifotMonth = null;
+    if (kpiDef.kpi === 'Freight DIFOT' && DATA.difot_carriers) {
+      const allDifotMonths = Object.keys(DATA.difot_carriers).sort();
+      custDifotMonth = [...allDifotMonths].reverse().find(m => DATA.difot_carriers[m][customer]);
+      const custCarriers = custDifotMonth && DATA.difot_carriers[custDifotMonth][customer];
+      if (custCarriers) {
+        const carriers = custCarriers;
+        const rows = Object.entries(carriers)
+          .map(([name, s]) => ({ name, pct: s.den ? s.num / s.den : null, num: s.num, den: s.den,
+                                  avgDays: (s.days_count > 0) ? s.days_total / s.days_count : null }))
+          .sort((a, b) => (b.pct ?? -1) - (a.pct ?? -1));
+        const rowsHtml = rows.map(c => {
+          const pctStr = c.pct !== null ? (c.pct * 100).toFixed(1) + '%' : '–';
+          const ok = c.pct !== null && c.pct >= kpiDef.target;
+          const daysStr = c.avgDays !== null ? c.avgDays.toFixed(1) + 'd avg' : '';
+          return `<tr>
+            <td style="padding:3px 8px 3px 0;font-size:0.8rem">${c.name}</td>
+            <td style="padding:3px 0;font-size:0.8rem;font-weight:700;color:${ok ? '#16a34a' : '#dc2626'}">${pctStr}</td>
+            <td style="padding:3px 0 3px 8px;font-size:0.75rem;color:var(--muted)">${c.num}/${c.den}${daysStr ? ' · ' + daysStr : ''}</td>
+          </tr>`;
+        }).join('');
+        custCarrierHtml = `<table style="border-collapse:collapse;width:100%">${rowsHtml}</table>`;
+      }
+    }
+    // Last-month line: always shown small under the target, as reference
+    // context for the MTD headline figure in the ring above.
+    const lastLineHtml = `Last month · ${latest.actual !== null ? (latest.actual*100).toFixed(1)+'%' : '–'}`;
+
+    card.innerHTML = `${ringSvg(primaryPctNum, primaryFrac, primaryMet)}
+      <h3>${kpiDef.kpi}</h3>
+      <div class="ring-target-label">Target ${(kpiDef.target*100).toFixed(1)}%</div>
+      <div class="ring-last-label">${lastLineHtml}</div>`;
+    cardsEl.appendChild(card);
+
+    // Carrier breakdown as a separate sibling card
+    if (custCarrierHtml) {
+      const carrierCard = document.createElement('div');
+      carrierCard.className = 'card';
+      carrierCard.innerHTML = `<h3 style="margin-bottom:8px">DIFOT by Carrier</h3>
+        <div class="freq">${monthLabel(custDifotMonth)}</div>
+        ${custCarrierHtml}`;
+      cardsEl.appendChild(carrierCard);
+    }
+
+    if (latest.notes) {
+      const noteDiv = document.createElement('div');
+      noteDiv.className = 'chart-card';
+      noteDiv.innerHTML = `<h3>${kpiDef.kpi} — ${monthLabel(latest.month)}</h3><div class="note" style="margin-top:0">${latest.notes}</div>`;
+      notesEl.appendChild(noteDiv);
+    }
+
+    // Build trend labels + data, appending MTD point if available
+    const custTrendLabels = recs.map(r => monthLabel(r.month));
+    const custTrendData   = recs.map(r => r.actual !== null ? +(r.actual * 100).toFixed(1) : null);
+    let custMtdPct = null;
+    if (DATA.mtd && DATA.mtd.kpis[kpiDef.kpi] && DATA.mtd.kpis[kpiDef.kpi][customer]) {
+      const m = DATA.mtd.kpis[kpiDef.kpi][customer];
+      if (m.den > 0) custMtdPct = +(m.num / m.den * 100).toFixed(1);
+    }
+    if (custMtdPct !== null) {
+      custTrendLabels.push(monthLabel(DATA.mtd.month) + ' MTD');
+      custTrendData.push(custMtdPct);
+    }
+    const custLastCompIdx = custMtdPct !== null ? custTrendData.length - 2 : -1;
+
+    const section = document.createElement('div');
+    section.className = 'chart-card';
+    section.innerHTML = `<h3>${kpiDef.kpi} trend</h3><div class="chart-wrap"><canvas></canvas></div>`;
+    chartsEl.appendChild(section);
+    const canvas = section.querySelector('canvas');
+    const ctx = canvas.getContext('2d');
+    const chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: custTrendLabels,
+        datasets: [
+          {
+            label: custMtdPct !== null ? 'Actual (dashed = MTD)' : 'Actual',
+            data: custTrendData,
+            borderColor: '#1d4ed8',
+            backgroundColor: 'rgba(29,78,216,0.1)',
+            tension: 0.25,
+            fill: true,
+            pointRadius: custTrendData.map((_, i) => i === custTrendData.length - 1 && custMtdPct !== null ? 6 : 4),
+            pointStyle: custTrendData.map((_, i) => i === custTrendData.length - 1 && custMtdPct !== null ? 'triangle' : 'circle'),
+            segment: custLastCompIdx >= 0 ? {
+              borderDash: (ctx) => ctx.p0DataIndex >= custLastCompIdx ? [5, 4] : undefined,
+              borderColor: (ctx) => ctx.p0DataIndex >= custLastCompIdx ? '#93c5fd' : '#1d4ed8',
+            } : undefined,
+          },
+          {
+            label: 'Target',
+            data: custTrendLabels.map(() => kpiDef.target * 100),
+            borderColor: '#dc2626',
+            borderDash: [6, 4],
+            pointRadius: 0,
+            fill: false,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: { y: { ticks: { callback: v => v + '%' } } },
+      },
+    });
+    charts.push(chart);
+  });
+
+  if (notesEl.innerHTML === '') {
+    notesEl.innerHTML = '<div class="empty">No outstanding action items for the latest month.</div>';
+  }
+
+  renderPickPack(customer);
+  renderPickPackPerOrder(customer);
+}
+
+populateSelect();
+render();
+
+</script>
+</body>
+</html>
