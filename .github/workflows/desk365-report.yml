@@ -1,0 +1,41 @@
+name: Desk365 visibility report
+
+on:
+  schedule:
+    # 3x/day, matching the cadence of the other KPI dashboard refreshes.
+    # Times are UTC. NZST is UTC+12, NZDT (daylight saving) is UTC+13.
+    - cron: '15 20 * * *'   # ~08:15 NZST
+    - cron: '15 1 * * *'    # ~13:15 NZST
+    - cron: '15 5 * * *'    # ~17:15 NZST
+  workflow_dispatch: {}      # lets you trigger a manual run from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Build report
+        env:
+          DESK365_API_KEY: ${{ secrets.DESK365_API_KEY }}
+        run: python desk365_report.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add desk365_visibility_report.html
+          git diff --cached --quiet && echo "No changes to commit" || git commit -m "Refresh Desk365 visibility report"
+          git push
