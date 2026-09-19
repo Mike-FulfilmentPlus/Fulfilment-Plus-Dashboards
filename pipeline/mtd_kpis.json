@@ -107,61 +107,17 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Vixxen": {
-        "num": 3281,
-        "den": 3281
-      },
-      "Made Group NZ": {
-        "num": 10420,
-        "den": 10420
-      },
-      "Simply Clean": {
-        "num": 6772,
-        "den": 6772
-      },
-      "Aleger Studio": {
-        "num": 8,
-        "den": 8
-      },
-      "Flo & Frankie": {
-        "num": 400,
-        "den": 400
-      },
-      "Interior Images": {
-        "num": 14,
-        "den": 14
-      },
-      "Logwin - Sikla": {
-        "num": 5077,
-        "den": 5077
-      },
-      "May Eleven NZ": {
-        "num": 1000,
-        "den": 1000
+      "Purify Me": {
+        "num": 113,
+        "den": 113
       },
       "Coromandel Mountains Company Limited": {
         "num": 624,
         "den": 624
       },
-      "Baking Tech": {
-        "num": 1,
-        "den": 1
-      },
-      "Purify Me": {
-        "num": 113,
-        "den": 113
-      },
-      "Oceanbridge": {
-        "num": 7,
-        "den": 7
-      },
-      "Jock Freight - SECA": {
-        "num": 6,
-        "den": 6
-      },
-      "Oricom": {
-        "num": 704,
-        "den": 704
+      "Logwin - Sikla": {
+        "num": 5077,
+        "den": 5077
       },
       "Gym Equip": {
         "num": 306,
@@ -171,17 +127,61 @@
         "num": 188,
         "den": 188
       },
-      "EcoPallets": {
-        "num": 351,
-        "den": 351
+      "Interior Images": {
+        "num": 14,
+        "den": 14
+      },
+      "Vixxen": {
+        "num": 3281,
+        "den": 3281
+      },
+      "Baking Tech": {
+        "num": 1,
+        "den": 1
+      },
+      "Aleger Studio": {
+        "num": 8,
+        "den": 8
       },
       "Samsung Batteries CP": {
         "num": 524,
         "den": 524
       },
+      "May Eleven NZ": {
+        "num": 1000,
+        "den": 1000
+      },
       "Stryx": {
         "num": 35,
         "den": 35
+      },
+      "Oricom": {
+        "num": 704,
+        "den": 704
+      },
+      "Made Group NZ": {
+        "num": 10420,
+        "den": 10420
+      },
+      "EcoPallets": {
+        "num": 351,
+        "den": 351
+      },
+      "Flo & Frankie": {
+        "num": 400,
+        "den": 400
+      },
+      "Simply Clean": {
+        "num": 6772,
+        "den": 6772
+      },
+      "Oceanbridge": {
+        "num": 7,
+        "den": 7
+      },
+      "Jock Freight - SECA": {
+        "num": 6,
+        "den": 6
       }
     },
     "Freight DIFOT": {
