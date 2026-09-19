@@ -107,49 +107,45 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Jock Freight - SECA": {
-        "num": 6,
-        "den": 6
-      },
-      "Coromandel Mountains Company Limited": {
-        "num": 624,
-        "den": 624
-      },
-      "Samsung Batteries CP": {
-        "num": 524,
-        "den": 524
-      },
       "Gym Equip": {
         "num": 306,
         "den": 306
       },
-      "EcoPallets": {
-        "num": 351,
-        "den": 351
+      "Vixxen": {
+        "num": 3281,
+        "den": 3281
       },
-      "Flo & Frankie": {
-        "num": 400,
-        "den": 400
-      },
-      "Interior Images": {
-        "num": 14,
-        "den": 14
+      "Salt Shark": {
+        "num": 188,
+        "den": 188
       },
       "Logwin - Sikla": {
         "num": 5077,
         "den": 5077
       },
-      "Simply Clean": {
-        "num": 6772,
-        "den": 6772
+      "Flo & Frankie": {
+        "num": 400,
+        "den": 400
       },
-      "Aleger Studio": {
-        "num": 8,
-        "den": 8
+      "Oricom": {
+        "num": 704,
+        "den": 704
       },
-      "Made Group NZ": {
-        "num": 10420,
-        "den": 10420
+      "Jock Freight - SECA": {
+        "num": 6,
+        "den": 6
+      },
+      "Interior Images": {
+        "num": 14,
+        "den": 14
+      },
+      "Coromandel Mountains Company Limited": {
+        "num": 624,
+        "den": 624
+      },
+      "Purify Me": {
+        "num": 113,
+        "den": 113
       },
       "Oceanbridge": {
         "num": 7,
@@ -159,29 +155,33 @@
         "num": 1,
         "den": 1
       },
-      "Purify Me": {
-        "num": 113,
-        "den": 113
-      },
       "Stryx": {
         "num": 35,
         "den": 35
+      },
+      "Samsung Batteries CP": {
+        "num": 524,
+        "den": 524
+      },
+      "EcoPallets": {
+        "num": 351,
+        "den": 351
+      },
+      "Made Group NZ": {
+        "num": 10420,
+        "den": 10420
+      },
+      "Aleger Studio": {
+        "num": 8,
+        "den": 8
       },
       "May Eleven NZ": {
         "num": 1000,
         "den": 1000
       },
-      "Salt Shark": {
-        "num": 188,
-        "den": 188
-      },
-      "Vixxen": {
-        "num": 3281,
-        "den": 3281
-      },
-      "Oricom": {
-        "num": 704,
-        "den": 704
+      "Simply Clean": {
+        "num": 6772,
+        "den": 6772
       }
     },
     "Freight DIFOT": {
