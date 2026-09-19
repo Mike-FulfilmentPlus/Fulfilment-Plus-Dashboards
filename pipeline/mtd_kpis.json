@@ -107,17 +107,29 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Flo & Frankie": {
-        "num": 400,
-        "den": 400
+      "May Eleven NZ": {
+        "num": 1000,
+        "den": 1000
       },
-      "Stryx": {
-        "num": 35,
-        "den": 35
+      "Oceanbridge": {
+        "num": 7,
+        "den": 7
+      },
+      "Interior Images": {
+        "num": 14,
+        "den": 14
+      },
+      "Samsung Batteries CP": {
+        "num": 524,
+        "den": 524
       },
       "Oricom": {
         "num": 704,
         "den": 704
+      },
+      "Flo & Frankie": {
+        "num": 400,
+        "den": 400
       },
       "Baking Tech": {
         "num": 1,
@@ -131,57 +143,45 @@
         "num": 3281,
         "den": 3281
       },
-      "Salt Shark": {
-        "num": 188,
-        "den": 188
-      },
-      "Aleger Studio": {
-        "num": 8,
-        "den": 8
-      },
-      "Purify Me": {
-        "num": 113,
-        "den": 113
-      },
       "Simply Clean": {
         "num": 6772,
         "den": 6772
+      },
+      "Stryx": {
+        "num": 35,
+        "den": 35
       },
       "Logwin - Sikla": {
         "num": 5077,
         "den": 5077
       },
-      "Samsung Batteries CP": {
-        "num": 524,
-        "den": 524
+      "Purify Me": {
+        "num": 113,
+        "den": 113
       },
       "Coromandel Mountains Company Limited": {
         "num": 624,
         "den": 624
       },
-      "Made Group NZ": {
-        "num": 10420,
-        "den": 10420
-      },
-      "May Eleven NZ": {
-        "num": 1000,
-        "den": 1000
-      },
-      "Interior Images": {
-        "num": 14,
-        "den": 14
-      },
       "Gym Equip": {
         "num": 306,
         "den": 306
       },
-      "Oceanbridge": {
-        "num": 7,
-        "den": 7
+      "Made Group NZ": {
+        "num": 10420,
+        "den": 10420
+      },
+      "Salt Shark": {
+        "num": 188,
+        "den": 188
       },
       "Jock Freight - SECA": {
         "num": 6,
         "den": 6
+      },
+      "Aleger Studio": {
+        "num": 8,
+        "den": 8
       }
     },
     "Freight DIFOT": {
