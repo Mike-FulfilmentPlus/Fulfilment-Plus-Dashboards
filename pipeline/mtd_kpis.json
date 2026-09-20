@@ -107,21 +107,41 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Jock Freight - SECA": {
-        "num": 6,
-        "den": 6
+      "Vixxen": {
+        "num": 3281,
+        "den": 3281
       },
-      "Baking Tech": {
-        "num": 1,
-        "den": 1
+      "Made Group NZ": {
+        "num": 10420,
+        "den": 10420
+      },
+      "Gym Equip": {
+        "num": 306,
+        "den": 306
       },
       "Salt Shark": {
         "num": 188,
         "den": 188
       },
-      "Vixxen": {
-        "num": 3281,
-        "den": 3281
+      "Simply Clean": {
+        "num": 6772,
+        "den": 6772
+      },
+      "Aleger Studio": {
+        "num": 8,
+        "den": 8
+      },
+      "Jock Freight - SECA": {
+        "num": 6,
+        "den": 6
+      },
+      "EcoPallets": {
+        "num": 351,
+        "den": 351
+      },
+      "May Eleven NZ": {
+        "num": 1000,
+        "den": 1000
       },
       "Logwin - Sikla": {
         "num": 5077,
@@ -131,57 +151,37 @@
         "num": 624,
         "den": 624
       },
-      "Aleger Studio": {
-        "num": 8,
-        "den": 8
-      },
-      "Interior Images": {
-        "num": 14,
-        "den": 14
-      },
-      "May Eleven NZ": {
-        "num": 1000,
-        "den": 1000
-      },
-      "Flo & Frankie": {
-        "num": 400,
-        "den": 400
-      },
-      "Simply Clean": {
-        "num": 6772,
-        "den": 6772
-      },
-      "Stryx": {
-        "num": 35,
-        "den": 35
-      },
-      "EcoPallets": {
-        "num": 351,
-        "den": 351
-      },
-      "Oceanbridge": {
-        "num": 7,
-        "den": 7
-      },
-      "Made Group NZ": {
-        "num": 10420,
-        "den": 10420
+      "Oricom": {
+        "num": 704,
+        "den": 704
       },
       "Purify Me": {
         "num": 113,
         "den": 113
       },
-      "Gym Equip": {
-        "num": 306,
-        "den": 306
+      "Baking Tech": {
+        "num": 1,
+        "den": 1
       },
-      "Oricom": {
-        "num": 704,
-        "den": 704
+      "Stryx": {
+        "num": 35,
+        "den": 35
+      },
+      "Interior Images": {
+        "num": 14,
+        "den": 14
+      },
+      "Flo & Frankie": {
+        "num": 400,
+        "den": 400
       },
       "Samsung Batteries CP": {
         "num": 524,
         "den": 524
+      },
+      "Oceanbridge": {
+        "num": 7,
+        "den": 7
       }
     },
     "Freight DIFOT": {
