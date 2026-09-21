@@ -1235,6 +1235,7 @@ tbody tr:hover{background:var(--neutral-bg)}
 
 <header>
   <div>
+    <a href="index.html" style="font-size:0.85rem;color:var(--muted);text-decoration:none;">&larr; All dashboards</a>
     <h1>Warehouse Operations</h1>
     <div class="header-meta">Fulfilment Plus &middot; <strong id="gen-time">__GENERATED__</strong></div>
     <div class="refresh-hint">Re-run <code>generate_warehouse_dashboard.py</code> to refresh data</div>
