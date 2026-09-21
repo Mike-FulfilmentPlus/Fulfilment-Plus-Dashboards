@@ -246,6 +246,7 @@ PAGE_SHELL = """<!DOCTYPE html>
     <div class="meta">Fulfilment Plus &middot; generated {generated}</div>
   </div>
   <nav class="tabs">
+    <a href="index.html">&larr; All dashboards</a>
     <a href="customer_dashboard.html" class="{cust_active}">Customer view</a>
     <a href="business_dashboard.html" class="{biz_active}">Business view</a>
   </nav>
