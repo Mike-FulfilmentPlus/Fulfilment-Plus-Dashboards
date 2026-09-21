@@ -283,6 +283,7 @@ def render_html(d):
 </head>
 <body>
 <div class="wrap">
+  <div style="margin-bottom:12px;"><a href="index.html" style="font-size:0.85rem;color:var(--faint);text-decoration:none;">&larr; All dashboards</a></div>
   <header>
     <div>
       <h1>Customer Services Visibility Report</h1>
