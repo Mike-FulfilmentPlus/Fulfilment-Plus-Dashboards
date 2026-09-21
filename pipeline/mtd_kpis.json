@@ -107,9 +107,37 @@
       }
     },
     "Order Accuracy by Unit": {
+      "Interior Images": {
+        "num": 14,
+        "den": 14
+      },
+      "Salt Shark": {
+        "num": 205,
+        "den": 205
+      },
+      "Oceanbridge": {
+        "num": 7,
+        "den": 7
+      },
+      "Made Group NZ": {
+        "num": 10420,
+        "den": 10420
+      },
+      "Purify Me": {
+        "num": 145,
+        "den": 145
+      },
+      "Samsung Batteries CP": {
+        "num": 524,
+        "den": 524
+      },
       "May Eleven NZ": {
         "num": 1000,
         "den": 1000
+      },
+      "Aleger Studio": {
+        "num": 8,
+        "den": 8
       },
       "EcoPallets": {
         "num": 351,
@@ -119,33 +147,25 @@
         "num": 1,
         "den": 1
       },
-      "Flo & Frankie": {
-        "num": 400,
-        "den": 400
-      },
-      "Oceanbridge": {
-        "num": 7,
-        "den": 7
-      },
-      "Salt Shark": {
-        "num": 205,
-        "den": 205
-      },
-      "Aleger Studio": {
-        "num": 8,
-        "den": 8
-      },
-      "Samsung Batteries CP": {
-        "num": 524,
-        "den": 524
-      },
-      "Logwin - Sikla": {
-        "num": 5077,
-        "den": 5077
+      "Gym Equip": {
+        "num": 306,
+        "den": 306
       },
       "Stryx": {
         "num": 39,
         "den": 39
+      },
+      "Vixxen": {
+        "num": 5783,
+        "den": 5783
+      },
+      "Flo & Frankie": {
+        "num": 400,
+        "den": 400
+      },
+      "Jock Freight - SECA": {
+        "num": 6,
+        "den": 6
       },
       "Coromandel Mountains Company Limited": {
         "num": 638,
@@ -155,33 +175,13 @@
         "num": 948,
         "den": 948
       },
-      "Jock Freight - SECA": {
-        "num": 6,
-        "den": 6
-      },
-      "Purify Me": {
-        "num": 145,
-        "den": 145
-      },
-      "Vixxen": {
-        "num": 5783,
-        "den": 5783
-      },
-      "Made Group NZ": {
-        "num": 10420,
-        "den": 10420
-      },
-      "Interior Images": {
-        "num": 14,
-        "den": 14
-      },
-      "Gym Equip": {
-        "num": 306,
-        "den": 306
-      },
       "Simply Clean": {
         "num": 6772,
         "den": 6772
+      },
+      "Logwin - Sikla": {
+        "num": 5077,
+        "den": 5077
       }
     },
     "Freight DIFOT": {
