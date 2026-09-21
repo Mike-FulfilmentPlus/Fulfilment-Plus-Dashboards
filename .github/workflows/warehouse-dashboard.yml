@@ -50,4 +50,5 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add pipeline/*.json pipeline/*.csv docs/warehouse_dashboard.html
           git diff --cached --quiet || git commit -m "Auto-refresh warehouse dashboard"
+          git pull --rebase origin main
           git push
