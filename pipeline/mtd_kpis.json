@@ -107,9 +107,21 @@
       }
     },
     "Order Accuracy by Unit": {
-      "EcoPallets": {
-        "num": 351,
-        "den": 351
+      "Oricom": {
+        "num": 948,
+        "den": 948
+      },
+      "Oceanbridge": {
+        "num": 7,
+        "den": 7
+      },
+      "Made Group NZ": {
+        "num": 10420,
+        "den": 10420
+      },
+      "Stryx": {
+        "num": 39,
+        "den": 39
       },
       "Coromandel Mountains Company Limited": {
         "num": 638,
@@ -119,45 +131,37 @@
         "num": 6,
         "den": 6
       },
-      "May Eleven NZ": {
-        "num": 1000,
-        "den": 1000
+      "Salt Shark": {
+        "num": 205,
+        "den": 205
+      },
+      "Gym Equip": {
+        "num": 306,
+        "den": 306
       },
       "Baking Tech": {
         "num": 1,
         "den": 1
       },
-      "Oceanbridge": {
-        "num": 7,
-        "den": 7
-      },
-      "Aleger Studio": {
-        "num": 8,
-        "den": 8
-      },
-      "Purify Me": {
-        "num": 145,
-        "den": 145
-      },
-      "Salt Shark": {
-        "num": 205,
-        "den": 205
+      "Simply Clean": {
+        "num": 6772,
+        "den": 6772
       },
       "Flo & Frankie": {
         "num": 400,
         "den": 400
       },
-      "Vixxen": {
-        "num": 5783,
-        "den": 5783
-      },
       "Interior Images": {
         "num": 14,
         "den": 14
       },
-      "Made Group NZ": {
-        "num": 10420,
-        "den": 10420
+      "Purify Me": {
+        "num": 145,
+        "den": 145
+      },
+      "EcoPallets": {
+        "num": 351,
+        "den": 351
       },
       "Logwin - Sikla": {
         "num": 5077,
@@ -167,21 +171,17 @@
         "num": 1060,
         "den": 1060
       },
-      "Oricom": {
-        "num": 948,
-        "den": 948
+      "Vixxen": {
+        "num": 5783,
+        "den": 5783
       },
-      "Stryx": {
-        "num": 39,
-        "den": 39
+      "Aleger Studio": {
+        "num": 8,
+        "den": 8
       },
-      "Gym Equip": {
-        "num": 306,
-        "den": 306
-      },
-      "Simply Clean": {
-        "num": 6772,
-        "den": 6772
+      "May Eleven NZ": {
+        "num": 1000,
+        "den": 1000
       }
     },
     "Freight DIFOT": {
