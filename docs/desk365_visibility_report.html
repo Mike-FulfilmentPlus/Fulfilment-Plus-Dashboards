@@ -54,16 +54,16 @@
       <h1>Customer Services Visibility Report</h1>
       <div class="sub">Desk365 helpdesk &mdash; fulfilmentplus.desk365.io</div>
     </div>
-    <div class="asof">Snapshot as of<br><strong>2026-09-22 08:27 NZST</strong></div>
+    <div class="asof">Snapshot as of<br><strong>2026-09-22 13:22 NZST</strong></div>
   </header>
-  <div class="alert"><b>SLA breach alert:</b> 3 tickets overdue and still open &mdash; Ticket #1000023 (&quot;NC 49488572&quot;, Salt shark, Freight Issues) &mdash; <b>54.6 days overdue</b>; Ticket #1000166 (&quot;July Invoice.&quot;, Sikla, Invoicing) &mdash; <b>11.6 days overdue</b>; Ticket #1000189 (&quot;July/ August Invoices&quot;, Sikla, Invoicing) &mdash; <b>0.6 days overdue</b>.</div>
+  <div class="alert"><b>SLA breach alert:</b> 3 tickets overdue and still open &mdash; Ticket #1000023 (&quot;NC 49488572&quot;, Salt shark, Freight Issues) &mdash; <b>54.8 days overdue</b>; Ticket #1000166 (&quot;July Invoice.&quot;, Sikla, Invoicing) &mdash; <b>11.8 days overdue</b>; Ticket #1000189 (&quot;July/ August Invoices&quot;, Sikla, Invoicing) &mdash; <b>0.8 days overdue</b>.</div>
   <div class="cards">
-    <div class="card"><div class="label">Total tickets</div><div class="value">196</div><div class="note">13 Jul 2026 – 21 Sep 2026</div></div>
-    <div class="card"><div class="label">Open / Pending</div><div class="value warn">16</div><div class="note">3 breached (overdue)</div></div>
-    <div class="card"><div class="label">Closed</div><div class="value good">180</div><div class="note">91.8% of volume</div></div>
-    <div class="card"><div class="label">SLA compliance</div><div class="value good">90.1%</div><div class="note">118 met / 131 measurable</div></div>
-    <div class="card"><div class="label">Median 1st response time</div><div class="value">1.0 hrs</div><div class="note">n=134 of 196 tickets tracked</div></div>
-    <div class="card"><div class="label">Median resolution time</div><div class="value">4.5 hrs</div><div class="note">n=180 &middot; 19 outliers flagged</div></div>
+    <div class="card"><div class="label">Total tickets</div><div class="value">197</div><div class="note">13 Jul 2026 – 21 Sep 2026</div></div>
+    <div class="card"><div class="label">Open / Pending</div><div class="value warn">14</div><div class="note">3 breached (overdue)</div></div>
+    <div class="card"><div class="label">Closed</div><div class="value good">183</div><div class="note">92.9% of volume</div></div>
+    <div class="card"><div class="label">SLA compliance</div><div class="value good">90.2%</div><div class="note">120 met / 133 measurable</div></div>
+    <div class="card"><div class="label">Median 1st response time</div><div class="value">1.1 hrs</div><div class="note">n=139 of 197 tickets tracked</div></div>
+    <div class="card"><div class="label">Median resolution time</div><div class="value">4.5 hrs</div><div class="note">n=183 &middot; 19 outliers flagged</div></div>
   </div>
   <div class="grid2">
     <div class="panel"><h2>Ticket volume by day (created)</h2><div class="chart-box"><canvas id="volumeChart"></canvas></div></div>
@@ -92,17 +92,17 @@
       </tr>
       <tr>
         <td>Purify Me</td>
-        <td class="num">32</td>
-        <td class="num">2</td>
+        <td class="num">34</td>
+        <td class="num">4</td>
         <td class="num">5</td>
-        <td class="num">7.2 hrs (n=15)</td>
+        <td class="num">7.6 hrs (n=18)</td>
       </tr>
       <tr>
         <td>Sikla</td>
-        <td class="num">30</td>
-        <td class="num">3</td>
-        <td class="num">4</td>
-        <td class="num">1.5 hrs (n=27)</td>
+        <td class="num">31</td>
+        <td class="num">2</td>
+        <td class="num">6</td>
+        <td class="num">1.5 hrs (n=28)</td>
       </tr>
       <tr>
         <td>Coromandel Mountain</td>
@@ -154,6 +154,13 @@
         <td class="num">9.3 hrs (n=1)</td>
       </tr>
       <tr>
+        <td>Ceva Batteries</td>
+        <td class="num">1</td>
+        <td class="num">0</td>
+        <td class="num">1</td>
+        <td class="num">19.7 hrs (n=1)</td>
+      </tr>
+      <tr>
         <td>Fulfilment Plus</td>
         <td class="num">1</td>
         <td class="num">0</td>
@@ -165,13 +172,6 @@
         <td class="num">1</td>
         <td class="num">0</td>
         <td class="num">1</td>
-        <td class="num">&mdash;</td>
-      </tr>
-      <tr>
-        <td>Logwin / Sikla</td>
-        <td class="num">1</td>
-        <td class="num">1</td>
-        <td class="num">0</td>
         <td class="num">&mdash;</td>
       </tr>
       <tr>
@@ -187,13 +187,13 @@
   <footer>Point-in-time snapshot pulled directly from the Desk365 API by a scheduled GitHub Actions workflow. Customer table grouped by the Desk365 "Customer" custom field (cf_Customer), falling back to company name only for the handful of tickets where it isn't set yet.</footer>
 </div>
 <script>
-const volumeLabels = ["8 Sep", "9 Sep", "10 Sep", "11 Sep", "12 Sep", "13 Sep", "14 Sep", "15 Sep", "16 Sep", "17 Sep", "18 Sep", "19 Sep", "20 Sep", "21 Sep"];
-const volumeData = [2, 4, 1, 1, 0, 2, 3, 4, 7, 3, 0, 0, 3, 5];
+const volumeLabels = ["9 Sep", "10 Sep", "11 Sep", "12 Sep", "13 Sep", "14 Sep", "15 Sep", "16 Sep", "17 Sep", "18 Sep", "19 Sep", "20 Sep", "21 Sep", "22 Sep"];
+const volumeData = [4, 1, 1, 0, 2, 3, 4, 7, 3, 0, 0, 3, 6, 0];
 new Chart(document.getElementById("volumeChart"), { type: "bar", data: { labels: volumeLabels, datasets: [{ label: "Tickets created", data: volumeData, backgroundColor: "#2f6fed", borderRadius: 4 }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true, ticks: { stepSize: 1 } } } } });
-new Chart(document.getElementById("slaChart"), { type: "doughnut", data: { labels: ["Met", "Breached (closed late)", "Breached (open, overdue)", "On track", "No SLA policy"], datasets: [{ data: [118, 13, 3, 7, 55], backgroundColor: ["#17824e", "#c0362c", "#7c2d12", "#2f6fed", "#98a2b3"] }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: "bottom", labels: { boxWidth: 12, font: { size: 11 } } } } } });
+new Chart(document.getElementById("slaChart"), { type: "doughnut", data: { labels: ["Met", "Breached (closed late)", "Breached (open, overdue)", "On track", "No SLA policy"], datasets: [{ data: [120, 13, 3, 6, 55], backgroundColor: ["#17824e", "#c0362c", "#7c2d12", "#2f6fed", "#98a2b3"] }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: "bottom", labels: { boxWidth: 12, font: { size: 11 } } } } } });
 const palette = ["#2f6fed", "#7c3aed","#0891b2","#d97706","#dc2626","#16a34a","#db2777","#4f46e5"];
-const weekLabels = ["29 Sep", "06 Oct", "13 Oct", "20 Oct", "27 Oct", "03 Nov", "10 Nov", "17 Nov", "24 Nov", "01 Dec", "08 Dec", "15 Dec", "22 Dec", "29 Dec", "05 Jan", "12 Jan", "19 Jan", "26 Jan", "02 Feb", "09 Feb", "16 Feb", "23 Feb", "02 Mar", "09 Mar", "16 Mar", "23 Mar", "30 Mar", "06 Apr", "13 Apr", "20 Apr", "27 Apr", "04 May", "11 May", "18 May", "25 May", "01 Jun", "08 Jun", "15 Jun", "22 Jun", "29 Jun", "06 Jul", "13 Jul", "20 Jul", "27 Jul", "03 Aug", "10 Aug", "17 Aug", "24 Aug", "31 Aug", "07 Sep", "14 Sep", "21 Sep"];
-const categorySeries = [{"label": "Customer Issue", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0]}, {"label": "Freight / Deliveries General", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 8, 3, 4, 9, 6, 6, 6, 4, 7]}, {"label": "Freight Issues", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4, 5, 5, 7, 2, 8, 2, 3, 1]}, {"label": "General Comms", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 2, 1, 0, 0, 0, 0]}, {"label": "IT Issue", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]}, {"label": "Invoicing", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1]}, {"label": "Inwards booking", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0]}, {"label": "PO Issues", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 0, 0]}, {"label": "Picking Issue", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0]}, {"label": "Products", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 0, 0, 0, 0, 0, 0]}, {"label": "Purchase Order Questions", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0]}, {"label": "Returns", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 1, 1, 3, 0, 0, 1]}, {"label": "Sales Orders", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 1, 0, 5, 5, 6, 1, 4, 2]}, {"label": "Stock Issues", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0]}, {"label": "Stocktake", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]}, {"label": "Uncategorized", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 7, 9, 1, 1, 6, 3, 0, 9]}].map((c, i) => ({ label: c.label, data: c.data, borderColor: palette[i % palette.length], backgroundColor: palette[i % palette.length], tension: 0.25, pointRadius: 2, borderWidth: 2 }));
+const weekLabels = ["30 Sep", "07 Oct", "14 Oct", "21 Oct", "28 Oct", "04 Nov", "11 Nov", "18 Nov", "25 Nov", "02 Dec", "09 Dec", "16 Dec", "23 Dec", "30 Dec", "06 Jan", "13 Jan", "20 Jan", "27 Jan", "03 Feb", "10 Feb", "17 Feb", "24 Feb", "03 Mar", "10 Mar", "17 Mar", "24 Mar", "31 Mar", "07 Apr", "14 Apr", "21 Apr", "28 Apr", "05 May", "12 May", "19 May", "26 May", "02 Jun", "09 Jun", "16 Jun", "23 Jun", "30 Jun", "07 Jul", "14 Jul", "21 Jul", "28 Jul", "04 Aug", "11 Aug", "18 Aug", "25 Aug", "01 Sep", "08 Sep", "15 Sep", "22 Sep"];
+const categorySeries = [{"label": "Customer Issue", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0]}, {"label": "Freight / Deliveries General", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 8, 5, 3, 8, 7, 5, 7, 3, 7]}, {"label": "Freight Issues", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4, 5, 5, 7, 4, 6, 2, 3, 3]}, {"label": "General Comms", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 3, 0, 1, 0, 0, 0, 0]}, {"label": "IT Issue", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]}, {"label": "Invoicing", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1]}, {"label": "Inwards booking", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0]}, {"label": "PO Issues", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 0, 0]}, {"label": "Picking Issue", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]}, {"label": "Products", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 0, 0, 0, 0, 0, 0]}, {"label": "Purchase Order Questions", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0]}, {"label": "Returns", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 2, 1, 2, 0, 0, 1]}, {"label": "Sales Orders", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 1, 0, 5, 6, 5, 1, 4, 2]}, {"label": "Stock Issues", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0]}, {"label": "Stocktake", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]}, {"label": "Uncategorized", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 4, 9, 1, 1, 6, 3, 0, 8]}].map((c, i) => ({ label: c.label, data: c.data, borderColor: palette[i % palette.length], backgroundColor: palette[i % palette.length], tension: 0.25, pointRadius: 2, borderWidth: 2 }));
 new Chart(document.getElementById("categoryChart"), { type: "line", data: { labels: weekLabels, datasets: categorySeries }, options: { responsive: true, maintainAspectRatio: false, interaction: { mode: 'index', intersect: false }, plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, font: { size: 11 } } } }, scales: { y: { beginAtZero: true, ticks: { stepSize: 1 } }, x: { ticks: { maxTicksLimit: 14, autoSkip: true } } } } });
 </script>
 </body>
