@@ -1,6 +1,6 @@
 {
   "month": "2026-09",
-  "as_of": "2026-09-22",
+  "as_of": "2026-09-23",
   "kpis": {
     "Dock to Stock": {
       "Flo & Frankie": {
@@ -107,65 +107,49 @@
       }
     },
     "Order Accuracy by Unit": {
-      "May Eleven NZ": {
-        "num": 1000,
-        "den": 1000
-      },
-      "Baking Tech": {
-        "num": 1,
-        "den": 1
-      },
-      "Simply Clean": {
-        "num": 7477,
-        "den": 7477
-      },
-      "Purify Me": {
-        "num": 158,
-        "den": 158
-      },
-      "Coromandel Mountains Company Limited": {
-        "num": 639,
-        "den": 639
-      },
-      "Logwin - Sikla": {
-        "num": 5077,
-        "den": 5077
-      },
-      "Vixxen": {
-        "num": 5791,
-        "den": 5792
-      },
-      "Samsung Batteries CP": {
-        "num": 1328,
-        "den": 1328
-      },
-      "Stryx": {
-        "num": 42,
-        "den": 42
-      },
-      "Salt Shark": {
-        "num": 217,
-        "den": 217
-      },
       "Gym Equip": {
         "num": 354,
         "den": 354
-      },
-      "Interior Images": {
-        "num": 14,
-        "den": 14
-      },
-      "Jock Freight - SECA": {
-        "num": 6,
-        "den": 6
       },
       "Made Group NZ": {
         "num": 14190,
         "den": 14190
       },
+      "Interior Images": {
+        "num": 14,
+        "den": 14
+      },
+      "Baking Tech": {
+        "num": 1,
+        "den": 1
+      },
+      "Stryx": {
+        "num": 42,
+        "den": 42
+      },
+      "Samsung Batteries CP": {
+        "num": 1328,
+        "den": 1328
+      },
+      "Salt Shark": {
+        "num": 217,
+        "den": 217
+      },
+      "Purify Me": {
+        "num": 158,
+        "den": 158
+      },
+      "Simply Clean": {
+        "num": 7477,
+        "den": 7477
+      },
       "Aleger Studio": {
         "num": 8,
         "den": 8
+      },
+      "May Eleven NZ": {
+        "num": 1000,
+        "den": 1000
       },
       "Oricom": {
         "num": 962,
@@ -174,6 +158,22 @@
       "Oceanbridge": {
         "num": 7,
         "den": 7
+      },
+      "Coromandel Mountains Company Limited": {
+        "num": 639,
+        "den": 639
+      },
+      "Jock Freight - SECA": {
+        "num": 6,
+        "den": 6
+      },
+      "Vixxen": {
+        "num": 5791,
+        "den": 5792
+      },
+      "Logwin - Sikla": {
+        "num": 5077,
+        "den": 5077
       },
       "EcoPallets": {
         "num": 351,
