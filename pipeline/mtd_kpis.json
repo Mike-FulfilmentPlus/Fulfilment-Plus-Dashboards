@@ -47,7 +47,7 @@
       },
       "Gym Equip": {
         "num": 13,
-        "den": 15
+        "den": 16
       },
       "Vixxen": {
         "num": 268,
@@ -111,49 +111,17 @@
         "num": 5791,
         "den": 5792
       },
-      "Baking Tech": {
-        "num": 1,
-        "den": 1
-      },
-      "Salt Shark": {
-        "num": 217,
-        "den": 217
-      },
-      "Simply Clean": {
-        "num": 7477,
-        "den": 7477
-      },
-      "Coromandel Mountains Company Limited": {
-        "num": 639,
-        "den": 639
+      "Oceanbridge": {
+        "num": 7,
+        "den": 7
       },
       "EcoPallets": {
         "num": 351,
         "den": 351
       },
-      "Interior Images": {
-        "num": 14,
-        "den": 14
-      },
-      "Flo & Frankie": {
-        "num": 468,
-        "den": 468
-      },
-      "Aleger Studio": {
-        "num": 8,
-        "den": 8
-      },
-      "Logwin - Sikla": {
-        "num": 5077,
-        "den": 5077
-      },
-      "Samsung Batteries CP": {
-        "num": 1328,
-        "den": 1328
-      },
-      "Purify Me": {
-        "num": 158,
-        "den": 158
+      "Coromandel Mountains Company Limited": {
+        "num": 639,
+        "den": 639
       },
       "Made Group NZ": {
         "num": 14190,
@@ -163,25 +131,57 @@
         "num": 42,
         "den": 42
       },
-      "May Eleven NZ": {
-        "num": 1000,
-        "den": 1000
+      "Flo & Frankie": {
+        "num": 468,
+        "den": 468
+      },
+      "Samsung Batteries CP": {
+        "num": 1328,
+        "den": 1328
+      },
+      "Purify Me": {
+        "num": 158,
+        "den": 158
       },
       "Oricom": {
         "num": 962,
         "den": 962
       },
-      "Gym Equip": {
-        "num": 354,
-        "den": 354
-      },
       "Jock Freight - SECA": {
         "num": 6,
         "den": 6
       },
-      "Oceanbridge": {
-        "num": 7,
-        "den": 7
+      "May Eleven NZ": {
+        "num": 1000,
+        "den": 1000
+      },
+      "Baking Tech": {
+        "num": 1,
+        "den": 1
+      },
+      "Simply Clean": {
+        "num": 7477,
+        "den": 7477
+      },
+      "Salt Shark": {
+        "num": 217,
+        "den": 217
+      },
+      "Aleger Studio": {
+        "num": 8,
+        "den": 8
+      },
+      "Interior Images": {
+        "num": 14,
+        "den": 14
+      },
+      "Gym Equip": {
+        "num": 354,
+        "den": 354
+      },
+      "Logwin - Sikla": {
+        "num": 5077,
+        "den": 5077
       }
     },
     "Freight DIFOT": {
