@@ -119,77 +119,77 @@
         "num": 1328,
         "den": 1328
       },
-      "Coromandel Mountains Company Limited": {
-        "num": 694,
-        "den": 694
-      },
-      "Stryx": {
-        "num": 45,
-        "den": 45
-      },
       "Jock Freight - SECA": {
         "num": 323,
         "den": 323
-      },
-      "Baking Tech": {
-        "num": 1,
-        "den": 1
-      },
-      "Purify Me": {
-        "num": 183,
-        "den": 183
-      },
-      "EcoPallets": {
-        "num": 355,
-        "den": 355
-      },
-      "Vixxen": {
-        "num": 5800,
-        "den": 5801
-      },
-      "Aleger Studio": {
-        "num": 8,
-        "den": 8
-      },
-      "May Eleven NZ": {
-        "num": 1500,
-        "den": 1500
-      },
-      "Made Group NZ": {
-        "num": 14190,
-        "den": 14190
-      },
-      "Flo & Frankie": {
-        "num": 518,
-        "den": 518
-      },
-      "Interior Images": {
-        "num": 14,
-        "den": 14
       },
       "Gym Equip": {
         "num": 384,
         "den": 384
       },
+      "Simply Clean": {
+        "num": 7820,
+        "den": 7820
+      },
       "Oricom": {
         "num": 978,
         "den": 978
       },
-      "Salt Shark": {
-        "num": 308,
-        "den": 308
+      "Coromandel Mountains Company Limited": {
+        "num": 694,
+        "den": 694
+      },
+      "Vixxen": {
+        "num": 5800,
+        "den": 5801
       },
       "Oceanbridge": {
         "num": 7,
         "den": 7
       },
+      "Interior Images": {
+        "num": 14,
+        "den": 14
+      },
       "Logwin - Sikla": {
         "num": 5089,
         "den": 5089
       },
-      "Simply Clean": {
-        "num": 7820,
-        "den": 7820
+      "Salt Shark": {
+        "num": 308,
+        "den": 308
+      },
+      "Flo & Frankie": {
+        "num": 518,
+        "den": 518
+      },
+      "EcoPallets": {
+        "num": 355,
+        "den": 355
+      },
+      "Made Group NZ": {
+        "num": 14190,
+        "den": 14190
+      },
+      "Baking Tech": {
+        "num": 1,
+        "den": 1
+      },
+      "Stryx": {
+        "num": 45,
+        "den": 45
+      },
+      "Aleger Studio": {
+        "num": 8,
+        "den": 8
+      },
+      "Purify Me": {
+        "num": 183,
+        "den": 183
+      },
+      "May Eleven NZ": {
+        "num": 1500,
+        "den": 1500
       }
     },
     "Freight DIFOT": {
