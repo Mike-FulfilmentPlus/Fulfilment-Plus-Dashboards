@@ -115,41 +115,21 @@
       }
     },
     "Order Accuracy by Unit": {
-      "May Eleven NZ": {
-        "num": 1500,
-        "den": 1500
+      "Flo & Frankie": {
+        "num": 518,
+        "den": 518
       },
-      "Stryx": {
-        "num": 46,
-        "den": 46
-      },
-      "Purify Me": {
-        "num": 186,
-        "den": 186
-      },
-      "Made Group NZ": {
-        "num": 14190,
-        "den": 14190
-      },
-      "EcoPallets": {
-        "num": 355,
-        "den": 355
-      },
-      "Baking Tech": {
-        "num": 1,
-        "den": 1
-      },
-      "Samsung Batteries CP": {
-        "num": 1328,
-        "den": 1328
+      "Interior Images": {
+        "num": 14,
+        "den": 14
       },
       "Jock Freight - SECA": {
         "num": 323,
         "den": 323
       },
-      "Oricom": {
-        "num": 1014,
-        "den": 1014
+      "May Eleven NZ": {
+        "num": 1500,
+        "den": 1500
       },
       "Oceanbridge": {
         "num": 7,
@@ -159,17 +139,45 @@
         "num": 5811,
         "den": 5812
       },
+      "Baking Tech": {
+        "num": 1,
+        "den": 1
+      },
       "Simply Clean": {
         "num": 7821,
         "den": 7821
       },
-      "Flo & Frankie": {
-        "num": 518,
-        "den": 518
-      },
       "Logwin - Sikla": {
         "num": 5089,
         "den": 5089
+      },
+      "Oricom": {
+        "num": 1014,
+        "den": 1014
+      },
+      "EcoPallets": {
+        "num": 355,
+        "den": 355
+      },
+      "Made Group NZ": {
+        "num": 14190,
+        "den": 14190
+      },
+      "Samsung Batteries CP": {
+        "num": 1328,
+        "den": 1328
+      },
+      "Purify Me": {
+        "num": 186,
+        "den": 186
+      },
+      "Coromandel Mountains Company Limited": {
+        "num": 694,
+        "den": 694
+      },
+      "Aleger Studio": {
+        "num": 8,
+        "den": 8
       },
       "Salt Shark": {
         "num": 312,
@@ -179,17 +187,9 @@
         "num": 384,
         "den": 384
       },
-      "Coromandel Mountains Company Limited": {
-        "num": 694,
-        "den": 694
-      },
-      "Interior Images": {
-        "num": 14,
-        "den": 14
-      },
-      "Aleger Studio": {
-        "num": 8,
-        "den": 8
+      "Stryx": {
+        "num": 46,
+        "den": 46
       }
     },
     "Freight DIFOT": {
