@@ -58,28 +58,28 @@
         "den": 278
       },
       "Salt Shark": {
-        "num": 46,
-        "den": 47
+        "num": 47,
+        "den": 48
       },
       "Purify Me": {
-        "num": 82,
-        "den": 83
+        "num": 83,
+        "den": 84
       },
       "Oricom": {
-        "num": 108,
-        "den": 109
+        "num": 109,
+        "den": 110
       },
       "Stryx": {
-        "num": 28,
-        "den": 31
+        "num": 29,
+        "den": 32
       },
       "Coromandel Mountains Company Limited": {
         "num": 61,
         "den": 61
       },
       "EcoPallets": {
-        "num": 9,
-        "den": 11
+        "num": 10,
+        "den": 12
       },
       "Aleger Studio": {
         "num": 6,
@@ -106,8 +106,8 @@
         "den": 1
       },
       "Samsung Batteries CP": {
-        "num": 2,
-        "den": 3
+        "num": 3,
+        "den": 4
       },
       "Oceanbridge": {
         "num": 1,
@@ -115,87 +115,87 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Aleger Studio": {
-        "num": 8,
-        "den": 8
-      },
-      "Coromandel Mountains Company Limited": {
-        "num": 710,
-        "den": 710
-      },
       "Stryx": {
-        "num": 46,
-        "den": 46
-      },
-      "Made Group NZ": {
-        "num": 14190,
-        "den": 14190
-      },
-      "Interior Images": {
-        "num": 14,
-        "den": 14
-      },
-      "Flo & Frankie": {
-        "num": 518,
-        "den": 518
-      },
-      "Gym Equip": {
-        "num": 384,
-        "den": 384
-      },
-      "May Eleven NZ": {
-        "num": 1500,
-        "den": 1500
-      },
-      "Purify Me": {
-        "num": 186,
-        "den": 186
-      },
-      "Simply Clean": {
-        "num": 7821,
-        "den": 7821
-      },
-      "Oceanbridge": {
-        "num": 7,
-        "den": 7
-      },
-      "Baking Tech": {
-        "num": 1,
-        "den": 1
-      },
-      "Vixxen": {
-        "num": 5811,
-        "den": 5812
-      },
-      "Samsung Batteries CP": {
-        "num": 1328,
-        "den": 1328
-      },
-      "Salt Shark": {
-        "num": 312,
-        "den": 312
-      },
-      "Logwin - Sikla": {
-        "num": 5163,
-        "den": 5163
-      },
-      "Oricom": {
-        "num": 1014,
-        "den": 1014
+        "num": 48,
+        "den": 48
       },
       "Jock Freight - SECA": {
         "num": 953,
         "den": 953
       },
+      "Baking Tech": {
+        "num": 1,
+        "den": 1
+      },
+      "Purify Me": {
+        "num": 190,
+        "den": 190
+      },
+      "Vixxen": {
+        "num": 5811,
+        "den": 5812
+      },
+      "Flo & Frankie": {
+        "num": 518,
+        "den": 518
+      },
       "EcoPallets": {
-        "num": 475,
-        "den": 475
+        "num": 476,
+        "den": 476
+      },
+      "Oricom": {
+        "num": 1021,
+        "den": 1021
+      },
+      "Coromandel Mountains Company Limited": {
+        "num": 710,
+        "den": 710
+      },
+      "Salt Shark": {
+        "num": 316,
+        "den": 316
+      },
+      "Interior Images": {
+        "num": 14,
+        "den": 14
+      },
+      "May Eleven NZ": {
+        "num": 1500,
+        "den": 1500
+      },
+      "Aleger Studio": {
+        "num": 8,
+        "den": 8
+      },
+      "Gym Equip": {
+        "num": 384,
+        "den": 384
+      },
+      "Samsung Batteries CP": {
+        "num": 1329,
+        "den": 1329
+      },
+      "Oceanbridge": {
+        "num": 7,
+        "den": 7
+      },
+      "Simply Clean": {
+        "num": 7821,
+        "den": 7821
+      },
+      "Made Group NZ": {
+        "num": 14190,
+        "den": 14190
+      },
+      "Logwin - Sikla": {
+        "num": 5163,
+        "den": 5163
       }
     },
     "Freight DIFOT": {
       "Simply Clean": {
-        "num": 120,
-        "den": 121
+        "num": 122,
+        "den": 123
       },
       "Vixxen": {
         "num": 79,
@@ -203,11 +203,11 @@
       },
       "Salt Shark": {
         "num": 37,
-        "den": 40
+        "den": 41
       },
       "Purify Me": {
         "num": 66,
-        "den": 73
+        "den": 74
       },
       "Oricom": {
         "num": 80,
