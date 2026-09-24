@@ -54,8 +54,8 @@
         "den": 16
       },
       "Vixxen": {
-        "num": 288,
-        "den": 288
+        "num": 299,
+        "den": 299
       },
       "Salt Shark": {
         "num": 47,
@@ -115,29 +115,25 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Salt Shark": {
-        "num": 316,
-        "den": 316
-      },
       "Gym Equip": {
         "num": 384,
         "den": 384
       },
-      "EcoPallets": {
-        "num": 476,
-        "den": 476
-      },
-      "Purify Me": {
-        "num": 190,
-        "den": 190
-      },
       "Vixxen": {
-        "num": 6486,
-        "den": 6487
+        "num": 7391,
+        "den": 7392
       },
-      "Baking Tech": {
-        "num": 1,
-        "den": 1
+      "Samsung Batteries CP": {
+        "num": 1329,
+        "den": 1329
+      },
+      "Salt Shark": {
+        "num": 316,
+        "den": 316
+      },
+      "Logwin - Sikla": {
+        "num": 5163,
+        "den": 5163
       },
       "Jock Freight - SECA": {
         "num": 953,
@@ -147,71 +143,75 @@
         "num": 710,
         "den": 710
       },
-      "Flo & Frankie": {
-        "num": 518,
-        "den": 518
-      },
-      "May Eleven NZ": {
-        "num": 1500,
-        "den": 1500
-      },
-      "Samsung Batteries CP": {
-        "num": 1329,
-        "den": 1329
-      },
-      "Oricom": {
-        "num": 1021,
-        "den": 1021
-      },
-      "Simply Clean": {
-        "num": 7821,
-        "den": 7821
-      },
-      "Aleger Studio": {
-        "num": 8,
-        "den": 8
-      },
-      "Oceanbridge": {
-        "num": 7,
-        "den": 7
-      },
       "Stryx": {
         "num": 48,
         "den": 48
-      },
-      "Logwin - Sikla": {
-        "num": 5163,
-        "den": 5163
       },
       "Made Group NZ": {
         "num": 14190,
         "den": 14190
       },
+      "Simply Clean": {
+        "num": 7821,
+        "den": 7821
+      },
+      "May Eleven NZ": {
+        "num": 1500,
+        "den": 1500
+      },
+      "Aleger Studio": {
+        "num": 8,
+        "den": 8
+      },
+      "Flo & Frankie": {
+        "num": 518,
+        "den": 518
+      },
+      "Baking Tech": {
+        "num": 1,
+        "den": 1
+      },
+      "Purify Me": {
+        "num": 190,
+        "den": 190
+      },
+      "EcoPallets": {
+        "num": 476,
+        "den": 476
+      },
       "Interior Images": {
         "num": 14,
         "den": 14
+      },
+      "Oceanbridge": {
+        "num": 7,
+        "den": 7
+      },
+      "Oricom": {
+        "num": 1021,
+        "den": 1021
       }
     },
     "Freight DIFOT": {
       "Simply Clean": {
-        "num": 122,
-        "den": 123
+        "num": 123,
+        "den": 124
       },
       "Vixxen": {
         "num": 79,
         "den": 87
       },
       "Salt Shark": {
-        "num": 37,
-        "den": 41
+        "num": 38,
+        "den": 42
       },
       "Purify Me": {
         "num": 66,
         "den": 74
       },
       "Oricom": {
-        "num": 80,
-        "den": 92
+        "num": 82,
+        "den": 94
       },
       "Stryx": {
         "num": 12,
