@@ -115,29 +115,21 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Gym Equip": {
-        "num": 384,
-        "den": 384
-      },
-      "Vixxen": {
-        "num": 5811,
-        "den": 5812
-      },
-      "Aleger Studio": {
-        "num": 8,
-        "den": 8
-      },
-      "Simply Clean": {
-        "num": 7821,
-        "den": 7821
-      },
       "Logwin - Sikla": {
         "num": 5089,
         "den": 5089
       },
-      "Jock Freight - SECA": {
-        "num": 323,
-        "den": 323
+      "Purify Me": {
+        "num": 186,
+        "den": 186
+      },
+      "Flo & Frankie": {
+        "num": 518,
+        "den": 518
+      },
+      "Gym Equip": {
+        "num": 384,
+        "den": 384
       },
       "EcoPallets": {
         "num": 355,
@@ -147,21 +139,29 @@
         "num": 14190,
         "den": 14190
       },
-      "Stryx": {
-        "num": 46,
-        "den": 46
-      },
-      "Flo & Frankie": {
-        "num": 518,
-        "den": 518
-      },
-      "Purify Me": {
-        "num": 186,
-        "den": 186
+      "Interior Images": {
+        "num": 14,
+        "den": 14
       },
       "Samsung Batteries CP": {
         "num": 1328,
         "den": 1328
+      },
+      "Baking Tech": {
+        "num": 1,
+        "den": 1
+      },
+      "Stryx": {
+        "num": 46,
+        "den": 46
+      },
+      "Aleger Studio": {
+        "num": 8,
+        "den": 8
+      },
+      "Oricom": {
+        "num": 1014,
+        "den": 1014
       },
       "Coromandel Mountains Company Limited": {
         "num": 694,
@@ -171,25 +171,25 @@
         "num": 1500,
         "den": 1500
       },
+      "Vixxen": {
+        "num": 5811,
+        "den": 5812
+      },
       "Oceanbridge": {
         "num": 7,
         "den": 7
-      },
-      "Interior Images": {
-        "num": 14,
-        "den": 14
       },
       "Salt Shark": {
         "num": 312,
         "den": 312
       },
-      "Oricom": {
-        "num": 1014,
-        "den": 1014
+      "Jock Freight - SECA": {
+        "num": 323,
+        "den": 323
       },
-      "Baking Tech": {
-        "num": 1,
-        "den": 1
+      "Simply Clean": {
+        "num": 7821,
+        "den": 7821
       }
     },
     "Freight DIFOT": {
