@@ -115,33 +115,9 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Salt Shark": {
-        "num": 312,
-        "den": 312
-      },
-      "Made Group NZ": {
-        "num": 14190,
-        "den": 14190
-      },
-      "Interior Images": {
-        "num": 14,
-        "den": 14
-      },
-      "Samsung Batteries CP": {
-        "num": 1328,
-        "den": 1328
-      },
       "Aleger Studio": {
         "num": 8,
         "den": 8
-      },
-      "Jock Freight - SECA": {
-        "num": 323,
-        "den": 323
-      },
-      "Oceanbridge": {
-        "num": 7,
-        "den": 7
       },
       "Logwin - Sikla": {
         "num": 5089,
@@ -155,41 +131,65 @@
         "num": 518,
         "den": 518
       },
-      "Coromandel Mountains Company Limited": {
-        "num": 694,
-        "den": 694
-      },
-      "Baking Tech": {
-        "num": 1,
-        "den": 1
-      },
-      "Oricom": {
-        "num": 1014,
-        "den": 1014
-      },
       "EcoPallets": {
         "num": 355,
         "den": 355
       },
-      "Vixxen": {
-        "num": 5811,
-        "den": 5812
-      },
-      "Simply Clean": {
-        "num": 7821,
-        "den": 7821
-      },
-      "Gym Equip": {
-        "num": 384,
-        "den": 384
+      "Coromandel Mountains Company Limited": {
+        "num": 694,
+        "den": 694
       },
       "Purify Me": {
         "num": 186,
         "den": 186
       },
+      "Samsung Batteries CP": {
+        "num": 1328,
+        "den": 1328
+      },
+      "Made Group NZ": {
+        "num": 14190,
+        "den": 14190
+      },
+      "Oceanbridge": {
+        "num": 7,
+        "den": 7
+      },
+      "Salt Shark": {
+        "num": 312,
+        "den": 312
+      },
+      "Jock Freight - SECA": {
+        "num": 323,
+        "den": 323
+      },
       "Stryx": {
         "num": 46,
         "den": 46
+      },
+      "Interior Images": {
+        "num": 14,
+        "den": 14
+      },
+      "Vixxen": {
+        "num": 5811,
+        "den": 5812
+      },
+      "Oricom": {
+        "num": 1014,
+        "den": 1014
+      },
+      "Simply Clean": {
+        "num": 7821,
+        "den": 7821
+      },
+      "Baking Tech": {
+        "num": 1,
+        "den": 1
+      },
+      "Gym Equip": {
+        "num": 384,
+        "den": 384
       }
     },
     "Freight DIFOT": {
