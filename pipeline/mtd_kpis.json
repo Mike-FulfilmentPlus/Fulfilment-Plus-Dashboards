@@ -115,13 +115,41 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Samsung Batteries CP": {
-        "num": 1329,
-        "den": 1329
+      "Vixxen": {
+        "num": 7461,
+        "den": 7462
+      },
+      "Interior Images": {
+        "num": 14,
+        "den": 14
+      },
+      "Salt Shark": {
+        "num": 318,
+        "den": 318
+      },
+      "Aleger Studio": {
+        "num": 8,
+        "den": 8
       },
       "EcoPallets": {
         "num": 476,
         "den": 476
+      },
+      "Logwin - Sikla": {
+        "num": 5163,
+        "den": 5163
+      },
+      "Jock Freight - SECA": {
+        "num": 953,
+        "den": 953
+      },
+      "Samsung Batteries CP": {
+        "num": 1329,
+        "den": 1329
+      },
+      "Simply Clean": {
+        "num": 7821,
+        "den": 7821
       },
       "Made Group NZ": {
         "num": 14190,
@@ -131,17 +159,25 @@
         "num": 518,
         "den": 518
       },
+      "Oceanbridge": {
+        "num": 7,
+        "den": 7
+      },
+      "Stryx": {
+        "num": 48,
+        "den": 48
+      },
+      "Baking Tech": {
+        "num": 1,
+        "den": 1
+      },
       "Oricom": {
         "num": 1021,
         "den": 1021
       },
-      "Salt Shark": {
-        "num": 318,
-        "den": 318
-      },
-      "Logwin - Sikla": {
-        "num": 5163,
-        "den": 5163
+      "Purify Me": {
+        "num": 191,
+        "den": 191
       },
       "Gym Equip": {
         "num": 384,
@@ -151,45 +187,9 @@
         "num": 1500,
         "den": 1500
       },
-      "Interior Images": {
-        "num": 14,
-        "den": 14
-      },
-      "Vixxen": {
-        "num": 7461,
-        "den": 7462
-      },
-      "Simply Clean": {
-        "num": 7821,
-        "den": 7821
-      },
-      "Purify Me": {
-        "num": 191,
-        "den": 191
-      },
       "Coromandel Mountains Company Limited": {
         "num": 710,
         "den": 710
-      },
-      "Jock Freight - SECA": {
-        "num": 953,
-        "den": 953
-      },
-      "Baking Tech": {
-        "num": 1,
-        "den": 1
-      },
-      "Stryx": {
-        "num": 48,
-        "den": 48
-      },
-      "Aleger Studio": {
-        "num": 8,
-        "den": 8
-      },
-      "Oceanbridge": {
-        "num": 7,
-        "den": 7
       }
     },
     "Freight DIFOT": {
