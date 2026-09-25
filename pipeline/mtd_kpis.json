@@ -115,6 +115,22 @@
       }
     },
     "Order Accuracy by Unit": {
+      "Purify Me": {
+        "num": 190,
+        "den": 190
+      },
+      "Vixxen": {
+        "num": 7391,
+        "den": 7392
+      },
+      "Aleger Studio": {
+        "num": 8,
+        "den": 8
+      },
+      "Interior Images": {
+        "num": 14,
+        "den": 14
+      },
       "Salt Shark": {
         "num": 316,
         "den": 316
@@ -123,49 +139,41 @@
         "num": 384,
         "den": 384
       },
-      "Oceanbridge": {
-        "num": 7,
-        "den": 7
-      },
-      "Interior Images": {
-        "num": 14,
-        "den": 14
-      },
       "Made Group NZ": {
         "num": 14190,
         "den": 14190
       },
-      "EcoPallets": {
-        "num": 476,
-        "den": 476
+      "Simply Clean": {
+        "num": 7821,
+        "den": 7821
       },
-      "Flo & Frankie": {
-        "num": 518,
-        "den": 518
-      },
-      "Vixxen": {
-        "num": 7391,
-        "den": 7392
+      "Coromandel Mountains Company Limited": {
+        "num": 710,
+        "den": 710
       },
       "Logwin - Sikla": {
         "num": 5163,
         "den": 5163
       },
-      "Baking Tech": {
-        "num": 1,
-        "den": 1
+      "EcoPallets": {
+        "num": 476,
+        "den": 476
+      },
+      "May Eleven NZ": {
+        "num": 1500,
+        "den": 1500
+      },
+      "Flo & Frankie": {
+        "num": 518,
+        "den": 518
+      },
+      "Oceanbridge": {
+        "num": 7,
+        "den": 7
       },
       "Oricom": {
         "num": 1021,
         "den": 1021
-      },
-      "Aleger Studio": {
-        "num": 8,
-        "den": 8
-      },
-      "Coromandel Mountains Company Limited": {
-        "num": 710,
-        "den": 710
       },
       "Stryx": {
         "num": 48,
@@ -175,17 +183,9 @@
         "num": 1329,
         "den": 1329
       },
-      "Simply Clean": {
-        "num": 7821,
-        "den": 7821
-      },
-      "Purify Me": {
-        "num": 190,
-        "den": 190
-      },
-      "May Eleven NZ": {
-        "num": 1500,
-        "den": 1500
+      "Baking Tech": {
+        "num": 1,
+        "den": 1
       },
       "Jock Freight - SECA": {
         "num": 953,
@@ -202,12 +202,12 @@
         "den": 89
       },
       "Salt Shark": {
-        "num": 38,
-        "den": 42
+        "num": 39,
+        "den": 43
       },
       "Purify Me": {
-        "num": 66,
-        "den": 74
+        "num": 67,
+        "den": 75
       },
       "Oricom": {
         "num": 85,
