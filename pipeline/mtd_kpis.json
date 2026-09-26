@@ -115,45 +115,17 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Samsung Batteries CP": {
-        "num": 1329,
-        "den": 1329
-      },
-      "Jock Freight - SECA": {
-        "num": 953,
-        "den": 953
-      },
-      "Salt Shark": {
-        "num": 318,
-        "den": 318
-      },
-      "Oceanbridge": {
-        "num": 7,
-        "den": 7
-      },
-      "Logwin - Sikla": {
-        "num": 5163,
-        "den": 5163
+      "Stryx": {
+        "num": 48,
+        "den": 48
       },
       "Vixxen": {
         "num": 7461,
         "den": 7462
       },
-      "Purify Me": {
-        "num": 191,
-        "den": 191
-      },
-      "Baking Tech": {
-        "num": 1,
-        "den": 1
-      },
-      "Simply Clean": {
-        "num": 7821,
-        "den": 7821
-      },
-      "Stryx": {
-        "num": 48,
-        "den": 48
+      "Logwin - Sikla": {
+        "num": 5163,
+        "den": 5163
       },
       "Coromandel Mountains Company Limited": {
         "num": 710,
@@ -163,6 +135,26 @@
         "num": 14,
         "den": 14
       },
+      "Aleger Studio": {
+        "num": 8,
+        "den": 8
+      },
+      "May Eleven NZ": {
+        "num": 1500,
+        "den": 1500
+      },
+      "Jock Freight - SECA": {
+        "num": 953,
+        "den": 953
+      },
+      "Oceanbridge": {
+        "num": 7,
+        "den": 7
+      },
+      "Simply Clean": {
+        "num": 7821,
+        "den": 7821
+      },
       "Gym Equip": {
         "num": 384,
         "den": 384
@@ -171,25 +163,33 @@
         "num": 518,
         "den": 518
       },
-      "May Eleven NZ": {
-        "num": 1500,
-        "den": 1500
+      "Salt Shark": {
+        "num": 318,
+        "den": 318
+      },
+      "EcoPallets": {
+        "num": 476,
+        "den": 476
+      },
+      "Purify Me": {
+        "num": 191,
+        "den": 191
+      },
+      "Samsung Batteries CP": {
+        "num": 1329,
+        "den": 1329
       },
       "Made Group NZ": {
         "num": 14190,
         "den": 14190
       },
-      "Aleger Studio": {
-        "num": 8,
-        "den": 8
-      },
       "Oricom": {
         "num": 1021,
         "den": 1021
       },
-      "EcoPallets": {
-        "num": 476,
-        "den": 476
+      "Baking Tech": {
+        "num": 1,
+        "den": 1
       }
     },
     "Freight DIFOT": {
