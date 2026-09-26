@@ -115,17 +115,21 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Baking Tech": {
-        "num": 1,
-        "den": 1
+      "Gym Equip": {
+        "num": 384,
+        "den": 384
       },
-      "Jock Freight - SECA": {
-        "num": 953,
-        "den": 953
+      "Oceanbridge": {
+        "num": 7,
+        "den": 7
       },
-      "Logwin - Sikla": {
-        "num": 5163,
-        "den": 5163
+      "Flo & Frankie": {
+        "num": 518,
+        "den": 518
+      },
+      "EcoPallets": {
+        "num": 476,
+        "den": 476
       },
       "Oricom": {
         "num": 1021,
@@ -139,57 +143,53 @@
         "num": 710,
         "den": 710
       },
-      "Salt Shark": {
-        "num": 318,
-        "den": 318
-      },
-      "EcoPallets": {
-        "num": 476,
-        "den": 476
-      },
-      "Oceanbridge": {
-        "num": 7,
-        "den": 7
+      "Stryx": {
+        "num": 48,
+        "den": 48
       },
       "Made Group NZ": {
         "num": 14190,
         "den": 14190
       },
-      "Stryx": {
-        "num": 48,
-        "den": 48
-      },
-      "Interior Images": {
-        "num": 14,
-        "den": 14
-      },
-      "Purify Me": {
-        "num": 191,
-        "den": 191
+      "Salt Shark": {
+        "num": 318,
+        "den": 318
       },
       "Aleger Studio": {
         "num": 8,
         "den": 8
       },
+      "Jock Freight - SECA": {
+        "num": 953,
+        "den": 953
+      },
+      "Logwin - Sikla": {
+        "num": 5163,
+        "den": 5163
+      },
+      "Baking Tech": {
+        "num": 1,
+        "den": 1
+      },
+      "Vixxen": {
+        "num": 7461,
+        "den": 7462
+      },
       "Samsung Batteries CP": {
         "num": 1329,
         "den": 1329
+      },
+      "Purify Me": {
+        "num": 191,
+        "den": 191
       },
       "Simply Clean": {
         "num": 7821,
         "den": 7821
       },
-      "Gym Equip": {
-        "num": 384,
-        "den": 384
-      },
-      "Flo & Frankie": {
-        "num": 518,
-        "den": 518
-      },
-      "Vixxen": {
-        "num": 7461,
-        "den": 7462
+      "Interior Images": {
+        "num": 14,
+        "den": 14
       }
     },
     "Freight DIFOT": {
