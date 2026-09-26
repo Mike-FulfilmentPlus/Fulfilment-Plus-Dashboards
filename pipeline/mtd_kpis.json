@@ -115,73 +115,61 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Coromandel Mountains Company Limited": {
-        "num": 710,
-        "den": 710
-      },
-      "Flo & Frankie": {
-        "num": 518,
-        "den": 518
-      },
-      "Vixxen": {
-        "num": 7461,
-        "den": 7462
-      },
-      "Interior Images": {
-        "num": 14,
-        "den": 14
-      },
-      "Oceanbridge": {
-        "num": 7,
-        "den": 7
-      },
-      "Simply Clean": {
-        "num": 7821,
-        "den": 7821
-      },
-      "Aleger Studio": {
-        "num": 8,
-        "den": 8
-      },
-      "Gym Equip": {
-        "num": 384,
-        "den": 384
-      },
-      "Baking Tech": {
-        "num": 1,
-        "den": 1
-      },
-      "Salt Shark": {
-        "num": 318,
-        "den": 318
-      },
-      "Stryx": {
-        "num": 48,
-        "den": 48
-      },
       "EcoPallets": {
         "num": 476,
         "den": 476
+      },
+      "May Eleven NZ": {
+        "num": 1500,
+        "den": 1500
       },
       "Made Group NZ": {
         "num": 14190,
         "den": 14190
       },
-      "Purify Me": {
-        "num": 191,
-        "den": 191
-      },
-      "Jock Freight - SECA": {
-        "num": 953,
-        "den": 953
-      },
       "Samsung Batteries CP": {
         "num": 1329,
         "den": 1329
       },
-      "May Eleven NZ": {
-        "num": 1500,
-        "den": 1500
+      "Coromandel Mountains Company Limited": {
+        "num": 710,
+        "den": 710
+      },
+      "Gym Equip": {
+        "num": 384,
+        "den": 384
+      },
+      "Vixxen": {
+        "num": 7461,
+        "den": 7462
+      },
+      "Purify Me": {
+        "num": 191,
+        "den": 191
+      },
+      "Aleger Studio": {
+        "num": 8,
+        "den": 8
+      },
+      "Salt Shark": {
+        "num": 318,
+        "den": 318
+      },
+      "Baking Tech": {
+        "num": 1,
+        "den": 1
+      },
+      "Simply Clean": {
+        "num": 7821,
+        "den": 7821
+      },
+      "Stryx": {
+        "num": 48,
+        "den": 48
+      },
+      "Jock Freight - SECA": {
+        "num": 953,
+        "den": 953
       },
       "Logwin - Sikla": {
         "num": 5163,
@@ -190,6 +178,18 @@
       "Oricom": {
         "num": 1021,
         "den": 1021
+      },
+      "Flo & Frankie": {
+        "num": 518,
+        "den": 518
+      },
+      "Oceanbridge": {
+        "num": 7,
+        "den": 7
+      },
+      "Interior Images": {
+        "num": 14,
+        "den": 14
       }
     },
     "Freight DIFOT": {
