@@ -115,6 +115,62 @@
       }
     },
     "Order Accuracy by Unit": {
+      "Coromandel Mountains Company Limited": {
+        "num": 710,
+        "den": 710
+      },
+      "May Eleven NZ": {
+        "num": 1500,
+        "den": 1500
+      },
+      "Flo & Frankie": {
+        "num": 518,
+        "den": 518
+      },
+      "EcoPallets": {
+        "num": 476,
+        "den": 476
+      },
+      "Jock Freight - SECA": {
+        "num": 953,
+        "den": 953
+      },
+      "Oceanbridge": {
+        "num": 7,
+        "den": 7
+      },
+      "Stryx": {
+        "num": 48,
+        "den": 48
+      },
+      "Simply Clean": {
+        "num": 7821,
+        "den": 7821
+      },
+      "Aleger Studio": {
+        "num": 8,
+        "den": 8
+      },
+      "Salt Shark": {
+        "num": 318,
+        "den": 318
+      },
+      "Made Group NZ": {
+        "num": 14190,
+        "den": 14190
+      },
+      "Gym Equip": {
+        "num": 384,
+        "den": 384
+      },
+      "Vixxen": {
+        "num": 7461,
+        "den": 7462
+      },
+      "Purify Me": {
+        "num": 191,
+        "den": 191
+      },
       "Baking Tech": {
         "num": 1,
         "den": 1
@@ -123,73 +179,17 @@
         "num": 1021,
         "den": 1021
       },
-      "Stryx": {
-        "num": 48,
-        "den": 48
-      },
-      "EcoPallets": {
-        "num": 476,
-        "den": 476
-      },
       "Samsung Batteries CP": {
         "num": 1329,
         "den": 1329
-      },
-      "Oceanbridge": {
-        "num": 7,
-        "den": 7
-      },
-      "Jock Freight - SECA": {
-        "num": 953,
-        "den": 953
       },
       "Interior Images": {
         "num": 14,
         "den": 14
       },
-      "Simply Clean": {
-        "num": 7821,
-        "den": 7821
-      },
-      "Purify Me": {
-        "num": 191,
-        "den": 191
-      },
-      "Aleger Studio": {
-        "num": 8,
-        "den": 8
-      },
-      "May Eleven NZ": {
-        "num": 1500,
-        "den": 1500
-      },
-      "Vixxen": {
-        "num": 7461,
-        "den": 7462
-      },
-      "Gym Equip": {
-        "num": 384,
-        "den": 384
-      },
-      "Salt Shark": {
-        "num": 318,
-        "den": 318
-      },
       "Logwin - Sikla": {
         "num": 5163,
         "den": 5163
-      },
-      "Flo & Frankie": {
-        "num": 518,
-        "den": 518
-      },
-      "Made Group NZ": {
-        "num": 14190,
-        "den": 14190
-      },
-      "Coromandel Mountains Company Limited": {
-        "num": 710,
-        "den": 710
       }
     },
     "Freight DIFOT": {
