@@ -115,33 +115,49 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Stryx": {
-        "num": 48,
-        "den": 48
+      "Purify Me": {
+        "num": 191,
+        "den": 191
       },
-      "EcoPallets": {
-        "num": 476,
-        "den": 476
+      "Salt Shark": {
+        "num": 318,
+        "den": 318
+      },
+      "Vixxen": {
+        "num": 7461,
+        "den": 7462
       },
       "Interior Images": {
         "num": 14,
         "den": 14
       },
-      "Oceanbridge": {
-        "num": 7,
-        "den": 7
+      "Aleger Studio": {
+        "num": 8,
+        "den": 8
       },
       "Flo & Frankie": {
         "num": 518,
         "den": 518
       },
-      "Aleger Studio": {
-        "num": 8,
-        "den": 8
+      "EcoPallets": {
+        "num": 476,
+        "den": 476
       },
-      "Purify Me": {
-        "num": 191,
-        "den": 191
+      "Stryx": {
+        "num": 48,
+        "den": 48
+      },
+      "Samsung Batteries CP": {
+        "num": 1329,
+        "den": 1329
+      },
+      "Logwin - Sikla": {
+        "num": 5163,
+        "den": 5163
+      },
+      "Oricom": {
+        "num": 1021,
+        "den": 1021
       },
       "Gym Equip": {
         "num": 384,
@@ -151,41 +167,25 @@
         "num": 953,
         "den": 953
       },
-      "May Eleven NZ": {
-        "num": 1500,
-        "den": 1500
-      },
       "Simply Clean": {
         "num": 7821,
         "den": 7821
-      },
-      "Salt Shark": {
-        "num": 318,
-        "den": 318
-      },
-      "Logwin - Sikla": {
-        "num": 5163,
-        "den": 5163
-      },
-      "Samsung Batteries CP": {
-        "num": 1329,
-        "den": 1329
-      },
-      "Vixxen": {
-        "num": 7461,
-        "den": 7462
-      },
-      "Baking Tech": {
-        "num": 1,
-        "den": 1
       },
       "Coromandel Mountains Company Limited": {
         "num": 710,
         "den": 710
       },
-      "Oricom": {
-        "num": 1021,
-        "den": 1021
+      "Baking Tech": {
+        "num": 1,
+        "den": 1
+      },
+      "May Eleven NZ": {
+        "num": 1500,
+        "den": 1500
+      },
+      "Oceanbridge": {
+        "num": 7,
+        "den": 7
       },
       "Made Group NZ": {
         "num": 14190,
