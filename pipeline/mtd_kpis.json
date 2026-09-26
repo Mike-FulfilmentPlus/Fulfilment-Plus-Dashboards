@@ -115,49 +115,13 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Stryx": {
-        "num": 48,
-        "den": 48
-      },
-      "Vixxen": {
-        "num": 7461,
-        "den": 7462
-      },
-      "Logwin - Sikla": {
-        "num": 5163,
-        "den": 5163
-      },
-      "Coromandel Mountains Company Limited": {
-        "num": 710,
-        "den": 710
-      },
-      "Interior Images": {
-        "num": 14,
-        "den": 14
-      },
-      "Aleger Studio": {
-        "num": 8,
-        "den": 8
-      },
-      "May Eleven NZ": {
-        "num": 1500,
-        "den": 1500
-      },
       "Jock Freight - SECA": {
         "num": 953,
         "den": 953
       },
-      "Oceanbridge": {
-        "num": 7,
-        "den": 7
-      },
-      "Simply Clean": {
-        "num": 7821,
-        "den": 7821
-      },
-      "Gym Equip": {
-        "num": 384,
-        "den": 384
+      "Stryx": {
+        "num": 48,
+        "den": 48
       },
       "Flo & Frankie": {
         "num": 518,
@@ -167,9 +131,25 @@
         "num": 318,
         "den": 318
       },
-      "EcoPallets": {
-        "num": 476,
-        "den": 476
+      "Interior Images": {
+        "num": 14,
+        "den": 14
+      },
+      "Baking Tech": {
+        "num": 1,
+        "den": 1
+      },
+      "Logwin - Sikla": {
+        "num": 5163,
+        "den": 5163
+      },
+      "Vixxen": {
+        "num": 7461,
+        "den": 7462
+      },
+      "Oricom": {
+        "num": 1021,
+        "den": 1021
       },
       "Purify Me": {
         "num": 191,
@@ -183,13 +163,33 @@
         "num": 14190,
         "den": 14190
       },
-      "Oricom": {
-        "num": 1021,
-        "den": 1021
+      "Simply Clean": {
+        "num": 7821,
+        "den": 7821
       },
-      "Baking Tech": {
-        "num": 1,
-        "den": 1
+      "Aleger Studio": {
+        "num": 8,
+        "den": 8
+      },
+      "Oceanbridge": {
+        "num": 7,
+        "den": 7
+      },
+      "EcoPallets": {
+        "num": 476,
+        "den": 476
+      },
+      "Coromandel Mountains Company Limited": {
+        "num": 710,
+        "den": 710
+      },
+      "May Eleven NZ": {
+        "num": 1500,
+        "den": 1500
+      },
+      "Gym Equip": {
+        "num": 384,
+        "den": 384
       }
     },
     "Freight DIFOT": {
