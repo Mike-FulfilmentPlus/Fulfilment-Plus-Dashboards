@@ -115,9 +115,33 @@
       }
     },
     "Order Accuracy by Unit": {
+      "Jock Freight - SECA": {
+        "num": 953,
+        "den": 953
+      },
+      "Oceanbridge": {
+        "num": 7,
+        "den": 7
+      },
+      "Aleger Studio": {
+        "num": 8,
+        "den": 8
+      },
+      "Flo & Frankie": {
+        "num": 518,
+        "den": 518
+      },
+      "Salt Shark": {
+        "num": 318,
+        "den": 318
+      },
       "Simply Clean": {
         "num": 7821,
         "den": 7821
+      },
+      "Logwin - Sikla": {
+        "num": 5163,
+        "den": 5163
       },
       "Coromandel Mountains Company Limited": {
         "num": 710,
@@ -127,69 +151,45 @@
         "num": 1021,
         "den": 1021
       },
-      "Jock Freight - SECA": {
-        "num": 953,
-        "den": 953
-      },
-      "Gym Equip": {
-        "num": 384,
-        "den": 384
-      },
-      "Made Group NZ": {
-        "num": 14190,
-        "den": 14190
+      "Samsung Batteries CP": {
+        "num": 1329,
+        "den": 1329
       },
       "Vixxen": {
         "num": 7461,
         "den": 7462
       },
-      "EcoPallets": {
-        "num": 476,
-        "den": 476
+      "Purify Me": {
+        "num": 191,
+        "den": 191
       },
-      "Stryx": {
-        "num": 48,
-        "den": 48
+      "Gym Equip": {
+        "num": 384,
+        "den": 384
       },
       "Interior Images": {
         "num": 14,
         "den": 14
       },
-      "Flo & Frankie": {
-        "num": 518,
-        "den": 518
-      },
-      "Purify Me": {
-        "num": 191,
-        "den": 191
-      },
-      "Aleger Studio": {
-        "num": 8,
-        "den": 8
-      },
-      "Logwin - Sikla": {
-        "num": 5163,
-        "den": 5163
+      "EcoPallets": {
+        "num": 476,
+        "den": 476
       },
       "Baking Tech": {
         "num": 1,
         "den": 1
       },
+      "Made Group NZ": {
+        "num": 14190,
+        "den": 14190
+      },
       "May Eleven NZ": {
         "num": 1500,
         "den": 1500
       },
-      "Oceanbridge": {
-        "num": 7,
-        "den": 7
-      },
-      "Salt Shark": {
-        "num": 318,
-        "den": 318
-      },
-      "Samsung Batteries CP": {
-        "num": 1329,
-        "den": 1329
+      "Stryx": {
+        "num": 48,
+        "den": 48
       }
     },
     "Freight DIFOT": {
