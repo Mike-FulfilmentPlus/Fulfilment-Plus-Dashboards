@@ -54,8 +54,8 @@
         "den": 16
       },
       "Vixxen": {
-        "num": 352,
-        "den": 353
+        "num": 353,
+        "den": 354
       },
       "Salt Shark": {
         "num": 52,
@@ -115,81 +115,81 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Oricom": {
-        "num": 1058,
-        "den": 1058
-      },
       "EcoPallets": {
         "num": 476,
         "den": 476
       },
-      "Aleger Studio": {
-        "num": 8,
-        "den": 8
-      },
-      "Salt Shark": {
-        "num": 327,
-        "den": 327
-      },
-      "Simply Clean": {
-        "num": 7822,
-        "den": 7822
-      },
-      "Flo & Frankie": {
-        "num": 518,
-        "den": 518
+      "Vixxen": {
+        "num": 10704,
+        "den": 10709
       },
       "Jock Freight - SECA": {
         "num": 967,
         "den": 967
       },
+      "Aleger Studio": {
+        "num": 8,
+        "den": 8
+      },
+      "Simply Clean": {
+        "num": 7822,
+        "den": 7822
+      },
       "Gym Equip": {
         "num": 384,
         "den": 384
-      },
-      "Baking Tech": {
-        "num": 1,
-        "den": 1
-      },
-      "Stryx": {
-        "num": 55,
-        "den": 55
-      },
-      "Samsung Batteries CP": {
-        "num": 1329,
-        "den": 1329
       },
       "May Eleven NZ": {
         "num": 1500,
         "den": 1500
       },
-      "Made Group NZ": {
-        "num": 14190,
-        "den": 14190
+      "Coromandel Mountains Company Limited": {
+        "num": 712,
+        "den": 712
       },
       "Oceanbridge": {
         "num": 55,
         "den": 55
       },
-      "Interior Images": {
-        "num": 14,
-        "den": 14
-      },
-      "Purify Me": {
-        "num": 206,
-        "den": 206
-      },
-      "Vixxen": {
-        "num": 10584,
-        "den": 10589
+      "Salt Shark": {
+        "num": 327,
+        "den": 327
       },
       "Logwin - Sikla": {
         "num": 5163,
         "den": 5163
       },
-      "Coromandel Mountains Company Limited": {
-        "num": 712,
-        "den": 712
+      "Samsung Batteries CP": {
+        "num": 1329,
+        "den": 1329
+      },
+      "Made Group NZ": {
+        "num": 14190,
+        "den": 14190
+      },
+      "Flo & Frankie": {
+        "num": 518,
+        "den": 518
+      },
+      "Interior Images": {
+        "num": 14,
+        "den": 14
+      },
+      "Oricom": {
+        "num": 1058,
+        "den": 1058
+      },
+      "Stryx": {
+        "num": 55,
+        "den": 55
+      },
+      "Baking Tech": {
+        "num": 1,
+        "den": 1
+      },
+      "Purify Me": {
+        "num": 206,
+        "den": 206
       }
     },
     "Freight DIFOT": {
@@ -206,8 +206,8 @@
         "den": 46
       },
       "Purify Me": {
-        "num": 71,
-        "den": 79
+        "num": 73,
+        "den": 81
       },
       "Oricom": {
         "num": 87,
