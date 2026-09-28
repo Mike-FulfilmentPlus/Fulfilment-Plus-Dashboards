@@ -115,73 +115,57 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Baking Tech": {
-        "num": 1,
-        "den": 1
+      "Gym Equip": {
+        "num": 384,
+        "den": 384
       },
       "Salt Shark": {
         "num": 327,
         "den": 327
       },
-      "Coromandel Mountains Company Limited": {
-        "num": 712,
-        "den": 712
-      },
-      "Stryx": {
-        "num": 53,
-        "den": 53
-      },
-      "Interior Images": {
-        "num": 14,
-        "den": 14
-      },
       "Vixxen": {
         "num": 9166,
         "den": 9171
       },
-      "May Eleven NZ": {
-        "num": 1500,
-        "den": 1500
+      "Samsung Batteries CP": {
+        "num": 1329,
+        "den": 1329
       },
       "EcoPallets": {
         "num": 476,
         "den": 476
       },
-      "Gym Equip": {
-        "num": 384,
-        "den": 384
+      "May Eleven NZ": {
+        "num": 1500,
+        "den": 1500
+      },
+      "Coromandel Mountains Company Limited": {
+        "num": 712,
+        "den": 712
+      },
+      "Baking Tech": {
+        "num": 1,
+        "den": 1
       },
       "Simply Clean": {
         "num": 7822,
         "den": 7822
       },
-      "Flo & Frankie": {
-        "num": 518,
-        "den": 518
-      },
-      "Purify Me": {
-        "num": 204,
-        "den": 204
-      },
-      "Jock Freight - SECA": {
-        "num": 967,
-        "den": 967
+      "Oricom": {
+        "num": 1058,
+        "den": 1058
       },
       "Oceanbridge": {
         "num": 55,
         "den": 55
       },
-      "Oricom": {
-        "num": 1058,
-        "den": 1058
+      "Jock Freight - SECA": {
+        "num": 967,
+        "den": 967
       },
       "Logwin - Sikla": {
         "num": 5163,
         "den": 5163
-      },
-      "Samsung Batteries CP": {
-        "num": 1329,
-        "den": 1329
       },
       "Aleger Studio": {
         "num": 8,
@@ -190,6 +174,22 @@
       "Made Group NZ": {
         "num": 14190,
         "den": 14190
+      },
+      "Flo & Frankie": {
+        "num": 518,
+        "den": 518
+      },
+      "Stryx": {
+        "num": 53,
+        "den": 53
+      },
+      "Purify Me": {
+        "num": 204,
+        "den": 204
+      },
+      "Interior Images": {
+        "num": 14,
+        "den": 14
       }
     },
     "Freight DIFOT": {
