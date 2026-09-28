@@ -115,49 +115,37 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Purify Me": {
-        "num": 204,
-        "den": 204
+      "Salt Shark": {
+        "num": 327,
+        "den": 327
       },
-      "Stryx": {
-        "num": 53,
-        "den": 53
-      },
-      "Flo & Frankie": {
-        "num": 518,
-        "den": 518
+      "May Eleven NZ": {
+        "num": 1500,
+        "den": 1500
       },
       "Jock Freight - SECA": {
         "num": 967,
         "den": 967
       },
-      "Made Group NZ": {
-        "num": 14190,
-        "den": 14190
+      "Logwin - Sikla": {
+        "num": 5163,
+        "den": 5163
       },
-      "Oricom": {
-        "num": 1058,
-        "den": 1058
+      "Stryx": {
+        "num": 53,
+        "den": 53
       },
-      "Simply Clean": {
-        "num": 7822,
-        "den": 7822
+      "EcoPallets": {
+        "num": 476,
+        "den": 476
       },
-      "Samsung Batteries CP": {
-        "num": 1329,
-        "den": 1329
+      "Purify Me": {
+        "num": 204,
+        "den": 204
       },
-      "Baking Tech": {
-        "num": 1,
-        "den": 1
-      },
-      "Aleger Studio": {
-        "num": 8,
-        "den": 8
-      },
-      "Oceanbridge": {
-        "num": 55,
-        "den": 55
+      "Flo & Frankie": {
+        "num": 518,
+        "den": 518
       },
       "Vixxen": {
         "num": 9166,
@@ -167,29 +155,41 @@
         "num": 384,
         "den": 384
       },
-      "EcoPallets": {
-        "num": 476,
-        "den": 476
+      "Baking Tech": {
+        "num": 1,
+        "den": 1
+      },
+      "Oceanbridge": {
+        "num": 55,
+        "den": 55
+      },
+      "Oricom": {
+        "num": 1058,
+        "den": 1058
       },
       "Interior Images": {
         "num": 14,
         "den": 14
       },
-      "Logwin - Sikla": {
-        "num": 5163,
-        "den": 5163
-      },
-      "Salt Shark": {
-        "num": 327,
-        "den": 327
-      },
       "Coromandel Mountains Company Limited": {
         "num": 712,
         "den": 712
       },
-      "May Eleven NZ": {
-        "num": 1500,
-        "den": 1500
+      "Samsung Batteries CP": {
+        "num": 1329,
+        "den": 1329
+      },
+      "Made Group NZ": {
+        "num": 14190,
+        "den": 14190
+      },
+      "Simply Clean": {
+        "num": 7822,
+        "den": 7822
+      },
+      "Aleger Studio": {
+        "num": 8,
+        "den": 8
       }
     },
     "Freight DIFOT": {
