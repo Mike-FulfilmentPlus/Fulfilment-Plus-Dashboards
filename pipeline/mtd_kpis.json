@@ -15,10 +15,6 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Stryx": {
-        "num": 2,
-        "den": 2
-      },
       "Flo & Frankie": {
         "num": 1,
         "den": 1
@@ -26,6 +22,10 @@
       "Purify Me": {
         "num": 47,
         "den": 47
+      },
+      "Stryx": {
+        "num": 2,
+        "den": 2
       }
     },
     "Freight DIFOT": {}
