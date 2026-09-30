@@ -1,0 +1,111 @@
+name: Monthly KPI Close-Out
+
+# Closes out the previous NZ month into KPI_Data once each month:
+# Dock to Stock, Order Cut Off, Order Accuracy by Unit (extract_kpi_data.py),
+# then Freight DIFOT (fetch_difot_api.py + extract_difot.py), then rebuilds
+# the dashboards so the trend charts pick the new month up immediately.
+#
+# NZ is UTC+12/+13 depending on daylight saving, so "the 1st of the month
+# in NZ" can fall on UTC day 30/31 or day 1 depending on the time of year.
+# Rather than trying to hand-pick a UTC cron time that's always right, this
+# runs hourly across UTC days 1-3 and uses NZ time itself, inside the job,
+# to decide (a) whether it's actually the start of a new NZ month right now
+# and (b) which month just finished. That makes it self-correcting across
+# DST changes without needing the schedule edited twice a year.
+
+on:
+  schedule:
+    - cron: '0 * 1-3 * *'   # hourly, UTC days 1-3 — see note above
+  workflow_dispatch:
+    inputs:
+      month:
+        description: 'Month to close out (YYYY-MM). Leave blank to auto-detect the previous NZ month.'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+jobs:
+  close-out:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Determine target month (NZ time) and whether to run
+        id: target
+        run: |
+          if [ -n "${{ github.event.inputs.month }}" ]; then
+            echo "month=${{ github.event.inputs.month }}" >> "$GITHUB_OUTPUT"
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "Manual run requested for ${{ github.event.inputs.month }}"
+            exit 0
+          fi
+
+          nz_day=$(TZ=Pacific/Auckland date +%d)
+          nz_hour=$(TZ=Pacific/Auckland date +%H)
+          echo "NZ time right now: day=$nz_day hour=$nz_hour"
+
+          # Only actually close out in the first hour of NZ day 1 each month,
+          # even though this job checks in hourly across UTC days 1-3.
+          if [ "$nz_day" != "01" ] || [ "$nz_hour" != "00" ]; then
+            echo "Not the start of a new NZ month yet — skipping this run."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          month=$(TZ=Pacific/Auckland date -d "yesterday" +%Y-%m)
+          echo "New NZ month has started — closing out $month"
+          echo "month=$month" >> "$GITHUB_OUTPUT"
+          echo "run=true" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Python
+        if: steps.target.outputs.run == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        if: steps.target.outputs.run == 'true'
+        run: pip install -r requirements.txt
+
+      - name: Write credentials.env from secrets
+        if: steps.target.outputs.run == 'true'
+        working-directory: pipeline
+        run: |
+          cat > credentials.env << EOF
+          CARTONCLOUD_CLIENT_ID=${{ secrets.CARTONCLOUD_CLIENT_ID }}
+          CARTONCLOUD_CLIENT_SECRET=${{ secrets.CARTONCLOUD_CLIENT_SECRET }}
+          CARTONCLOUD_TENANT_ID=${{ secrets.CARTONCLOUD_TENANT_ID }}
+          STARSHIPIT_API_KEY=${{ secrets.STARSHIPIT_API_KEY }}
+          STARSHIPIT_SUBSCRIPTION_KEY=${{ secrets.STARSHIPIT_SUBSCRIPTION_KEY }}
+          EOF
+
+      - name: Run monthly close-out
+        if: steps.target.outputs.run == 'true'
+        working-directory: pipeline
+        run: |
+          set -e
+          MONTH="${{ steps.target.outputs.month }}"
+          echo "Closing out $MONTH"
+          python3 extract_kpi_data.py "$MONTH"
+          python3 fetch_difot_api.py "$MONTH" "DeliveryPerformanceReport_API_${MONTH}.xlsx"
+          python3 extract_difot.py "$MONTH" "DeliveryPerformanceReport_API_${MONTH}.xlsx"
+          python3 generate_dashboards.py
+
+      - name: Publish dashboard HTML to docs/ for GitHub Pages
+        if: steps.target.outputs.run == 'true'
+        run: |
+          mkdir -p docs
+          cp pipeline/business_dashboard.html docs/business_dashboard.html
+          cp pipeline/customer_dashboard.html docs/customer_dashboard.html
+
+      - name: Commit updated files back to repo
+        if: steps.target.outputs.run == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add pipeline/kpi_dashboard.xlsx pipeline/difot_carriers.json pipeline/*.json pipeline/*.csv docs/business_dashboard.html docs/customer_dashboard.html
+          git diff --cached --quiet || git commit -m "Automated monthly close-out for ${{ steps.target.outputs.month }}"
+          git pull --rebase origin main
+          git push
