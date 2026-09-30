@@ -984,5 +984,317 @@
         "days_count": 0
       }
     }
+  },
+  "2026-09": {
+    "_total": {
+      "Post Haste": {
+        "num": 110,
+        "den": 115,
+        "days_total": 319,
+        "days_count": 115
+      },
+      "NZ Couriers": {
+        "num": 340,
+        "den": 355,
+        "days_total": 473,
+        "days_count": 348
+      },
+      "FedEx": {
+        "num": 64,
+        "den": 75,
+        "days_total": 199,
+        "days_count": 75
+      },
+      "Cargo Plus": {
+        "num": 4,
+        "den": 4,
+        "days_total": 0,
+        "days_count": 0
+      }
+    },
+    "Purify Me": {
+      "Post Haste": {
+        "num": 12,
+        "den": 12,
+        "days_total": 26,
+        "days_count": 12
+      },
+      "NZ Couriers": {
+        "num": 32,
+        "den": 33,
+        "days_total": 48,
+        "days_count": 33
+      },
+      "FedEx": {
+        "num": 2,
+        "den": 3,
+        "days_total": 8,
+        "days_count": 3
+      }
+    },
+    "Oricom": {
+      "NZ Couriers": {
+        "num": 44,
+        "den": 47,
+        "days_total": 46,
+        "days_count": 40
+      },
+      "FedEx": {
+        "num": 13,
+        "den": 14,
+        "days_total": 31,
+        "days_count": 14
+      },
+      "Post Haste": {
+        "num": 18,
+        "den": 18,
+        "days_total": 42,
+        "days_count": 18
+      }
+    },
+    "Coromandel Mountains Company Limited": {
+      "Post Haste": {
+        "num": 4,
+        "den": 5,
+        "days_total": 15,
+        "days_count": 5
+      },
+      "FedEx": {
+        "num": 5,
+        "den": 6,
+        "days_total": 14,
+        "days_count": 6
+      },
+      "NZ Couriers": {
+        "num": 23,
+        "den": 23,
+        "days_total": 30,
+        "days_count": 23
+      }
+    },
+    "Simply Clean": {
+      "NZ Couriers": {
+        "num": 56,
+        "den": 60,
+        "days_total": 81,
+        "days_count": 60
+      },
+      "Post Haste": {
+        "num": 18,
+        "den": 20,
+        "days_total": 57,
+        "days_count": 20
+      },
+      "FedEx": {
+        "num": 7,
+        "den": 8,
+        "days_total": 19,
+        "days_count": 8
+      }
+    },
+    "Vixxen": {
+      "Post Haste": {
+        "num": 30,
+        "den": 32,
+        "days_total": 105,
+        "days_count": 32
+      },
+      "FedEx": {
+        "num": 19,
+        "den": 23,
+        "days_total": 71,
+        "days_count": 23
+      },
+      "NZ Couriers": {
+        "num": 113,
+        "den": 117,
+        "days_total": 160,
+        "days_count": 117
+      }
+    },
+    "Gym Equip": {
+      "FedEx": {
+        "num": 1,
+        "den": 2,
+        "days_total": 7,
+        "days_count": 2
+      },
+      "NZ Couriers": {
+        "num": 12,
+        "den": 12,
+        "days_total": 14,
+        "days_count": 12
+      },
+      "Post Haste": {
+        "num": 4,
+        "den": 4,
+        "days_total": 10,
+        "days_count": 4
+      }
+    },
+    "Stryx": {
+      "NZ Couriers": {
+        "num": 9,
+        "den": 9,
+        "days_total": 13,
+        "days_count": 9
+      },
+      "FedEx": {
+        "num": 2,
+        "den": 2,
+        "days_total": 7,
+        "days_count": 2
+      },
+      "Post Haste": {
+        "num": 9,
+        "den": 9,
+        "days_total": 25,
+        "days_count": 9
+      }
+    },
+    "Salt Shark": {
+      "Post Haste": {
+        "num": 5,
+        "den": 5,
+        "days_total": 15,
+        "days_count": 5
+      },
+      "NZ Couriers": {
+        "num": 24,
+        "den": 24,
+        "days_total": 32,
+        "days_count": 24
+      },
+      "FedEx": {
+        "num": 9,
+        "den": 10,
+        "days_total": 24,
+        "days_count": 10
+      }
+    },
+    "Flo & Frankie": {
+      "Post Haste": {
+        "num": 3,
+        "den": 3,
+        "days_total": 10,
+        "days_count": 3
+      },
+      "NZ Couriers": {
+        "num": 8,
+        "den": 9,
+        "days_total": 17,
+        "days_count": 9
+      },
+      "FedEx": {
+        "num": 1,
+        "den": 1,
+        "days_total": 2,
+        "days_count": 1
+      }
+    },
+    "May Eleven NZ": {
+      "NZ Couriers": {
+        "num": 2,
+        "den": 2,
+        "days_total": 3,
+        "days_count": 2
+      }
+    },
+    "Logwin - Sikla": {
+      "NZ Couriers": {
+        "num": 4,
+        "den": 4,
+        "days_total": 5,
+        "days_count": 4
+      },
+      "Post Haste": {
+        "num": 1,
+        "den": 1,
+        "days_total": 2,
+        "days_count": 1
+      },
+      "FedEx": {
+        "num": 1,
+        "den": 1,
+        "days_total": 4,
+        "days_count": 1
+      }
+    },
+    "EcoPallets": {
+      "FedEx": {
+        "num": 1,
+        "den": 2,
+        "days_total": 7,
+        "days_count": 2
+      },
+      "NZ Couriers": {
+        "num": 5,
+        "den": 5,
+        "days_total": 5,
+        "days_count": 5
+      },
+      "Post Haste": {
+        "num": 1,
+        "den": 1,
+        "days_total": 2,
+        "days_count": 1
+      }
+    },
+    "Jock Freight - SECA": {
+      "NZ Couriers": {
+        "num": 5,
+        "den": 7,
+        "days_total": 15,
+        "days_count": 7
+      },
+      "Post Haste": {
+        "num": 3,
+        "den": 3,
+        "days_total": 6,
+        "days_count": 3
+      },
+      "FedEx": {
+        "num": 1,
+        "den": 1,
+        "days_total": 2,
+        "days_count": 1
+      }
+    },
+    "Aleger Studio": {
+      "Post Haste": {
+        "num": 2,
+        "den": 2,
+        "days_total": 4,
+        "days_count": 2
+      },
+      "NZ Couriers": {
+        "num": 2,
+        "den": 2,
+        "days_total": 2,
+        "days_count": 2
+      },
+      "FedEx": {
+        "num": 2,
+        "den": 2,
+        "days_total": 3,
+        "days_count": 2
+      }
+    },
+    "Interior Images": {
+      "NZ Couriers": {
+        "num": 1,
+        "den": 1,
+        "days_total": 2,
+        "days_count": 1
+      }
+    },
+    "Made Group NZ": {
+      "Cargo Plus": {
+        "num": 4,
+        "den": 4,
+        "days_total": 0,
+        "days_count": 0
+      }
+    }
   }
 }
