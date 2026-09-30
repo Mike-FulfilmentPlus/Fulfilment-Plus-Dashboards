@@ -10,9 +10,13 @@
       }
     },
     "Order Accuracy by Unit": {
+      "Stryx": {
+        "num": 2,
+        "den": 2
+      },
       "Purify Me": {
-        "num": 40,
-        "den": 40
+        "num": 47,
+        "den": 47
       }
     },
     "Freight DIFOT": {}
