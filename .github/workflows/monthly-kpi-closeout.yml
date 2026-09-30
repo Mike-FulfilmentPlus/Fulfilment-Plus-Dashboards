@@ -5,21 +5,31 @@ name: Monthly KPI Close-Out
 # then Freight DIFOT (fetch_difot_api.py + extract_difot.py), then rebuilds
 # the dashboards so the trend charts pick the new month up immediately.
 #
-# NZ is UTC+12/+13 depending on daylight saving, so "the 1st of the month
-# in NZ" can fall on UTC day 30/31 or day 1 depending on the time of year.
-# Rather than trying to hand-pick a UTC cron time that's always right, this
-# runs hourly across UTC days 1-3 and uses NZ time itself, inside the job,
-# to decide (a) whether it's actually the start of a new NZ month right now
-# and (b) which month just finished. That makes it self-correcting across
-# DST changes without needing the schedule edited twice a year.
+# NZ is AHEAD of UTC (+12 or +13 depending on daylight saving), so NZ's
+# "start of the new month" (local midnight on the 1st) always falls on the
+# LAST UTC calendar day of the PREVIOUS month — e.g. NZ midnight on 1 Oct is
+# 30 Sep, 11:00 or 12:00 UTC, never 1 Oct UTC. (An earlier version of this
+# workflow scheduled against UTC days 1-3, which never actually overlaps
+# that moment — it never fired.) This version runs hourly across the last
+# few UTC days of every month and hour 00-13 UTC (covers hour 00 for the
+# small sliver of NZ where the two calendars briefly agree, plus hours
+# 09-13 UTC where NZ's midnight actually falls), and uses NZ time itself,
+# inside the job, to decide (a) whether it's genuinely just past midnight
+# on NZ's 1st and (b) which month just finished — so it self-corrects
+# across DST changes without the schedule needing to be edited twice a year.
+#
+# A manual run (workflow_dispatch) with no month given skips that "is it
+# actually midnight" gate entirely and always closes out the most recently
+# completed NZ calendar month — so it works regardless of what day/time it's
+# run on.
 
 on:
   schedule:
-    - cron: '0 * 1-3 * *'   # hourly, UTC days 1-3 — see note above
+    - cron: '0 0,9-13 28-31 * *'   # hourly, UTC days 28-31, hours 00 and 09-13 — see note above
   workflow_dispatch:
     inputs:
       month:
-        description: 'Month to close out (YYYY-MM). Leave blank to auto-detect the previous NZ month.'
+        description: 'Month to close out (YYYY-MM). Leave blank to auto-detect the most recently completed NZ month.'
         required: false
         default: ''
 
@@ -35,6 +45,12 @@ jobs:
       - name: Determine target month (NZ time) and whether to run
         id: target
         run: |
+          # Most recently completed NZ calendar month, computed from NZ's
+          # current date regardless of what UTC date/time it happens to be:
+          # first-of-this-NZ-month minus one day = last day of the previous
+          # NZ month, then take its Y-m.
+          auto_month=$(TZ=Pacific/Auckland date -d "$(TZ=Pacific/Auckland date +%Y-%m-01) -1 day" +%Y-%m)
+
           if [ -n "${{ github.event.inputs.month }}" ]; then
             echo "month=${{ github.event.inputs.month }}" >> "$GITHUB_OUTPUT"
             echo "run=true" >> "$GITHUB_OUTPUT"
@@ -42,21 +58,30 @@ jobs:
             exit 0
           fi
 
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            # Manual run, no month specified — just close out the most
+            # recently completed NZ month, whatever time it is right now.
+            echo "month=$auto_month" >> "$GITHUB_OUTPUT"
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "Manual run, auto-detected month: $auto_month"
+            exit 0
+          fi
+
           nz_day=$(TZ=Pacific/Auckland date +%d)
           nz_hour=$(TZ=Pacific/Auckland date +%H)
           echo "NZ time right now: day=$nz_day hour=$nz_hour"
 
-          # Only actually close out in the first hour of NZ day 1 each month,
-          # even though this job checks in hourly across UTC days 1-3.
+          # Scheduled run — only actually close out once, in the first hour
+          # of NZ day 1 each month, even though this job checks in hourly
+          # across several UTC days to be sure it catches that moment.
           if [ "$nz_day" != "01" ] || [ "$nz_hour" != "00" ]; then
             echo "Not the start of a new NZ month yet — skipping this run."
             echo "run=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
-          month=$(TZ=Pacific/Auckland date -d "yesterday" +%Y-%m)
-          echo "New NZ month has started — closing out $month"
-          echo "month=$month" >> "$GITHUB_OUTPUT"
+          echo "New NZ month has started — closing out $auto_month"
+          echo "month=$auto_month" >> "$GITHUB_OUTPUT"
           echo "run=true" >> "$GITHUB_OUTPUT"
 
       - name: Set up Python
