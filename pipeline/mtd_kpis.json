@@ -3,8 +3,18 @@
   "as_of": "2026-10-01",
   "kpis": {
     "Dock to Stock": {},
-    "Order Cut Off": {},
-    "Order Accuracy by Unit": {},
+    "Order Cut Off": {
+      "Purify Me": {
+        "num": 1,
+        "den": 1
+      }
+    },
+    "Order Accuracy by Unit": {
+      "Purify Me": {
+        "num": 40,
+        "den": 40
+      }
+    },
     "Freight DIFOT": {}
   }
 }
