@@ -19,6 +19,17 @@ import os
 import json
 import datetime
 import openpyxl
+from zoneinfo import ZoneInfo
+
+# Dates here must be NZ-local, not server/UTC time: GitHub Actions runners
+# run in UTC, and near a month boundary UTC can lag several hours behind
+# NZ's actual date. Using date.today() (server time) caused a freshly
+# closed-out month to stay wrongly excluded as "current" for hours after
+# NZ had already rolled into the next month.
+NZ_TZ = ZoneInfo("Pacific/Auckland")
+
+def today_nz():
+    return datetime.datetime.now(NZ_TZ).date()
 
 WORKBOOK           = "kpi_dashboard.xlsx"
 MTD_FILE           = "mtd_kpis.json"
@@ -669,7 +680,7 @@ render();
     return PAGE_SHELL.format(
         title="Customer KPI Dashboard - Fulfilment Plus",
         heading="Customer KPI Dashboard",
-        generated=datetime.date.today().isoformat(),
+        generated=today_nz().isoformat(),
         cust_active="active",
         biz_active="",
         body=body,
@@ -1278,7 +1289,7 @@ if (DATA.difot_carriers && carrierTrendEl) {
     return PAGE_SHELL.format(
         title="Business KPI Dashboard - Fulfilment Plus",
         heading="Business KPI Dashboard",
-        generated=datetime.date.today().isoformat(),
+        generated=today_nz().isoformat(),
         cust_active="",
         biz_active="active",
         body=body,
@@ -1290,7 +1301,7 @@ if (DATA.difot_carriers && carrierTrendEl) {
 def main():
     data = load_data()
     # Exclude the current month from historical records — MTD badges cover it.
-    current_month = datetime.date.today().strftime("%Y-%m")
+    current_month = today_nz().strftime("%Y-%m")
     data["records"] = [r for r in data["records"] if r["month"] != current_month]
     with open("customer_dashboard.html", "w", encoding="utf-8") as f:
         f.write(build_customer_dashboard(data))
