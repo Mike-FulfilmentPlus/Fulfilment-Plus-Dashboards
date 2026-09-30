@@ -2,7 +2,12 @@
   "month": "2026-10",
   "as_of": "2026-10-01",
   "kpis": {
-    "Dock to Stock": {},
+    "Dock to Stock": {
+      "Flo & Frankie": {
+        "num": 2,
+        "den": 2
+      }
+    },
     "Order Cut Off": {
       "Purify Me": {
         "num": 1,
@@ -13,6 +18,10 @@
       "Stryx": {
         "num": 2,
         "den": 2
+      },
+      "Flo & Frankie": {
+        "num": 1,
+        "den": 1
       },
       "Purify Me": {
         "num": 47,
