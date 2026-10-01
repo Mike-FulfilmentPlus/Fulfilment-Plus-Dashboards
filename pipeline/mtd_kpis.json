@@ -1,6 +1,6 @@
 {
   "month": "2026-10",
-  "as_of": "2026-10-01",
+  "as_of": "2026-10-02",
   "kpis": {
     "Dock to Stock": {
       "Flo & Frankie": {
@@ -31,15 +31,23 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Salt Shark": {
-        "num": 112,
-        "den": 112
-      },
       "Flo & Frankie": {
         "num": 55,
         "den": 55
       },
+      "Salt Shark": {
+        "num": 112,
+        "den": 112
+      },
+      "Purify Me": {
+        "num": 47,
+        "den": 47
+      },
       "Baking Tech": {
+        "num": 2,
+        "den": 2
+      },
+      "Stryx": {
         "num": 2,
         "den": 2
       },
@@ -47,17 +55,9 @@
         "num": 69,
         "den": 69
       },
-      "Stryx": {
-        "num": 2,
-        "den": 2
-      },
       "Vixxen": {
         "num": 1740,
         "den": 1740
-      },
-      "Purify Me": {
-        "num": 47,
-        "den": 47
       }
     },
     "Freight DIFOT": {}
