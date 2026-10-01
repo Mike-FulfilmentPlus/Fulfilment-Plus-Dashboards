@@ -4,8 +4,8 @@
   "kpis": {
     "Dock to Stock": {
       "Made Group NZ": {
-        "num": 2,
-        "den": 2
+        "num": 3,
+        "den": 3
       },
       "Flo & Frankie": {
         "num": 3,
@@ -39,9 +39,13 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Baking Tech": {
-        "num": 2,
-        "den": 2
+      "Oricom": {
+        "num": 69,
+        "den": 69
+      },
+      "Purify Me": {
+        "num": 47,
+        "den": 47
       },
       "Vixxen": {
         "num": 1740,
@@ -51,21 +55,21 @@
         "num": 112,
         "den": 112
       },
-      "Flo & Frankie": {
-        "num": 103,
-        "den": 103
+      "Jock Freight - SECA": {
+        "num": 1,
+        "den": 1
       },
-      "Purify Me": {
-        "num": 47,
-        "den": 47
+      "Baking Tech": {
+        "num": 2,
+        "den": 2
       },
       "Stryx": {
         "num": 5,
         "den": 5
       },
-      "Oricom": {
-        "num": 69,
-        "den": 69
+      "Flo & Frankie": {
+        "num": 103,
+        "den": 103
       },
       "Made Group NZ": {
         "num": 1,
