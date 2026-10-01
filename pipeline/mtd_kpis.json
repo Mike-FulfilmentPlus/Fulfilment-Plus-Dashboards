@@ -31,18 +31,6 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Flo & Frankie": {
-        "num": 55,
-        "den": 55
-      },
-      "Salt Shark": {
-        "num": 112,
-        "den": 112
-      },
-      "Purify Me": {
-        "num": 47,
-        "den": 47
-      },
       "Baking Tech": {
         "num": 2,
         "den": 2
@@ -50,6 +38,18 @@
       "Stryx": {
         "num": 2,
         "den": 2
+      },
+      "Purify Me": {
+        "num": 47,
+        "den": 47
+      },
+      "Flo & Frankie": {
+        "num": 55,
+        "den": 55
+      },
+      "Salt Shark": {
+        "num": 112,
+        "den": 112
       },
       "Oricom": {
         "num": 69,
