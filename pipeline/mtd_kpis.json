@@ -3,13 +3,13 @@
   "as_of": "2026-10-02",
   "kpis": {
     "Dock to Stock": {
+      "Made Group NZ": {
+        "num": 2,
+        "den": 2
+      },
       "Flo & Frankie": {
         "num": 3,
         "den": 3
-      },
-      "Made Group NZ": {
-        "num": 1,
-        "den": 1
       }
     },
     "Order Cut Off": {
@@ -39,37 +39,37 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Salt Shark": {
-        "num": 112,
-        "den": 112
-      },
-      "Purify Me": {
-        "num": 47,
-        "den": 47
-      },
-      "Flo & Frankie": {
-        "num": 55,
-        "den": 55
+      "Baking Tech": {
+        "num": 2,
+        "den": 2
       },
       "Vixxen": {
         "num": 1740,
         "den": 1740
       },
+      "Salt Shark": {
+        "num": 112,
+        "den": 112
+      },
+      "Flo & Frankie": {
+        "num": 103,
+        "den": 103
+      },
+      "Purify Me": {
+        "num": 47,
+        "den": 47
+      },
       "Stryx": {
         "num": 5,
         "den": 5
       },
-      "Made Group NZ": {
-        "num": 1,
-        "den": 1
-      },
-      "Baking Tech": {
-        "num": 2,
-        "den": 2
-      },
       "Oricom": {
         "num": 69,
         "den": 69
+      },
+      "Made Group NZ": {
+        "num": 1,
+        "den": 1
       }
     },
     "Freight DIFOT": {}
