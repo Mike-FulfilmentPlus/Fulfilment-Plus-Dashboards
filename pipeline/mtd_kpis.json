@@ -9,47 +9,55 @@
       }
     },
     "Order Cut Off": {
+      "Vixxen": {
+        "num": 3,
+        "den": 3
+      },
       "Purify Me": {
         "num": 1,
         "den": 1
+      },
+      "Salt Shark": {
+        "num": 5,
+        "den": 5
       },
       "Flo & Frankie": {
         "num": 2,
         "den": 2
       },
-      "Vixxen": {
+      "Oricom": {
         "num": 1,
         "den": 1
       }
     },
     "Order Accuracy by Unit": {
-      "Baking Tech": {
-        "num": 2,
-        "den": 2
+      "Oricom": {
+        "num": 69,
+        "den": 69
       },
       "Vixxen": {
-        "num": 1723,
-        "den": 1723
-      },
-      "Oricom": {
-        "num": 3,
-        "den": 3
+        "num": 1740,
+        "den": 1740
       },
       "Purify Me": {
         "num": 47,
         "den": 47
       },
-      "Stryx": {
+      "Baking Tech": {
         "num": 2,
         "den": 2
       },
       "Salt Shark": {
-        "num": 97,
-        "den": 97
+        "num": 112,
+        "den": 112
       },
       "Flo & Frankie": {
         "num": 55,
         "den": 55
+      },
+      "Stryx": {
+        "num": 2,
+        "den": 2
       }
     },
     "Freight DIFOT": {}
