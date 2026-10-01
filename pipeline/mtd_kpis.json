@@ -22,8 +22,8 @@
         "den": 1
       },
       "Salt Shark": {
-        "num": 5,
-        "den": 6
+        "num": 6,
+        "den": 7
       },
       "Flo & Frankie": {
         "num": 2,
@@ -39,43 +39,48 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Oricom": {
-        "num": 69,
-        "den": 69
-      },
-      "Baking Tech": {
-        "num": 2,
-        "den": 2
+      "Stryx": {
+        "num": 5,
+        "den": 5
       },
       "Flo & Frankie": {
         "num": 103,
         "den": 103
       },
-      "Salt Shark": {
-        "num": 597,
-        "den": 597
-      },
-      "Jock Freight - SECA": {
-        "num": 1,
-        "den": 1
-      },
-      "Made Group NZ": {
-        "num": 1,
-        "den": 1
-      },
-      "Vixxen": {
-        "num": 1740,
-        "den": 1740
+      "Oricom": {
+        "num": 69,
+        "den": 69
       },
       "Purify Me": {
         "num": 47,
         "den": 47
       },
-      "Stryx": {
-        "num": 5,
-        "den": 5
+      "Salt Shark": {
+        "num": 827,
+        "den": 827
+      },
+      "Vixxen": {
+        "num": 1740,
+        "den": 1740
+      },
+      "Jock Freight - SECA": {
+        "num": 1,
+        "den": 1
+      },
+      "Baking Tech": {
+        "num": 2,
+        "den": 2
+      },
+      "Made Group NZ": {
+        "num": 1,
+        "den": 1
       }
     },
-    "Freight DIFOT": {}
+    "Freight DIFOT": {
+      "Vixxen": {
+        "num": 1,
+        "den": 1
+      }
+    }
   }
 }
