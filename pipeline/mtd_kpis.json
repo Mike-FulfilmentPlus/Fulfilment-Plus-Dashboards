@@ -35,29 +35,29 @@
         "num": 2,
         "den": 2
       },
-      "Stryx": {
-        "num": 2,
-        "den": 2
-      },
       "Purify Me": {
         "num": 47,
         "den": 47
-      },
-      "Flo & Frankie": {
-        "num": 55,
-        "den": 55
-      },
-      "Salt Shark": {
-        "num": 112,
-        "den": 112
       },
       "Oricom": {
         "num": 69,
         "den": 69
       },
+      "Flo & Frankie": {
+        "num": 55,
+        "den": 55
+      },
+      "Stryx": {
+        "num": 2,
+        "den": 2
+      },
       "Vixxen": {
         "num": 1740,
         "den": 1740
+      },
+      "Salt Shark": {
+        "num": 112,
+        "den": 112
       }
     },
     "Freight DIFOT": {}
