@@ -31,10 +31,6 @@
         "num": 1723,
         "den": 1723
       },
-      "Purify Me": {
-        "num": 47,
-        "den": 47
-      },
       "Stryx": {
         "num": 2,
         "den": 2
@@ -42,6 +38,10 @@
       "Flo & Frankie": {
         "num": 55,
         "den": 55
+      },
+      "Purify Me": {
+        "num": 47,
+        "den": 47
       }
     },
     "Freight DIFOT": {}
