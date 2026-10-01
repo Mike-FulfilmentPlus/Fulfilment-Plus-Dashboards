@@ -19,11 +19,11 @@
       },
       "Salt Shark": {
         "num": 5,
-        "den": 5
+        "den": 6
       },
       "Flo & Frankie": {
         "num": 2,
-        "den": 2
+        "den": 3
       },
       "Oricom": {
         "num": 1,
@@ -31,17 +31,13 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Oricom": {
-        "num": 69,
-        "den": 69
+      "Salt Shark": {
+        "num": 112,
+        "den": 112
       },
       "Stryx": {
         "num": 2,
         "den": 2
-      },
-      "Salt Shark": {
-        "num": 112,
-        "den": 112
       },
       "Vixxen": {
         "num": 1740,
@@ -51,13 +47,17 @@
         "num": 2,
         "den": 2
       },
-      "Purify Me": {
-        "num": 47,
-        "den": 47
-      },
       "Flo & Frankie": {
         "num": 55,
         "den": 55
+      },
+      "Oricom": {
+        "num": 69,
+        "den": 69
+      },
+      "Purify Me": {
+        "num": 47,
+        "den": 47
       }
     },
     "Freight DIFOT": {}
