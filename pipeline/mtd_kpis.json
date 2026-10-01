@@ -31,33 +31,33 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Baking Tech": {
-        "num": 2,
-        "den": 2
-      },
       "Purify Me": {
         "num": 47,
         "den": 47
       },
-      "Oricom": {
-        "num": 69,
-        "den": 69
+      "Stryx": {
+        "num": 2,
+        "den": 2
       },
       "Flo & Frankie": {
         "num": 55,
         "den": 55
       },
-      "Stryx": {
+      "Salt Shark": {
+        "num": 112,
+        "den": 112
+      },
+      "Oricom": {
+        "num": 69,
+        "den": 69
+      },
+      "Baking Tech": {
         "num": 2,
         "den": 2
       },
       "Vixxen": {
         "num": 1740,
         "den": 1740
-      },
-      "Salt Shark": {
-        "num": 112,
-        "den": 112
       }
     },
     "Freight DIFOT": {}
