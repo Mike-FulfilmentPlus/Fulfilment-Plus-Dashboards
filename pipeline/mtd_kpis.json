@@ -4,8 +4,8 @@
   "kpis": {
     "Dock to Stock": {
       "Made Group NZ": {
-        "num": 3,
-        "den": 3
+        "num": 4,
+        "den": 4
       },
       "Flo & Frankie": {
         "num": 3,
@@ -39,6 +39,26 @@
       }
     },
     "Order Accuracy by Unit": {
+      "Purify Me": {
+        "num": 47,
+        "den": 47
+      },
+      "Made Group NZ": {
+        "num": 1,
+        "den": 1
+      },
+      "Salt Shark": {
+        "num": 871,
+        "den": 871
+      },
+      "Baking Tech": {
+        "num": 2,
+        "den": 2
+      },
+      "Jock Freight - SECA": {
+        "num": 1,
+        "den": 1
+      },
       "Stryx": {
         "num": 5,
         "den": 5
@@ -47,33 +67,13 @@
         "num": 103,
         "den": 103
       },
-      "Oricom": {
-        "num": 69,
-        "den": 69
-      },
-      "Purify Me": {
-        "num": 47,
-        "den": 47
-      },
-      "Salt Shark": {
-        "num": 827,
-        "den": 827
-      },
       "Vixxen": {
         "num": 1740,
         "den": 1740
       },
-      "Jock Freight - SECA": {
-        "num": 1,
-        "den": 1
-      },
-      "Baking Tech": {
-        "num": 2,
-        "den": 2
-      },
-      "Made Group NZ": {
-        "num": 1,
-        "den": 1
+      "Oricom": {
+        "num": 69,
+        "den": 69
       }
     },
     "Freight DIFOT": {
