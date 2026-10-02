@@ -43,45 +43,45 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Stryx": {
-        "num": 5,
-        "den": 5
-      },
-      "Oricom": {
-        "num": 74,
-        "den": 74
-      },
-      "Vixxen": {
-        "num": 1755,
-        "den": 1755
-      },
-      "Flo & Frankie": {
-        "num": 103,
-        "den": 103
-      },
-      "Jock Freight - SECA": {
-        "num": 2,
-        "den": 2
-      },
-      "Made Group NZ": {
-        "num": 1,
-        "den": 1
-      },
-      "Baking Tech": {
-        "num": 2,
-        "den": 2
-      },
       "Purify Me": {
         "num": 60,
         "den": 60
+      },
+      "Salt Shark": {
+        "num": 893,
+        "den": 893
       },
       "Coromandel Mountains Company Limited": {
         "num": 2,
         "den": 2
       },
-      "Salt Shark": {
-        "num": 893,
-        "den": 893
+      "Vixxen": {
+        "num": 1755,
+        "den": 1755
+      },
+      "Jock Freight - SECA": {
+        "num": 2,
+        "den": 2
+      },
+      "Oricom": {
+        "num": 74,
+        "den": 74
+      },
+      "Made Group NZ": {
+        "num": 1,
+        "den": 1
+      },
+      "Flo & Frankie": {
+        "num": 103,
+        "den": 103
+      },
+      "Baking Tech": {
+        "num": 2,
+        "den": 2
+      },
+      "Stryx": {
+        "num": 5,
+        "den": 5
       }
     },
     "Freight DIFOT": {
