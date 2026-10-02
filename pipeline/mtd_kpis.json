@@ -51,27 +51,7 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Salt Shark": {
-        "num": 893,
-        "den": 893
-      },
-      "Vixxen": {
-        "num": 1755,
-        "den": 1755
-      },
-      "Stryx": {
-        "num": 5,
-        "den": 5
-      },
-      "Coromandel Mountains Company Limited": {
-        "num": 2,
-        "den": 2
-      },
-      "EcoPallets": {
-        "num": 1,
-        "den": 1
-      },
-      "Jock Freight - SECA": {
+      "Baking Tech": {
         "num": 2,
         "den": 2
       },
@@ -83,6 +63,18 @@
         "num": 74,
         "den": 74
       },
+      "Stryx": {
+        "num": 5,
+        "den": 5
+      },
+      "Vixxen": {
+        "num": 1755,
+        "den": 1755
+      },
+      "EcoPallets": {
+        "num": 1,
+        "den": 1
+      },
       "Flo & Frankie": {
         "num": 103,
         "den": 103
@@ -91,11 +83,19 @@
         "num": 1,
         "den": 1
       },
+      "Salt Shark": {
+        "num": 893,
+        "den": 893
+      },
+      "Jock Freight - SECA": {
+        "num": 2,
+        "den": 2
+      },
       "Made Group NZ": {
         "num": 1,
         "den": 1
       },
-      "Baking Tech": {
+      "Coromandel Mountains Company Limited": {
         "num": 2,
         "den": 2
       }
