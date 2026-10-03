@@ -51,6 +51,22 @@
       }
     },
     "Order Accuracy by Unit": {
+      "Oricom": {
+        "num": 74,
+        "den": 74
+      },
+      "Jock Freight - SECA": {
+        "num": 2,
+        "den": 2
+      },
+      "Stryx": {
+        "num": 5,
+        "den": 5
+      },
+      "Baking Tech": {
+        "num": 2,
+        "den": 2
+      },
       "Coromandel Mountains Company Limited": {
         "num": 2,
         "den": 2
@@ -59,45 +75,29 @@
         "num": 1755,
         "den": 1755
       },
-      "Purify Me": {
-        "num": 60,
-        "den": 60
-      },
-      "Baking Tech": {
-        "num": 2,
-        "den": 2
-      },
-      "Jock Freight - SECA": {
-        "num": 2,
-        "den": 2
-      },
-      "Oricom": {
-        "num": 74,
-        "den": 74
+      "Made Group NZ": {
+        "num": 1,
+        "den": 1
       },
       "Samsung Batteries CP": {
         "num": 1,
         "den": 1
       },
-      "Salt Shark": {
-        "num": 893,
-        "den": 893
-      },
-      "Stryx": {
-        "num": 5,
-        "den": 5
-      },
       "EcoPallets": {
         "num": 1,
         "den": 1
+      },
+      "Purify Me": {
+        "num": 60,
+        "den": 60
       },
       "Flo & Frankie": {
         "num": 103,
         "den": 103
       },
-      "Made Group NZ": {
-        "num": 1,
-        "den": 1
+      "Salt Shark": {
+        "num": 893,
+        "den": 893
       }
     },
     "Freight DIFOT": {
