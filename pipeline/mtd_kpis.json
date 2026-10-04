@@ -1,6 +1,6 @@
 {
   "month": "2026-10",
-  "as_of": "2026-10-04",
+  "as_of": "2026-10-05",
   "kpis": {
     "Dock to Stock": {
       "Made Group NZ": {
@@ -59,43 +59,43 @@
         "num": 2,
         "den": 2
       },
-      "Purify Me": {
-        "num": 60,
-        "den": 60
-      },
-      "Stryx": {
-        "num": 5,
-        "den": 5
-      },
-      "Vixxen": {
-        "num": 1755,
-        "den": 1755
-      },
-      "Salt Shark": {
-        "num": 893,
-        "den": 893
+      "Oricom": {
+        "num": 74,
+        "den": 74
       },
       "Jock Freight - SECA": {
         "num": 2,
         "den": 2
       },
-      "Oricom": {
-        "num": 74,
-        "den": 74
+      "Salt Shark": {
+        "num": 893,
+        "den": 893
+      },
+      "Stryx": {
+        "num": 5,
+        "den": 5
       },
       "Baking Tech": {
         "num": 2,
         "den": 2
+      },
+      "Vixxen": {
+        "num": 1755,
+        "den": 1755
+      },
+      "Samsung Batteries CP": {
+        "num": 1,
+        "den": 1
+      },
+      "Purify Me": {
+        "num": 60,
+        "den": 60
       },
       "Made Group NZ": {
         "num": 1,
         "den": 1
       },
       "EcoPallets": {
-        "num": 1,
-        "den": 1
-      },
-      "Samsung Batteries CP": {
         "num": 1,
         "den": 1
       }
