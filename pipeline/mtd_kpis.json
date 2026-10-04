@@ -51,21 +51,29 @@
       }
     },
     "Order Accuracy by Unit": {
+      "Purify Me": {
+        "num": 73,
+        "den": 73
+      },
+      "Jock Freight - SECA": {
+        "num": 2,
+        "den": 2
+      },
       "Vixxen": {
         "num": 2190,
         "den": 2190
       },
-      "Salt Shark": {
-        "num": 893,
-        "den": 893
+      "Samsung Batteries CP": {
+        "num": 3,
+        "den": 3
       },
       "Stryx": {
         "num": 10,
         "den": 10
       },
-      "Flo & Frankie": {
-        "num": 209,
-        "den": 209
+      "Oricom": {
+        "num": 85,
+        "den": 85
       },
       "Made Group NZ": {
         "num": 1,
@@ -75,27 +83,19 @@
         "num": 13,
         "den": 13
       },
-      "Oricom": {
-        "num": 85,
-        "den": 85
-      },
       "EcoPallets": {
         "num": 1,
         "den": 1
       },
+      "Flo & Frankie": {
+        "num": 209,
+        "den": 209
+      },
+      "Salt Shark": {
+        "num": 893,
+        "den": 893
+      },
       "Baking Tech": {
-        "num": 2,
-        "den": 2
-      },
-      "Samsung Batteries CP": {
-        "num": 3,
-        "den": 3
-      },
-      "Purify Me": {
-        "num": 73,
-        "den": 73
-      },
-      "Jock Freight - SECA": {
         "num": 2,
         "den": 2
       }
@@ -106,8 +106,12 @@
         "den": 3
       },
       "Salt Shark": {
-        "num": 5,
-        "den": 5
+        "num": 6,
+        "den": 6
+      },
+      "Purify Me": {
+        "num": 1,
+        "den": 1
       },
       "Oricom": {
         "num": 1,
