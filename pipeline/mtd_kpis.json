@@ -55,29 +55,17 @@
         "num": 74,
         "den": 74
       },
-      "Stryx": {
-        "num": 5,
-        "den": 5
-      },
-      "Coromandel Mountains Company Limited": {
-        "num": 2,
-        "den": 2
+      "Flo & Frankie": {
+        "num": 103,
+        "den": 103
       },
       "Purify Me": {
         "num": 60,
         "den": 60
       },
-      "Baking Tech": {
+      "Jock Freight - SECA": {
         "num": 2,
         "den": 2
-      },
-      "Salt Shark": {
-        "num": 893,
-        "den": 893
-      },
-      "Flo & Frankie": {
-        "num": 103,
-        "den": 103
       },
       "Made Group NZ": {
         "num": 1,
@@ -87,7 +75,15 @@
         "num": 1,
         "den": 1
       },
-      "Jock Freight - SECA": {
+      "Salt Shark": {
+        "num": 893,
+        "den": 893
+      },
+      "EcoPallets": {
+        "num": 1,
+        "den": 1
+      },
+      "Coromandel Mountains Company Limited": {
         "num": 2,
         "den": 2
       },
@@ -95,9 +91,13 @@
         "num": 1755,
         "den": 1755
       },
-      "EcoPallets": {
-        "num": 1,
-        "den": 1
+      "Stryx": {
+        "num": 5,
+        "den": 5
+      },
+      "Baking Tech": {
+        "num": 2,
+        "den": 2
       }
     },
     "Freight DIFOT": {
