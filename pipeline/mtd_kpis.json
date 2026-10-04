@@ -18,16 +18,16 @@
         "den": 6
       },
       "Purify Me": {
-        "num": 7,
-        "den": 7
+        "num": 15,
+        "den": 15
       },
       "Salt Shark": {
         "num": 11,
         "den": 12
       },
       "Flo & Frankie": {
-        "num": 2,
-        "den": 3
+        "num": 3,
+        "den": 4
       },
       "Samsung Batteries CP": {
         "num": 0,
@@ -38,8 +38,8 @@
         "den": 4
       },
       "Stryx": {
-        "num": 2,
-        "den": 2
+        "num": 4,
+        "den": 4
       },
       "Coromandel Mountains Company Limited": {
         "num": 1,
@@ -52,60 +52,64 @@
     },
     "Order Accuracy by Unit": {
       "Vixxen": {
-        "num": 1755,
-        "den": 1755
-      },
-      "Oricom": {
-        "num": 74,
-        "den": 74
+        "num": 2190,
+        "den": 2190
       },
       "Made Group NZ": {
         "num": 1,
         "den": 1
       },
-      "Flo & Frankie": {
-        "num": 103,
-        "den": 103
-      },
-      "EcoPallets": {
-        "num": 1,
-        "den": 1
-      },
-      "Salt Shark": {
-        "num": 893,
-        "den": 893
-      },
-      "Coromandel Mountains Company Limited": {
+      "Baking Tech": {
         "num": 2,
         "den": 2
+      },
+      "Flo & Frankie": {
+        "num": 209,
+        "den": 209
       },
       "Jock Freight - SECA": {
         "num": 2,
         "den": 2
       },
-      "Purify Me": {
-        "num": 60,
-        "den": 60
+      "Oricom": {
+        "num": 74,
+        "den": 74
       },
-      "Baking Tech": {
+      "Coromandel Mountains Company Limited": {
         "num": 2,
         "den": 2
       },
       "Samsung Batteries CP": {
+        "num": 3,
+        "den": 3
+      },
+      "Purify Me": {
+        "num": 73,
+        "den": 73
+      },
+      "Salt Shark": {
+        "num": 893,
+        "den": 893
+      },
+      "EcoPallets": {
         "num": 1,
         "den": 1
       },
       "Stryx": {
-        "num": 5,
-        "den": 5
+        "num": 10,
+        "den": 10
       }
     },
     "Freight DIFOT": {
-      "Salt Shark": {
-        "num": 1,
-        "den": 1
-      },
       "Vixxen": {
+        "num": 2,
+        "den": 2
+      },
+      "Salt Shark": {
+        "num": 4,
+        "den": 4
+      },
+      "Oricom": {
         "num": 1,
         "den": 1
       }
