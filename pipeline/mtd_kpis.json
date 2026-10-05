@@ -59,61 +59,61 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Jock Freight - SECA": {
-        "num": 2,
-        "den": 2
+      "Samsung Batteries CP": {
+        "num": 3,
+        "den": 3
       },
       "Stryx": {
         "num": 10,
         "den": 10
       },
-      "EcoPallets": {
-        "num": 1,
-        "den": 1
-      },
-      "Flo & Frankie": {
-        "num": 209,
-        "den": 209
-      },
       "Made Group NZ": {
         "num": 1,
         "den": 1
       },
-      "Samsung Batteries CP": {
-        "num": 3,
-        "den": 3
-      },
-      "Salt Shark": {
-        "num": 918,
-        "den": 918
-      },
-      "Simply Clean": {
-        "num": 1,
-        "den": 1
-      },
-      "Purify Me": {
-        "num": 73,
-        "den": 73
-      },
-      "Vixxen": {
-        "num": 2747,
-        "den": 2747
-      },
-      "Oricom": {
-        "num": 131,
-        "den": 131
-      },
-      "Baking Tech": {
-        "num": 2,
-        "den": 2
+      "Gym Equip": {
+        "num": 6,
+        "den": 6
       },
       "Coromandel Mountains Company Limited": {
         "num": 30,
         "den": 30
       },
-      "Gym Equip": {
-        "num": 6,
-        "den": 6
+      "Vixxen": {
+        "num": 2747,
+        "den": 2747
+      },
+      "Flo & Frankie": {
+        "num": 209,
+        "den": 209
+      },
+      "Oricom": {
+        "num": 131,
+        "den": 131
+      },
+      "Salt Shark": {
+        "num": 918,
+        "den": 918
+      },
+      "Baking Tech": {
+        "num": 2,
+        "den": 2
+      },
+      "Simply Clean": {
+        "num": 1,
+        "den": 1
+      },
+      "EcoPallets": {
+        "num": 1,
+        "den": 1
+      },
+      "Jock Freight - SECA": {
+        "num": 2,
+        "den": 2
+      },
+      "Purify Me": {
+        "num": 73,
+        "den": 73
       }
     },
     "Freight DIFOT": {
@@ -126,8 +126,8 @@
         "den": 9
       },
       "Purify Me": {
-        "num": 3,
-        "den": 3
+        "num": 4,
+        "den": 4
       },
       "Oricom": {
         "num": 1,
