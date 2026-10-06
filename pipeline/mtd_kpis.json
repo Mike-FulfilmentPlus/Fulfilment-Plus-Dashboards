@@ -71,17 +71,29 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Flo & Frankie": {
-        "num": 314,
-        "den": 314
+      "Coromandel Mountains Company Limited": {
+        "num": 30,
+        "den": 30
       },
-      "Baking Tech": {
+      "Interior Images": {
+        "num": 1,
+        "den": 1
+      },
+      "Jock Freight - SECA": {
         "num": 2,
         "den": 2
       },
-      "EcoPallets": {
-        "num": 12,
-        "den": 12
+      "Samsung Batteries CP": {
+        "num": 3,
+        "den": 3
+      },
+      "Simply Clean": {
+        "num": 722,
+        "den": 722
+      },
+      "Salt Shark": {
+        "num": 1022,
+        "den": 1022
       },
       "Logwin - Sikla": {
         "num": 1,
@@ -91,26 +103,6 @@
         "num": 12,
         "den": 12
       },
-      "Simply Clean": {
-        "num": 722,
-        "den": 722
-      },
-      "Jock Freight - SECA": {
-        "num": 2,
-        "den": 2
-      },
-      "Vixxen": {
-        "num": 2757,
-        "den": 2757
-      },
-      "Salt Shark": {
-        "num": 1022,
-        "den": 1022
-      },
-      "Made Group NZ": {
-        "num": 1,
-        "den": 1
-      },
       "Oricom": {
         "num": 149,
         "den": 149
@@ -119,21 +111,29 @@
         "num": 77,
         "den": 77
       },
-      "Coromandel Mountains Company Limited": {
-        "num": 30,
-        "den": 30
+      "EcoPallets": {
+        "num": 12,
+        "den": 12
+      },
+      "Flo & Frankie": {
+        "num": 314,
+        "den": 314
+      },
+      "Baking Tech": {
+        "num": 2,
+        "den": 2
+      },
+      "Made Group NZ": {
+        "num": 1,
+        "den": 1
       },
       "Gym Equip": {
         "num": 6,
         "den": 6
       },
-      "Samsung Batteries CP": {
-        "num": 3,
-        "den": 3
-      },
-      "Interior Images": {
-        "num": 1,
-        "den": 1
+      "Vixxen": {
+        "num": 2757,
+        "den": 2757
       }
     },
     "Freight DIFOT": {
@@ -150,8 +150,8 @@
         "den": 5
       },
       "Purify Me": {
-        "num": 10,
-        "den": 10
+        "num": 11,
+        "den": 11
       },
       "Stryx": {
         "num": 1,
