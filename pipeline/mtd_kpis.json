@@ -71,21 +71,13 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Vixxen": {
-        "num": 2757,
-        "den": 2757
+      "Coromandel Mountains Company Limited": {
+        "num": 30,
+        "den": 30
       },
-      "Interior Images": {
-        "num": 1,
-        "den": 1
-      },
-      "Baking Tech": {
-        "num": 2,
-        "den": 2
-      },
-      "Oricom": {
-        "num": 149,
-        "den": 149
+      "Samsung Batteries CP": {
+        "num": 3,
+        "den": 3
       },
       "EcoPallets": {
         "num": 12,
@@ -95,33 +87,37 @@
         "num": 77,
         "den": 77
       },
-      "Stryx": {
-        "num": 12,
-        "den": 12
-      },
-      "Coromandel Mountains Company Limited": {
-        "num": 30,
-        "den": 30
-      },
-      "Flo & Frankie": {
-        "num": 314,
-        "den": 314
-      },
-      "Samsung Batteries CP": {
-        "num": 3,
-        "den": 3
+      "Interior Images": {
+        "num": 1,
+        "den": 1
       },
       "Made Group NZ": {
         "num": 1,
         "den": 1
       },
-      "Simply Clean": {
-        "num": 722,
-        "den": 722
+      "Flo & Frankie": {
+        "num": 314,
+        "den": 314
+      },
+      "Vixxen": {
+        "num": 2757,
+        "den": 2757
+      },
+      "Baking Tech": {
+        "num": 2,
+        "den": 2
       },
       "Logwin - Sikla": {
         "num": 1,
         "den": 1
+      },
+      "Stryx": {
+        "num": 12,
+        "den": 12
+      },
+      "Jock Freight - SECA": {
+        "num": 2,
+        "den": 2
       },
       "Gym Equip": {
         "num": 6,
@@ -131,9 +127,13 @@
         "num": 1022,
         "den": 1022
       },
-      "Jock Freight - SECA": {
-        "num": 2,
-        "den": 2
+      "Simply Clean": {
+        "num": 722,
+        "den": 722
+      },
+      "Oricom": {
+        "num": 149,
+        "den": 149
       }
     },
     "Freight DIFOT": {
