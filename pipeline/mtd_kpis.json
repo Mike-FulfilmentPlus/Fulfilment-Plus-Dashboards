@@ -15,7 +15,7 @@
     "Order Cut Off": {
       "Vixxen": {
         "num": 24,
-        "den": 24
+        "den": 79
       },
       "Purify Me": {
         "num": 18,
@@ -64,20 +64,40 @@
       "Logwin - Sikla": {
         "num": 1,
         "den": 1
+      },
+      "Jock Freight - SECA": {
+        "num": 1,
+        "den": 1
       }
     },
     "Order Accuracy by Unit": {
+      "Flo & Frankie": {
+        "num": 314,
+        "den": 314
+      },
+      "EcoPallets": {
+        "num": 12,
+        "den": 12
+      },
+      "Jock Freight - SECA": {
+        "num": 2,
+        "den": 2
+      },
       "Gym Equip": {
         "num": 6,
         "den": 6
       },
-      "Oricom": {
-        "num": 149,
-        "den": 149
+      "Salt Shark": {
+        "num": 1022,
+        "den": 1022
       },
-      "Samsung Batteries CP": {
-        "num": 3,
-        "den": 3
+      "Simply Clean": {
+        "num": 722,
+        "den": 722
+      },
+      "Interior Images": {
+        "num": 1,
+        "den": 1
       },
       "Stryx": {
         "num": 12,
@@ -87,55 +107,39 @@
         "num": 1,
         "den": 1
       },
-      "EcoPallets": {
-        "num": 12,
-        "den": 12
+      "Vixxen": {
+        "num": 2757,
+        "den": 2757
       },
-      "Purify Me": {
-        "num": 77,
-        "den": 77
-      },
-      "Salt Shark": {
-        "num": 1022,
-        "den": 1022
-      },
-      "Baking Tech": {
-        "num": 2,
-        "den": 2
-      },
-      "Flo & Frankie": {
-        "num": 314,
-        "den": 314
-      },
-      "Jock Freight - SECA": {
-        "num": 2,
-        "den": 2
+      "Samsung Batteries CP": {
+        "num": 3,
+        "den": 3
       },
       "Logwin - Sikla": {
         "num": 1,
         "den": 1
       },
+      "Purify Me": {
+        "num": 77,
+        "den": 77
+      },
+      "Baking Tech": {
+        "num": 2,
+        "den": 2
+      },
+      "Oricom": {
+        "num": 149,
+        "den": 149
+      },
       "Coromandel Mountains Company Limited": {
         "num": 30,
         "den": 30
-      },
-      "Vixxen": {
-        "num": 2757,
-        "den": 2757
-      },
-      "Simply Clean": {
-        "num": 722,
-        "den": 722
-      },
-      "Interior Images": {
-        "num": 1,
-        "den": 1
       }
     },
     "Freight DIFOT": {
       "Vixxen": {
-        "num": 8,
-        "den": 8
+        "num": 9,
+        "den": 9
       },
       "Salt Shark": {
         "num": 16,
