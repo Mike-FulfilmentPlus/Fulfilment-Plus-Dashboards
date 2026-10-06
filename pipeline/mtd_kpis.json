@@ -79,41 +79,9 @@
         "num": 12,
         "den": 12
       },
-      "Oricom": {
-        "num": 149,
-        "den": 149
-      },
-      "Vixxen": {
-        "num": 2757,
-        "den": 2757
-      },
       "Logwin - Sikla": {
         "num": 1,
         "den": 1
-      },
-      "Made Group NZ": {
-        "num": 1,
-        "den": 1
-      },
-      "Flo & Frankie": {
-        "num": 314,
-        "den": 314
-      },
-      "Samsung Batteries CP": {
-        "num": 3,
-        "den": 3
-      },
-      "Baking Tech": {
-        "num": 2,
-        "den": 2
-      },
-      "Interior Images": {
-        "num": 1,
-        "den": 1
-      },
-      "Coromandel Mountains Company Limited": {
-        "num": 30,
-        "den": 30
       },
       "Jock Freight - SECA": {
         "num": 2,
@@ -123,21 +91,53 @@
         "num": 9,
         "den": 9
       },
-      "Salt Shark": {
-        "num": 1080,
-        "den": 1080
-      },
-      "Stryx": {
-        "num": 12,
-        "den": 12
+      "Baking Tech": {
+        "num": 2,
+        "den": 2
       },
       "Purify Me": {
         "num": 77,
         "den": 77
       },
+      "Samsung Batteries CP": {
+        "num": 3,
+        "den": 3
+      },
+      "Coromandel Mountains Company Limited": {
+        "num": 30,
+        "den": 30
+      },
+      "Made Group NZ": {
+        "num": 1,
+        "den": 1
+      },
+      "Vixxen": {
+        "num": 2757,
+        "den": 2757
+      },
+      "Stryx": {
+        "num": 12,
+        "den": 12
+      },
+      "Interior Images": {
+        "num": 1,
+        "den": 1
+      },
+      "Salt Shark": {
+        "num": 1080,
+        "den": 1080
+      },
       "Simply Clean": {
         "num": 722,
         "den": 722
+      },
+      "Oricom": {
+        "num": 149,
+        "den": 149
+      },
+      "Flo & Frankie": {
+        "num": 314,
+        "den": 314
       }
     },
     "Freight DIFOT": {
@@ -150,8 +150,8 @@
         "den": 19
       },
       "Oricom": {
-        "num": 7,
-        "den": 7
+        "num": 13,
+        "den": 13
       },
       "Purify Me": {
         "num": 11,
@@ -166,8 +166,8 @@
         "den": 9
       },
       "Simply Clean": {
-        "num": 8,
-        "den": 8
+        "num": 9,
+        "den": 9
       }
     }
   }
