@@ -26,8 +26,8 @@
         "den": 18
       },
       "Salt Shark": {
-        "num": 26,
-        "den": 28
+        "num": 27,
+        "den": 29
       },
       "Flo & Frankie": {
         "num": 5,
@@ -79,9 +79,25 @@
         "num": 1,
         "den": 1
       },
-      "Logwin - Sikla": {
-        "num": 1,
-        "den": 1
+      "Vixxen": {
+        "num": 2757,
+        "den": 2757
+      },
+      "Salt Shark": {
+        "num": 1080,
+        "den": 1080
+      },
+      "Coromandel Mountains Company Limited": {
+        "num": 30,
+        "den": 30
+      },
+      "EcoPallets": {
+        "num": 12,
+        "den": 12
+      },
+      "Purify Me": {
+        "num": 77,
+        "den": 77
       },
       "Baking Tech": {
         "num": 2,
@@ -91,53 +107,37 @@
         "num": 722,
         "den": 722
       },
-      "Purify Me": {
-        "num": 77,
-        "den": 77
-      },
-      "Vixxen": {
-        "num": 2757,
-        "den": 2757
-      },
-      "Coromandel Mountains Company Limited": {
-        "num": 30,
-        "den": 30
-      },
-      "Jock Freight - SECA": {
-        "num": 2,
-        "den": 2
-      },
-      "Oricom": {
-        "num": 149,
-        "den": 149
-      },
       "Samsung Batteries CP": {
         "num": 3,
         "den": 3
       },
-      "Salt Shark": {
-        "num": 1029,
-        "den": 1029
-      },
-      "Interior Images": {
-        "num": 1,
-        "den": 1
-      },
-      "EcoPallets": {
-        "num": 12,
-        "den": 12
-      },
-      "Gym Equip": {
-        "num": 6,
-        "den": 6
+      "Flo & Frankie": {
+        "num": 314,
+        "den": 314
       },
       "Stryx": {
         "num": 12,
         "den": 12
       },
-      "Flo & Frankie": {
-        "num": 314,
-        "den": 314
+      "Oricom": {
+        "num": 149,
+        "den": 149
+      },
+      "Gym Equip": {
+        "num": 6,
+        "den": 6
+      },
+      "Logwin - Sikla": {
+        "num": 1,
+        "den": 1
+      },
+      "Interior Images": {
+        "num": 1,
+        "den": 1
+      },
+      "Jock Freight - SECA": {
+        "num": 2,
+        "den": 2
       }
     },
     "Freight DIFOT": {
@@ -166,8 +166,8 @@
         "den": 9
       },
       "Simply Clean": {
-        "num": 6,
-        "den": 6
+        "num": 8,
+        "den": 8
       }
     }
   }
