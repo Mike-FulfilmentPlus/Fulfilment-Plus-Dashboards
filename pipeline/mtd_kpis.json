@@ -71,6 +71,50 @@
       }
     },
     "Order Accuracy by Unit": {
+      "Interior Images": {
+        "num": 1,
+        "den": 1
+      },
+      "Stryx": {
+        "num": 12,
+        "den": 12
+      },
+      "Baking Tech": {
+        "num": 2,
+        "den": 2
+      },
+      "Flo & Frankie": {
+        "num": 314,
+        "den": 314
+      },
+      "Jock Freight - SECA": {
+        "num": 2,
+        "den": 2
+      },
+      "Vixxen": {
+        "num": 2757,
+        "den": 2757
+      },
+      "Purify Me": {
+        "num": 77,
+        "den": 77
+      },
+      "Gym Equip": {
+        "num": 6,
+        "den": 6
+      },
+      "Logwin - Sikla": {
+        "num": 1,
+        "den": 1
+      },
+      "Simply Clean": {
+        "num": 722,
+        "den": 722
+      },
+      "Salt Shark": {
+        "num": 1022,
+        "den": 1022
+      },
       "Coromandel Mountains Company Limited": {
         "num": 30,
         "den": 30
@@ -79,61 +123,17 @@
         "num": 3,
         "den": 3
       },
-      "EcoPallets": {
-        "num": 12,
-        "den": 12
-      },
-      "Purify Me": {
-        "num": 77,
-        "den": 77
-      },
-      "Interior Images": {
-        "num": 1,
-        "den": 1
-      },
       "Made Group NZ": {
         "num": 1,
         "den": 1
       },
-      "Flo & Frankie": {
-        "num": 314,
-        "den": 314
-      },
-      "Vixxen": {
-        "num": 2757,
-        "den": 2757
-      },
-      "Baking Tech": {
-        "num": 2,
-        "den": 2
-      },
-      "Logwin - Sikla": {
-        "num": 1,
-        "den": 1
-      },
-      "Stryx": {
-        "num": 12,
-        "den": 12
-      },
-      "Jock Freight - SECA": {
-        "num": 2,
-        "den": 2
-      },
-      "Gym Equip": {
-        "num": 6,
-        "den": 6
-      },
-      "Salt Shark": {
-        "num": 1022,
-        "den": 1022
-      },
-      "Simply Clean": {
-        "num": 722,
-        "den": 722
-      },
       "Oricom": {
         "num": 149,
         "den": 149
+      },
+      "EcoPallets": {
+        "num": 12,
+        "den": 12
       }
     },
     "Freight DIFOT": {
