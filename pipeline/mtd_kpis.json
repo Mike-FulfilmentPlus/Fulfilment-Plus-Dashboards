@@ -79,69 +79,69 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Jock Freight - SECA": {
-        "num": 2,
-        "den": 2
-      },
-      "Interior Images": {
-        "num": 1,
-        "den": 1
-      },
       "Samsung Batteries CP": {
         "num": 3,
         "den": 3
-      },
-      "Purify Me": {
-        "num": 78,
-        "den": 78
-      },
-      "Vixxen": {
-        "num": 2757,
-        "den": 2757
-      },
-      "Coromandel Mountains Company Limited": {
-        "num": 31,
-        "den": 31
-      },
-      "Gym Equip": {
-        "num": 9,
-        "den": 9
-      },
-      "Flo & Frankie": {
-        "num": 339,
-        "den": 339
-      },
-      "Simply Clean": {
-        "num": 726,
-        "den": 726
-      },
-      "Stryx": {
-        "num": 12,
-        "den": 12
-      },
-      "Oricom": {
-        "num": 167,
-        "den": 167
       },
       "Logwin - Sikla": {
         "num": 1,
         "den": 1
       },
+      "Oricom": {
+        "num": 167,
+        "den": 167
+      },
       "EcoPallets": {
         "num": 12,
         "den": 12
+      },
+      "Gym Equip": {
+        "num": 9,
+        "den": 9
+      },
+      "Simply Clean": {
+        "num": 726,
+        "den": 726
       },
       "Made Group NZ": {
         "num": 1,
         "den": 1
       },
-      "Baking Tech": {
+      "Stryx": {
+        "num": 12,
+        "den": 12
+      },
+      "Jock Freight - SECA": {
         "num": 2,
         "den": 2
+      },
+      "Vixxen": {
+        "num": 2757,
+        "den": 2757
+      },
+      "Interior Images": {
+        "num": 1,
+        "den": 1
+      },
+      "Purify Me": {
+        "num": 78,
+        "den": 78
+      },
+      "Coromandel Mountains Company Limited": {
+        "num": 31,
+        "den": 31
+      },
+      "Flo & Frankie": {
+        "num": 339,
+        "den": 339
       },
       "Salt Shark": {
         "num": 1081,
         "den": 1081
+      },
+      "Baking Tech": {
+        "num": 2,
+        "den": 2
       }
     },
     "Freight DIFOT": {
