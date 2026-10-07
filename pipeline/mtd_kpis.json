@@ -3,13 +3,17 @@
   "as_of": "2026-10-07",
   "kpis": {
     "Dock to Stock": {
-      "Vixxen": {
+      "Flo & Frankie": {
+        "num": 8,
+        "den": 8
+      },
+      "Salt Shark": {
         "num": 1,
         "den": 1
       },
-      "Flo & Frankie": {
-        "num": 5,
-        "den": 5
+      "Vixxen": {
+        "num": 1,
+        "den": 1
       },
       "Made Group NZ": {
         "num": 5,
@@ -75,65 +79,65 @@
       }
     },
     "Order Accuracy by Unit": {
-      "EcoPallets": {
-        "num": 12,
-        "den": 12
-      },
-      "Logwin - Sikla": {
-        "num": 1,
-        "den": 1
-      },
-      "Jock Freight - SECA": {
-        "num": 2,
-        "den": 2
-      },
-      "Gym Equip": {
-        "num": 9,
-        "den": 9
-      },
-      "Baking Tech": {
-        "num": 2,
-        "den": 2
-      },
-      "Purify Me": {
-        "num": 77,
-        "den": 77
-      },
-      "Samsung Batteries CP": {
-        "num": 3,
-        "den": 3
+      "Salt Shark": {
+        "num": 1080,
+        "den": 1080
       },
       "Coromandel Mountains Company Limited": {
         "num": 30,
         "den": 30
       },
-      "Made Group NZ": {
-        "num": 1,
-        "den": 1
-      },
-      "Vixxen": {
-        "num": 2757,
-        "den": 2757
+      "Simply Clean": {
+        "num": 722,
+        "den": 722
       },
       "Stryx": {
         "num": 12,
         "den": 12
       },
-      "Interior Images": {
-        "num": 1,
-        "den": 1
-      },
-      "Salt Shark": {
-        "num": 1080,
-        "den": 1080
-      },
-      "Simply Clean": {
-        "num": 722,
-        "den": 722
+      "Gym Equip": {
+        "num": 9,
+        "den": 9
       },
       "Oricom": {
         "num": 149,
         "den": 149
+      },
+      "Purify Me": {
+        "num": 77,
+        "den": 77
+      },
+      "Vixxen": {
+        "num": 2757,
+        "den": 2757
+      },
+      "Interior Images": {
+        "num": 1,
+        "den": 1
+      },
+      "Made Group NZ": {
+        "num": 1,
+        "den": 1
+      },
+      "Samsung Batteries CP": {
+        "num": 3,
+        "den": 3
+      },
+      "Jock Freight - SECA": {
+        "num": 2,
+        "den": 2
+      },
+      "Baking Tech": {
+        "num": 2,
+        "den": 2
+      },
+      "Logwin - Sikla": {
+        "num": 1,
+        "den": 1
+      },
+      "EcoPallets": {
+        "num": 12,
+        "den": 12
       },
       "Flo & Frankie": {
         "num": 314,
@@ -142,12 +146,12 @@
     },
     "Freight DIFOT": {
       "Vixxen": {
-        "num": 9,
-        "den": 9
+        "num": 12,
+        "den": 12
       },
       "Salt Shark": {
-        "num": 18,
-        "den": 19
+        "num": 19,
+        "den": 20
       },
       "Oricom": {
         "num": 13,
@@ -166,8 +170,8 @@
         "den": 9
       },
       "Simply Clean": {
-        "num": 9,
-        "den": 9
+        "num": 11,
+        "den": 11
       }
     }
   }
