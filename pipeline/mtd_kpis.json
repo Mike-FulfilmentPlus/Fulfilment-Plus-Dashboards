@@ -1,6 +1,6 @@
 {
   "month": "2026-10",
-  "as_of": "2026-10-07",
+  "as_of": "2026-10-08",
   "kpis": {
     "Dock to Stock": {
       "Flo & Frankie": {
@@ -79,17 +79,41 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Samsung Batteries CP": {
-        "num": 3,
-        "den": 3
+      "Simply Clean": {
+        "num": 726,
+        "den": 726
       },
-      "Logwin - Sikla": {
+      "Salt Shark": {
+        "num": 1081,
+        "den": 1081
+      },
+      "Coromandel Mountains Company Limited": {
+        "num": 31,
+        "den": 31
+      },
+      "Interior Images": {
         "num": 1,
         "den": 1
       },
-      "Oricom": {
-        "num": 167,
-        "den": 167
+      "Jock Freight - SECA": {
+        "num": 2,
+        "den": 2
+      },
+      "Made Group NZ": {
+        "num": 1,
+        "den": 1
+      },
+      "Baking Tech": {
+        "num": 2,
+        "den": 2
+      },
+      "Flo & Frankie": {
+        "num": 339,
+        "den": 339
+      },
+      "Samsung Batteries CP": {
+        "num": 3,
+        "den": 3
       },
       "EcoPallets": {
         "num": 12,
@@ -99,49 +123,25 @@
         "num": 9,
         "den": 9
       },
-      "Simply Clean": {
-        "num": 726,
-        "den": 726
+      "Purify Me": {
+        "num": 78,
+        "den": 78
       },
-      "Made Group NZ": {
+      "Logwin - Sikla": {
         "num": 1,
         "den": 1
-      },
-      "Stryx": {
-        "num": 12,
-        "den": 12
-      },
-      "Jock Freight - SECA": {
-        "num": 2,
-        "den": 2
       },
       "Vixxen": {
         "num": 2757,
         "den": 2757
       },
-      "Interior Images": {
-        "num": 1,
-        "den": 1
+      "Oricom": {
+        "num": 167,
+        "den": 167
       },
-      "Purify Me": {
-        "num": 78,
-        "den": 78
-      },
-      "Coromandel Mountains Company Limited": {
-        "num": 31,
-        "den": 31
-      },
-      "Flo & Frankie": {
-        "num": 339,
-        "den": 339
-      },
-      "Salt Shark": {
-        "num": 1081,
-        "den": 1081
-      },
-      "Baking Tech": {
-        "num": 2,
-        "den": 2
+      "Stryx": {
+        "num": 12,
+        "den": 12
       }
     },
     "Freight DIFOT": {
