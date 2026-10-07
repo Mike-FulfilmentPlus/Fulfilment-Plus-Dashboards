@@ -79,7 +79,39 @@
       }
     },
     "Order Accuracy by Unit": {
+      "Logwin - Sikla": {
+        "num": 1,
+        "den": 1
+      },
+      "Salt Shark": {
+        "num": 1081,
+        "den": 1081
+      },
+      "Samsung Batteries CP": {
+        "num": 3,
+        "den": 3
+      },
+      "Simply Clean": {
+        "num": 726,
+        "den": 726
+      },
+      "Coromandel Mountains Company Limited": {
+        "num": 31,
+        "den": 31
+      },
       "Baking Tech": {
+        "num": 2,
+        "den": 2
+      },
+      "Oricom": {
+        "num": 167,
+        "den": 167
+      },
+      "Flo & Frankie": {
+        "num": 339,
+        "den": 339
+      },
+      "Jock Freight - SECA": {
         "num": 2,
         "den": 2
       },
@@ -87,61 +119,29 @@
         "num": 2757,
         "den": 2757
       },
-      "Purify Me": {
-        "num": 81,
-        "den": 81
-      },
-      "Oricom": {
-        "num": 167,
-        "den": 167
-      },
-      "Interior Images": {
-        "num": 1,
-        "den": 1
+      "EcoPallets": {
+        "num": 12,
+        "den": 12
       },
       "Made Group NZ": {
         "num": 1,
         "den": 1
       },
-      "Simply Clean": {
-        "num": 726,
-        "den": 726
+      "Interior Images": {
+        "num": 1,
+        "den": 1
       },
-      "Samsung Batteries CP": {
-        "num": 3,
-        "den": 3
-      },
-      "EcoPallets": {
-        "num": 12,
-        "den": 12
-      },
-      "Stryx": {
-        "num": 12,
-        "den": 12
-      },
-      "Salt Shark": {
-        "num": 1081,
-        "den": 1081
-      },
-      "Coromandel Mountains Company Limited": {
-        "num": 31,
-        "den": 31
-      },
-      "Flo & Frankie": {
-        "num": 339,
-        "den": 339
+      "Purify Me": {
+        "num": 81,
+        "den": 81
       },
       "Gym Equip": {
         "num": 9,
         "den": 9
       },
-      "Jock Freight - SECA": {
-        "num": 2,
-        "den": 2
-      },
-      "Logwin - Sikla": {
-        "num": 1,
-        "den": 1
+      "Stryx": {
+        "num": 12,
+        "den": 12
       }
     },
     "Freight DIFOT": {
@@ -154,8 +154,8 @@
         "den": 23
       },
       "Oricom": {
-        "num": 15,
-        "den": 15
+        "num": 17,
+        "den": 17
       },
       "Purify Me": {
         "num": 12,
@@ -166,12 +166,12 @@
         "den": 2
       },
       "Coromandel Mountains Company Limited": {
-        "num": 9,
-        "den": 9
+        "num": 10,
+        "den": 10
       },
       "Simply Clean": {
-        "num": 12,
-        "den": 12
+        "num": 13,
+        "den": 13
       },
       "Jock Freight - SECA": {
         "num": 3,
