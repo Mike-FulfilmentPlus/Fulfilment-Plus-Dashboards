@@ -26,8 +26,8 @@
         "den": 84
       },
       "Purify Me": {
-        "num": 19,
-        "den": 19
+        "num": 21,
+        "den": 21
       },
       "Salt Shark": {
         "num": 28,
@@ -79,29 +79,45 @@
       }
     },
     "Order Accuracy by Unit": {
+      "Baking Tech": {
+        "num": 2,
+        "den": 2
+      },
       "Vixxen": {
         "num": 2757,
         "den": 2757
       },
-      "Samsung Batteries CP": {
-        "num": 3,
-        "den": 3
+      "Purify Me": {
+        "num": 81,
+        "den": 81
+      },
+      "Oricom": {
+        "num": 167,
+        "den": 167
+      },
+      "Interior Images": {
+        "num": 1,
+        "den": 1
       },
       "Made Group NZ": {
         "num": 1,
         "den": 1
       },
-      "Baking Tech": {
-        "num": 2,
-        "den": 2
-      },
-      "Gym Equip": {
-        "num": 9,
-        "den": 9
-      },
       "Simply Clean": {
         "num": 726,
         "den": 726
+      },
+      "Samsung Batteries CP": {
+        "num": 3,
+        "den": 3
+      },
+      "EcoPallets": {
+        "num": 12,
+        "den": 12
+      },
+      "Stryx": {
+        "num": 12,
+        "den": 12
       },
       "Salt Shark": {
         "num": 1081,
@@ -111,21 +127,13 @@
         "num": 31,
         "den": 31
       },
-      "Purify Me": {
-        "num": 78,
-        "den": 78
-      },
-      "Stryx": {
-        "num": 12,
-        "den": 12
-      },
       "Flo & Frankie": {
         "num": 339,
         "den": 339
       },
-      "Interior Images": {
-        "num": 1,
-        "den": 1
+      "Gym Equip": {
+        "num": 9,
+        "den": 9
       },
       "Jock Freight - SECA": {
         "num": 2,
@@ -134,28 +142,20 @@
       "Logwin - Sikla": {
         "num": 1,
         "den": 1
-      },
-      "Oricom": {
-        "num": 167,
-        "den": 167
-      },
-      "EcoPallets": {
-        "num": 12,
-        "den": 12
       }
     },
     "Freight DIFOT": {
       "Vixxen": {
-        "num": 14,
-        "den": 14
+        "num": 15,
+        "den": 15
       },
       "Salt Shark": {
-        "num": 21,
-        "den": 22
+        "num": 22,
+        "den": 23
       },
       "Oricom": {
-        "num": 14,
-        "den": 14
+        "num": 15,
+        "den": 15
       },
       "Purify Me": {
         "num": 12,
@@ -170,12 +170,12 @@
         "den": 9
       },
       "Simply Clean": {
-        "num": 11,
-        "den": 11
+        "num": 12,
+        "den": 12
       },
       "Jock Freight - SECA": {
-        "num": 2,
-        "den": 2
+        "num": 3,
+        "den": 3
       }
     }
   }
