@@ -1,0 +1,51 @@
+name: Exceptions edit + check (manual)
+
+# Manual-only. Edits a copy of pipeline/kpi_dashboard.xlsx on the runner,
+# verifies it against live CartonCloud data, and uploads the edited workbook
+# as an artifact for review. Never commits anything.
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+
+      - name: Write credentials.env from secrets
+        working-directory: pipeline
+        run: |
+          cat > credentials.env << EOF
+          CARTONCLOUD_CLIENT_ID=${{ secrets.CARTONCLOUD_CLIENT_ID }}
+          CARTONCLOUD_CLIENT_SECRET=${{ secrets.CARTONCLOUD_CLIENT_SECRET }}
+          CARTONCLOUD_TENANT_ID=${{ secrets.CARTONCLOUD_TENANT_ID }}
+          STARSHIPIT_API_KEY=${{ secrets.STARSHIPIT_API_KEY }}
+          STARSHIPIT_SUBSCRIPTION_KEY=${{ secrets.STARSHIPIT_SUBSCRIPTION_KEY }}
+          EOF
+
+      - name: Edit Exceptions tab
+        working-directory: pipeline
+        run: |
+          cp kpi_dashboard.xlsx /tmp/kpi_dashboard_original.xlsx
+          python ../.github/scripts/exceptions_edit.py
+
+      - name: Check against CartonCloud
+        working-directory: pipeline
+        run: python ../.github/scripts/exceptions_check.py /tmp/kpi_dashboard_original.xlsx
+
+      - name: Run mtd_kpis.py with edited workbook
+        working-directory: pipeline
+        run: python mtd_kpis.py
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kpi_dashboard-edited
+          path: pipeline/kpi_dashboard.xlsx
