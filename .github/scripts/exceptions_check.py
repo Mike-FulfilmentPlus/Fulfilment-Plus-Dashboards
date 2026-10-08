@@ -120,6 +120,51 @@ def main():
                   f"  {ref}: status={o.get('status')} created={created:%Y-%m-%d %H:%M} dispatched=none",
                   f"-> exception={'count_as_met (MET)' if exc and exc['action'] == 'count_as_met' else 'NONE'}")
 
+    # ---- Diagnostics -------------------------------------------------------
+    print("\n===== Vixxen 5 Oct non-Farmers orders: dispatch vs deadline =====")
+    for o in vix:
+        company = o.get("details", {}).get("deliver", {}).get("address", {}).get("companyName", "") or ""
+        if "farmers" in company.lower():
+            continue
+        disp = o.get("timestamps", {}).get("dispatched", {}).get("time")
+        d = deadline_for(o, exc_new)
+        disp_dt = mk.parse_iso(disp).astimezone(NZ) if disp else None
+        print(f"  {o.get('references', {}).get('numericId')}: deadline {d:%Y-%m-%d %H:%M}, "
+              f"dispatched {disp_dt:%Y-%m-%d %H:%M} -> {'MET' if disp_dt <= d else 'MISSED'}"
+              if disp_dt else f"  {o.get('references', {}).get('numericId')}: not dispatched")
+
+    print("\n===== Salt Shark: any order whose references mention 4938 / 4953 =====")
+    lookback = mk.search_all_pages(
+        token, tenant, "outbound-orders",
+        mk.date_range_condition("/timestamps/created/time", "2026-09-01", tomorrow),
+    )
+    for o in lookback:
+        refs = o.get("references", {})
+        blob = " ".join(str(v) for v in refs.values())
+        if any(x in blob for x in ("4938", "4953")):
+            created = mk.parse_iso(o["timestamps"]["created"]["time"]).astimezone(NZ)
+            disp = o.get("timestamps", {}).get("dispatched", {}).get("time")
+            print(f"  customer={o['customer']['name']} refs={refs} status={o.get('status')} "
+                  f"created={created:%Y-%m-%d %H:%M} dispatched="
+                  f"{mk.parse_iso(disp).astimezone(NZ):%Y-%m-%d %H:%M}" if disp else
+                  f"  customer={o['customer']['name']} refs={refs} status={o.get('status')} "
+                  f"created={created:%Y-%m-%d %H:%M} dispatched=none")
+
+    print("\n===== Salt Shark October orders currently scored as MISSED =====")
+    for o in outbound:
+        if o["customer"]["name"] != "Salt Shark" or o.get("status") in mk.NON_KPI_STATUSES:
+            continue
+        d = deadline_for(o, exc_new)
+        disp = o.get("timestamps", {}).get("dispatched", {}).get("time")
+        disp_dt = mk.parse_iso(disp).astimezone(NZ) if disp else None
+        missed = (disp_dt > d) if disp_dt else (now > d)
+        if missed:
+            created = mk.parse_iso(o["timestamps"]["created"]["time"]).astimezone(NZ)
+            print(f"  refs={o.get('references', {})} status={o.get('status')} created={created:%Y-%m-%d %H:%M} "
+                  f"deadline={d:%Y-%m-%d %H:%M} dispatched={disp_dt:%Y-%m-%d %H:%M}" if disp_dt else
+                  f"  refs={o.get('references', {})} status={o.get('status')} created={created:%Y-%m-%d %H:%M} "
+                  f"deadline={d:%Y-%m-%d %H:%M} dispatched=none")
+
     # ---- Order Cut Off MTD, before vs after -------------------------------
     print("\n===== Order Cut Off MTD (mtd_kpis.compute_order_cut_off_mtd) =====")
     old = mk.compute_order_cut_off_mtd(outbound, exc_old, now, month_str)
