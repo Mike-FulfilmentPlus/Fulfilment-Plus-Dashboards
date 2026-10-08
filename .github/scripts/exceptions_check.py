@@ -103,17 +103,22 @@ def main():
         print("STOP: some 5 Oct Vixxen orders do not match 'farmers' - review before committing.")
 
     # ---- Salt Shark 4938 / 4953 -------------------------------------------
+    lookback_early = mk.search_all_pages(
+        token, tenant, "outbound-orders",
+        mk.date_range_condition("/timestamps/created/time", "2026-09-01", "2026-10-01"),
+    )
     cut_off_new = [e for e in exc_new["order_exceptions"] if e["kpi"] == "Order Cut Off"]
     print("\n===== Salt Shark 4938 / 4953 =====")
     for ref in ("4938", "4953"):
         hits = [o for o in outbound if o["customer"]["name"] == "Salt Shark"
                 and str(o.get("references", {}).get("numericId", "")) == ref]
+        hits = hits or [o for o in lookback_early if o["customer"]["name"] == "Salt Shark" and str(o.get("references", {}).get("numericId", "")) == ref]
         if not hits:
             print(f"  {ref}: NOT FOUND among this month's Salt Shark outbound orders")
             continue
         for o in hits:
             created = mk.parse_iso(o["timestamps"]["created"]["time"]).astimezone(NZ)
-            exc = mk.find_order_exception(cut_off_new, "Salt Shark", ref, created.date(), month_str)
+            exc = mk.find_order_exception(cut_off_new, "Salt Shark", ref, created.date(), created.strftime("%Y-%m"))
             disp = o.get("timestamps", {}).get("dispatched", {}).get("time")
             print(f"  {ref}: status={o.get('status')} created={created:%Y-%m-%d %H:%M} "
                   f"dispatched={mk.parse_iso(disp).astimezone(NZ):%Y-%m-%d %H:%M}" if disp else
@@ -174,6 +179,9 @@ def main():
         mark = "   <-- changed" if o_ != n_ else ""
         if mark or cust in ("Vixxen", "Flo & Frankie", "Salt Shark"):
             print(f"  {cust}: {o_[0]}/{o_[1]} -> {n_[0]}/{n_[1]}{mark}")
+    sep_old = mk.compute_order_cut_off_mtd(lookback_early, exc_old, now, "2026-09").get("Salt Shark", (0, 0))
+    sep_new = mk.compute_order_cut_off_mtd(lookback_early, exc_new, now, "2026-09").get("Salt Shark", (0, 0))
+    print(f"  Salt Shark SEPTEMBER (mtd logic, approx. of closeout): {sep_old[0]}/{sep_old[1]} -> {sep_new[0]}/{sep_new[1]}")
     ff = new.get("Flo & Frankie")
     if ff:
         print(f"Flo & Frankie all met: {ff[0] == ff[1]}")

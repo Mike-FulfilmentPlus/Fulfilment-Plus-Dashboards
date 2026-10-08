@@ -18,12 +18,12 @@ WORKBOOK = "kpi_dashboard.xlsx"
 
 ORDER_ROWS = [
     {
-        "customer": "Salt Shark", "reference": "4938", "month": "2026-10",
+        "customer": "Salt Shark", "reference": "4938", "month": "2026-09",
         "reason": "Order not yet dispatched; confirmed by operations to be completed and dispatched "
                   "tomorrow (2 Oct 2026) - extension approved, not a genuine cutoff miss.",
     },
     {
-        "customer": "Salt Shark", "reference": "4953", "month": "2026-10",
+        "customer": "Salt Shark", "reference": "4953", "month": "2026-09",
         "reason": "Order not yet dispatched; confirmed by operations to be completed and dispatched "
                   "tomorrow (2 Oct 2026) - extension approved, not a genuine cutoff miss.",
     },
