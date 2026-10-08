@@ -7,11 +7,13 @@ Argument: path to the ORIGINAL (pre-edit) workbook, to compare deadlines.
 """
 
 import datetime
+import os
 import sys
 
 import openpyxl
 
-import mtd_kpis as mk
+sys.path.insert(0, os.getcwd())  # run from pipeline/
+import mtd_kpis as mk  # noqa: E402
 
 NZ = mk.NZ_TZ
 CHECK_DATE = datetime.date(2026, 10, 5)
