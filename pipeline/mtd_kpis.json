@@ -1,6 +1,6 @@
 {
   "month": "2026-10",
-  "as_of": "2026-10-08",
+  "as_of": "2026-10-09",
   "kpis": {
     "Dock to Stock": {
       "EcoPallets": {
@@ -87,49 +87,13 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Jock Freight - SECA": {
-        "num": 2,
-        "den": 2
-      },
       "Salt Shark": {
         "num": 1086,
         "den": 1086
       },
-      "Stryx": {
-        "num": 16,
-        "den": 16
-      },
       "Coromandel Mountains Company Limited": {
         "num": 34,
         "den": 34
-      },
-      "Gym Equip": {
-        "num": 9,
-        "den": 9
-      },
-      "Vixxen": {
-        "num": 2774,
-        "den": 2774
-      },
-      "Oricom": {
-        "num": 217,
-        "den": 217
-      },
-      "Baking Tech": {
-        "num": 2,
-        "den": 2
-      },
-      "Purify Me": {
-        "num": 82,
-        "den": 82
-      },
-      "Flo & Frankie": {
-        "num": 339,
-        "den": 339
-      },
-      "Simply Clean": {
-        "num": 727,
-        "den": 727
       },
       "Logwin - Sikla": {
         "num": 1,
@@ -139,17 +103,53 @@
         "num": 1,
         "den": 1
       },
-      "Samsung Batteries CP": {
-        "num": 3,
-        "den": 3
+      "Vixxen": {
+        "num": 2774,
+        "den": 2774
       },
-      "EcoPallets": {
-        "num": 12,
-        "den": 12
+      "Flo & Frankie": {
+        "num": 339,
+        "den": 339
+      },
+      "Gym Equip": {
+        "num": 9,
+        "den": 9
+      },
+      "Jock Freight - SECA": {
+        "num": 2,
+        "den": 2
+      },
+      "Baking Tech": {
+        "num": 2,
+        "den": 2
       },
       "Interior Images": {
         "num": 1,
         "den": 1
+      },
+      "Oricom": {
+        "num": 217,
+        "den": 217
+      },
+      "Stryx": {
+        "num": 16,
+        "den": 16
+      },
+      "Samsung Batteries CP": {
+        "num": 3,
+        "den": 3
+      },
+      "Purify Me": {
+        "num": 82,
+        "den": 82
+      },
+      "Simply Clean": {
+        "num": 727,
+        "den": 727
+      },
+      "EcoPallets": {
+        "num": 12,
+        "den": 12
       },
       "Made Group NZ": {
         "num": 1,
