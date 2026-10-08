@@ -87,13 +87,9 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Vixxen": {
-        "num": 2774,
-        "den": 2774
-      },
-      "Baking Tech": {
-        "num": 2,
-        "den": 2
+      "Coromandel Mountains Company Limited": {
+        "num": 34,
+        "den": 34
       },
       "Purify Me": {
         "num": 82,
@@ -103,13 +99,41 @@
         "num": 339,
         "den": 339
       },
-      "Perennial Sport & Turf": {
+      "Logwin - Sikla": {
         "num": 1,
         "den": 1
+      },
+      "Made Group NZ": {
+        "num": 1,
+        "den": 1
+      },
+      "Vixxen": {
+        "num": 2774,
+        "den": 2774
+      },
+      "Simply Clean": {
+        "num": 727,
+        "den": 727
+      },
+      "Samsung Batteries CP": {
+        "num": 3,
+        "den": 3
+      },
+      "EcoPallets": {
+        "num": 12,
+        "den": 12
       },
       "Stryx": {
         "num": 16,
         "den": 16
+      },
+      "Baking Tech": {
+        "num": 2,
+        "den": 2
+      },
+      "Salt Shark": {
+        "num": 1086,
+        "den": 1086
       },
       "Interior Images": {
         "num": 1,
@@ -119,41 +143,17 @@
         "num": 9,
         "den": 9
       },
-      "Samsung Batteries CP": {
-        "num": 3,
-        "den": 3
+      "Oricom": {
+        "num": 217,
+        "den": 217
       },
-      "Made Group NZ": {
+      "Perennial Sport & Turf": {
         "num": 1,
         "den": 1
       },
       "Jock Freight - SECA": {
         "num": 2,
         "den": 2
-      },
-      "EcoPallets": {
-        "num": 12,
-        "den": 12
-      },
-      "Simply Clean": {
-        "num": 727,
-        "den": 727
-      },
-      "Oricom": {
-        "num": 217,
-        "den": 217
-      },
-      "Logwin - Sikla": {
-        "num": 1,
-        "den": 1
-      },
-      "Salt Shark": {
-        "num": 1086,
-        "den": 1086
-      },
-      "Coromandel Mountains Company Limited": {
-        "num": 34,
-        "den": 34
       }
     },
     "Freight DIFOT": {
