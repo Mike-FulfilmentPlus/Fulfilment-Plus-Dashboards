@@ -95,61 +95,25 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Purify Me": {
-        "num": 87,
-        "den": 87
-      },
-      "Oricom": {
-        "num": 229,
-        "den": 229
-      },
-      "Samsung Batteries CP": {
-        "num": 3,
-        "den": 3
-      },
-      "Logwin - Sikla": {
-        "num": 620,
-        "den": 620
-      },
-      "Baking Tech": {
-        "num": 2,
-        "den": 2
-      },
-      "Flo & Frankie": {
-        "num": 393,
-        "den": 393
-      },
-      "EcoPallets": {
-        "num": 19,
-        "den": 19
-      },
-      "Simply Clean": {
-        "num": 727,
-        "den": 727
-      },
       "Vixxen": {
         "num": 2810,
         "den": 2810
       },
-      "Salt Shark": {
-        "num": 1087,
-        "den": 1087
+      "Perennial Sport & Turf": {
+        "num": 1,
+        "den": 1
       },
       "Gym Equip": {
         "num": 9,
         "den": 9
       },
-      "Stryx": {
-        "num": 16,
-        "den": 16
-      },
       "Jock Freight - SECA": {
         "num": 2,
         "den": 2
       },
-      "Perennial Sport & Turf": {
-        "num": 1,
-        "den": 1
+      "Logwin - Sikla": {
+        "num": 620,
+        "den": 620
       },
       "Coromandel Mountains Company Limited": {
         "num": 34,
@@ -159,9 +123,45 @@
         "num": 1,
         "den": 1
       },
+      "Salt Shark": {
+        "num": 1087,
+        "den": 1087
+      },
+      "Purify Me": {
+        "num": 87,
+        "den": 87
+      },
+      "Samsung Batteries CP": {
+        "num": 3,
+        "den": 3
+      },
+      "EcoPallets": {
+        "num": 19,
+        "den": 19
+      },
       "Interior Images": {
         "num": 1,
         "den": 1
+      },
+      "Stryx": {
+        "num": 16,
+        "den": 16
+      },
+      "Baking Tech": {
+        "num": 2,
+        "den": 2
+      },
+      "Simply Clean": {
+        "num": 727,
+        "den": 727
+      },
+      "Oricom": {
+        "num": 229,
+        "den": 229
+      },
+      "Flo & Frankie": {
+        "num": 393,
+        "den": 393
       }
     },
     "Freight DIFOT": {
