@@ -95,13 +95,17 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Gym Equip": {
-        "num": 9,
-        "den": 9
+      "Baking Tech": {
+        "num": 2,
+        "den": 2
       },
-      "Oricom": {
-        "num": 229,
-        "den": 229
+      "Purify Me": {
+        "num": 87,
+        "den": 87
+      },
+      "Logwin - Sikla": {
+        "num": 620,
+        "den": 620
       },
       "EcoPallets": {
         "num": 19,
@@ -111,21 +115,37 @@
         "num": 393,
         "den": 393
       },
+      "Simply Clean": {
+        "num": 727,
+        "den": 727
+      },
+      "Gym Equip": {
+        "num": 9,
+        "den": 9
+      },
+      "Jock Freight - SECA": {
+        "num": 2,
+        "den": 2
+      },
+      "Coromandel Mountains Company Limited": {
+        "num": 34,
+        "den": 34
+      },
+      "Salt Shark": {
+        "num": 1087,
+        "den": 1087
+      },
+      "Perennial Sport & Turf": {
+        "num": 1,
+        "den": 1
+      },
       "Samsung Batteries CP": {
         "num": 3,
         "den": 3
       },
-      "Baking Tech": {
-        "num": 2,
-        "den": 2
-      },
-      "Logwin - Sikla": {
-        "num": 620,
-        "den": 620
-      },
-      "Simply Clean": {
-        "num": 727,
-        "den": 727
+      "Oricom": {
+        "num": 229,
+        "den": 229
       },
       "Stryx": {
         "num": 16,
@@ -135,33 +155,13 @@
         "num": 1,
         "den": 1
       },
-      "Perennial Sport & Turf": {
-        "num": 1,
-        "den": 1
-      },
       "Interior Images": {
         "num": 1,
         "den": 1
       },
-      "Purify Me": {
-        "num": 87,
-        "den": 87
-      },
-      "Coromandel Mountains Company Limited": {
-        "num": 34,
-        "den": 34
-      },
       "Vixxen": {
         "num": 2810,
         "den": 2810
-      },
-      "Salt Shark": {
-        "num": 1087,
-        "den": 1087
-      },
-      "Jock Freight - SECA": {
-        "num": 2,
-        "den": 2
       }
     },
     "Freight DIFOT": {
