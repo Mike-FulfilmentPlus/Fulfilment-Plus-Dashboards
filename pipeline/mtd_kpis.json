@@ -39,7 +39,7 @@
     "Order Cut Off": {
       "Vixxen": {
         "num": 28,
-        "den": 33
+        "den": 38
       },
       "Purify Me": {
         "num": 25,
@@ -95,49 +95,9 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Perennial Sport & Turf": {
-        "num": 1,
-        "den": 1
-      },
-      "Oricom": {
-        "num": 229,
-        "den": 229
-      },
-      "Jock Freight - SECA": {
-        "num": 2,
-        "den": 2
-      },
-      "Vixxen": {
-        "num": 2810,
-        "den": 2810
-      },
-      "Made Group NZ": {
-        "num": 1,
-        "den": 1
-      },
       "Samsung Batteries CP": {
         "num": 3,
         "den": 3
-      },
-      "Interior Images": {
-        "num": 1,
-        "den": 1
-      },
-      "Salt Shark": {
-        "num": 1087,
-        "den": 1087
-      },
-      "Baking Tech": {
-        "num": 2,
-        "den": 2
-      },
-      "Gym Equip": {
-        "num": 9,
-        "den": 9
-      },
-      "Flo & Frankie": {
-        "num": 393,
-        "den": 393
       },
       "EcoPallets": {
         "num": 19,
@@ -147,21 +107,61 @@
         "num": 620,
         "den": 620
       },
-      "Simply Clean": {
-        "num": 727,
-        "den": 727
+      "Flo & Frankie": {
+        "num": 393,
+        "den": 393
       },
-      "Stryx": {
-        "num": 16,
-        "den": 16
+      "Interior Images": {
+        "num": 1,
+        "den": 1
+      },
+      "Jock Freight - SECA": {
+        "num": 2,
+        "den": 2
+      },
+      "Made Group NZ": {
+        "num": 1,
+        "den": 1
       },
       "Purify Me": {
         "num": 87,
         "den": 87
       },
+      "Gym Equip": {
+        "num": 9,
+        "den": 9
+      },
+      "Perennial Sport & Turf": {
+        "num": 1,
+        "den": 1
+      },
+      "Baking Tech": {
+        "num": 2,
+        "den": 2
+      },
+      "Oricom": {
+        "num": 229,
+        "den": 229
+      },
       "Coromandel Mountains Company Limited": {
         "num": 34,
         "den": 34
+      },
+      "Simply Clean": {
+        "num": 727,
+        "den": 727
+      },
+      "Salt Shark": {
+        "num": 1087,
+        "den": 1087
+      },
+      "Vixxen": {
+        "num": 2810,
+        "den": 2810
+      },
+      "Stryx": {
+        "num": 16,
+        "den": 16
       }
     },
     "Freight DIFOT": {
