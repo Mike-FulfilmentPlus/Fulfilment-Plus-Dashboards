@@ -3,13 +3,17 @@
   "as_of": "2026-10-12",
   "kpis": {
     "Dock to Stock": {
+      "Oricom": {
+        "num": 3,
+        "den": 3
+      },
+      "Purify Me": {
+        "num": 1,
+        "den": 1
+      },
       "Flo & Frankie": {
         "num": 9,
         "den": 9
-      },
-      "Oricom": {
-        "num": 2,
-        "den": 2
       },
       "Coromandel Mountains Company Limited": {
         "num": 1,
@@ -95,51 +99,11 @@
       }
     },
     "Order Accuracy by Unit": {
-      "EcoPallets": {
-        "num": 19,
-        "den": 19
-      },
-      "Salt Shark": {
-        "num": 1100,
-        "den": 1100
-      },
-      "Logwin - Sikla": {
-        "num": 620,
-        "den": 620
-      },
-      "Purify Me": {
-        "num": 109,
-        "den": 109
-      },
-      "Made Group NZ": {
-        "num": 1,
-        "den": 1
-      },
-      "Gym Equip": {
-        "num": 9,
-        "den": 9
-      },
-      "Flo & Frankie": {
-        "num": 393,
-        "den": 393
-      },
-      "Samsung Batteries CP": {
-        "num": 3,
-        "den": 3
-      },
-      "Simply Clean": {
-        "num": 729,
-        "den": 729
-      },
-      "Jock Freight - SECA": {
-        "num": 2,
-        "den": 2
-      },
       "Coromandel Mountains Company Limited": {
         "num": 41,
         "den": 41
       },
-      "Perennial Sport & Turf": {
+      "Interior Images": {
         "num": 1,
         "den": 1
       },
@@ -147,7 +111,11 @@
         "num": 27,
         "den": 27
       },
-      "Interior Images": {
+      "EcoPallets": {
+        "num": 19,
+        "den": 19
+      },
+      "Made Group NZ": {
         "num": 1,
         "den": 1
       },
@@ -162,6 +130,42 @@
       "Vixxen": {
         "num": 2810,
         "den": 2810
+      },
+      "Jock Freight - SECA": {
+        "num": 2,
+        "den": 2
+      },
+      "Logwin - Sikla": {
+        "num": 620,
+        "den": 620
+      },
+      "Simply Clean": {
+        "num": 729,
+        "den": 729
+      },
+      "Purify Me": {
+        "num": 109,
+        "den": 109
+      },
+      "Flo & Frankie": {
+        "num": 393,
+        "den": 393
+      },
+      "Salt Shark": {
+        "num": 1100,
+        "den": 1100
+      },
+      "Samsung Batteries CP": {
+        "num": 3,
+        "den": 3
+      },
+      "Perennial Sport & Turf": {
+        "num": 1,
+        "den": 1
+      },
+      "Gym Equip": {
+        "num": 23,
+        "den": 23
       }
     },
     "Freight DIFOT": {
@@ -174,8 +178,8 @@
         "den": 28
       },
       "Oricom": {
-        "num": 30,
-        "den": 31
+        "num": 33,
+        "den": 34
       },
       "Purify Me": {
         "num": 17,
@@ -186,8 +190,8 @@
         "den": 3
       },
       "Coromandel Mountains Company Limited": {
-        "num": 14,
-        "den": 14
+        "num": 15,
+        "den": 15
       },
       "Simply Clean": {
         "num": 19,
