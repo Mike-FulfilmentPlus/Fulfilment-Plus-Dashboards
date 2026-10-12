@@ -99,41 +99,25 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Samsung Batteries CP": {
-        "num": 3,
-        "den": 3
-      },
-      "Purify Me": {
-        "num": 109,
-        "den": 109
-      },
-      "Gym Equip": {
-        "num": 23,
-        "den": 23
-      },
-      "Perennial Sport & Turf": {
-        "num": 1,
-        "den": 1
-      },
-      "Logwin - Sikla": {
-        "num": 620,
-        "den": 620
+      "Jock Freight - SECA": {
+        "num": 2,
+        "den": 2
       },
       "Vixxen": {
         "num": 3907,
         "den": 3907
       },
+      "Perennial Sport & Turf": {
+        "num": 1,
+        "den": 1
+      },
+      "Gym Equip": {
+        "num": 23,
+        "den": 23
+      },
       "Coromandel Mountains Company Limited": {
         "num": 44,
         "den": 44
-      },
-      "Stryx": {
-        "num": 27,
-        "den": 27
-      },
-      "Interior Images": {
-        "num": 1,
-        "den": 1
       },
       "Simply Clean": {
         "num": 729,
@@ -143,7 +127,27 @@
         "num": 252,
         "den": 252
       },
-      "Jock Freight - SECA": {
+      "Flo & Frankie": {
+        "num": 393,
+        "den": 393
+      },
+      "Salt Shark": {
+        "num": 1100,
+        "den": 1100
+      },
+      "Samsung Batteries CP": {
+        "num": 3,
+        "den": 3
+      },
+      "Logwin - Sikla": {
+        "num": 620,
+        "den": 620
+      },
+      "Purify Me": {
+        "num": 109,
+        "den": 109
+      },
+      "Baking Tech": {
         "num": 2,
         "den": 2
       },
@@ -151,21 +155,17 @@
         "num": 1,
         "den": 1
       },
-      "Baking Tech": {
-        "num": 2,
-        "den": 2
+      "Interior Images": {
+        "num": 1,
+        "den": 1
       },
       "EcoPallets": {
         "num": 19,
         "den": 19
       },
-      "Salt Shark": {
-        "num": 1100,
-        "den": 1100
-      },
-      "Flo & Frankie": {
-        "num": 393,
-        "den": 393
+      "Stryx": {
+        "num": 27,
+        "den": 27
       }
     },
     "Freight DIFOT": {
