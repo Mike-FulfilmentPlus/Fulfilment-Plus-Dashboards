@@ -99,55 +99,51 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Jock Freight - SECA": {
+      "Baking Tech": {
         "num": 2,
         "den": 2
-      },
-      "Vixxen": {
-        "num": 3907,
-        "den": 3907
-      },
-      "Interior Images": {
-        "num": 1,
-        "den": 1
       },
       "Purify Me": {
         "num": 109,
         "den": 109
       },
-      "Stryx": {
-        "num": 27,
-        "den": 27
-      },
-      "Simply Clean": {
-        "num": 729,
-        "den": 729
-      },
-      "Perennial Sport & Turf": {
-        "num": 1,
-        "den": 1
-      },
-      "Logwin - Sikla": {
-        "num": 620,
-        "den": 620
-      },
-      "Coromandel Mountains Company Limited": {
-        "num": 44,
-        "den": 44
-      },
-      "Samsung Batteries CP": {
-        "num": 3,
-        "den": 3
-      },
       "Made Group NZ": {
         "num": 1,
         "den": 1
+      },
+      "Oricom": {
+        "num": 252,
+        "den": 252
       },
       "Salt Shark": {
         "num": 1100,
         "den": 1100
       },
-      "Baking Tech": {
+      "Interior Images": {
+        "num": 1,
+        "den": 1
+      },
+      "Simply Clean": {
+        "num": 729,
+        "den": 729
+      },
+      "Flo & Frankie": {
+        "num": 393,
+        "den": 393
+      },
+      "Gym Equip": {
+        "num": 23,
+        "den": 23
+      },
+      "Samsung Batteries CP": {
+        "num": 3,
+        "den": 3
+      },
+      "Logwin - Sikla": {
+        "num": 620,
+        "den": 620
+      },
+      "Jock Freight - SECA": {
         "num": 2,
         "den": 2
       },
@@ -155,17 +151,21 @@
         "num": 19,
         "den": 19
       },
-      "Gym Equip": {
-        "num": 23,
-        "den": 23
+      "Coromandel Mountains Company Limited": {
+        "num": 44,
+        "den": 44
       },
-      "Oricom": {
-        "num": 252,
-        "den": 252
+      "Stryx": {
+        "num": 27,
+        "den": 27
       },
-      "Flo & Frankie": {
-        "num": 393,
-        "den": 393
+      "Vixxen": {
+        "num": 3907,
+        "den": 3907
+      },
+      "Perennial Sport & Turf": {
+        "num": 1,
+        "den": 1
       }
     },
     "Freight DIFOT": {
