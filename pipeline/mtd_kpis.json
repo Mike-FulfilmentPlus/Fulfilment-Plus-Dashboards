@@ -99,49 +99,13 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Vixxen": {
-        "num": 3907,
-        "den": 3907
-      },
-      "Oricom": {
-        "num": 252,
-        "den": 252
-      },
-      "Baking Tech": {
-        "num": 2,
-        "den": 2
-      },
-      "Interior Images": {
-        "num": 1,
-        "den": 1
-      },
       "Salt Shark": {
         "num": 1100,
         "den": 1100
       },
-      "Purify Me": {
-        "num": 109,
-        "den": 109
-      },
-      "Gym Equip": {
-        "num": 23,
-        "den": 23
-      },
-      "Flo & Frankie": {
-        "num": 393,
-        "den": 393
-      },
-      "Samsung Batteries CP": {
-        "num": 3,
-        "den": 3
-      },
-      "Logwin - Sikla": {
-        "num": 620,
-        "den": 620
-      },
-      "Made Group NZ": {
-        "num": 1,
-        "den": 1
+      "Baking Tech": {
+        "num": 2,
+        "den": 2
       },
       "EcoPallets": {
         "num": 19,
@@ -151,21 +115,57 @@
         "num": 2,
         "den": 2
       },
+      "Vixxen": {
+        "num": 3907,
+        "den": 3907
+      },
+      "Made Group NZ": {
+        "num": 1,
+        "den": 1
+      },
+      "Flo & Frankie": {
+        "num": 393,
+        "den": 393
+      },
+      "Gym Equip": {
+        "num": 23,
+        "den": 23
+      },
+      "Simply Clean": {
+        "num": 729,
+        "den": 729
+      },
+      "Samsung Batteries CP": {
+        "num": 3,
+        "den": 3
+      },
+      "Interior Images": {
+        "num": 1,
+        "den": 1
+      },
+      "Purify Me": {
+        "num": 109,
+        "den": 109
+      },
+      "Oricom": {
+        "num": 252,
+        "den": 252
+      },
       "Coromandel Mountains Company Limited": {
         "num": 44,
         "den": 44
       },
-      "Stryx": {
-        "num": 27,
-        "den": 27
+      "Logwin - Sikla": {
+        "num": 620,
+        "den": 620
       },
       "Perennial Sport & Turf": {
         "num": 1,
         "den": 1
       },
-      "Simply Clean": {
-        "num": 729,
-        "den": 729
+      "Stryx": {
+        "num": 27,
+        "den": 27
       }
     },
     "Freight DIFOT": {
