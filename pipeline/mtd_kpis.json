@@ -103,33 +103,17 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Vixxen": {
-        "num": 3920,
-        "den": 3920
-      },
-      "Perennial Sport & Turf": {
-        "num": 5,
-        "den": 5
-      },
-      "Oricom": {
-        "num": 612,
-        "den": 612
-      },
       "Stryx": {
         "num": 30,
         "den": 30
       },
-      "Simply Clean": {
-        "num": 729,
-        "den": 729
-      },
-      "Flo & Frankie": {
-        "num": 393,
-        "den": 393
-      },
       "Baking Tech": {
         "num": 2,
         "den": 2
+      },
+      "EcoPallets": {
+        "num": 39,
+        "den": 39
       },
       "Coromandel Mountains Company Limited": {
         "num": 51,
@@ -143,33 +127,49 @@
         "num": 1,
         "den": 1
       },
-      "Salt Shark": {
-        "num": 1103,
-        "den": 1103
-      },
-      "EcoPallets": {
-        "num": 39,
-        "den": 39
+      "Jock Freight - SECA": {
+        "num": 2,
+        "den": 2
       },
       "Samsung Batteries CP": {
         "num": 3,
         "den": 3
       },
-      "Purify Me": {
-        "num": 109,
-        "den": 109
+      "Gym Equip": {
+        "num": 23,
+        "den": 23
+      },
+      "Flo & Frankie": {
+        "num": 393,
+        "den": 393
+      },
+      "Salt Shark": {
+        "num": 1103,
+        "den": 1103
+      },
+      "Simply Clean": {
+        "num": 729,
+        "den": 729
       },
       "Logwin - Sikla": {
         "num": 620,
         "den": 620
       },
-      "Gym Equip": {
-        "num": 23,
-        "den": 23
+      "Oricom": {
+        "num": 612,
+        "den": 612
       },
-      "Jock Freight - SECA": {
-        "num": 2,
-        "den": 2
+      "Purify Me": {
+        "num": 109,
+        "den": 109
+      },
+      "Vixxen": {
+        "num": 3920,
+        "den": 3920
+      },
+      "Perennial Sport & Turf": {
+        "num": 5,
+        "den": 5
       }
     },
     "Freight DIFOT": {
