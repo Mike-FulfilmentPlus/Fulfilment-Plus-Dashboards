@@ -103,49 +103,21 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Stryx": {
-        "num": 30,
-        "den": 30
+      "Purify Me": {
+        "num": 109,
+        "den": 109
       },
-      "Baking Tech": {
-        "num": 2,
-        "den": 2
-      },
-      "EcoPallets": {
-        "num": 39,
-        "den": 39
-      },
-      "Coromandel Mountains Company Limited": {
-        "num": 51,
-        "den": 51
-      },
-      "Interior Images": {
-        "num": 31,
-        "den": 31
-      },
-      "Made Group NZ": {
-        "num": 1,
-        "den": 1
-      },
-      "Jock Freight - SECA": {
-        "num": 2,
-        "den": 2
+      "Perennial Sport & Turf": {
+        "num": 5,
+        "den": 5
       },
       "Samsung Batteries CP": {
         "num": 3,
         "den": 3
       },
-      "Gym Equip": {
-        "num": 23,
-        "den": 23
-      },
-      "Flo & Frankie": {
-        "num": 393,
-        "den": 393
-      },
-      "Salt Shark": {
-        "num": 1103,
-        "den": 1103
+      "EcoPallets": {
+        "num": 39,
+        "den": 39
       },
       "Simply Clean": {
         "num": 729,
@@ -155,21 +127,49 @@
         "num": 620,
         "den": 620
       },
-      "Oricom": {
-        "num": 612,
-        "den": 612
+      "Salt Shark": {
+        "num": 1103,
+        "den": 1103
       },
-      "Purify Me": {
-        "num": 109,
-        "den": 109
+      "Interior Images": {
+        "num": 31,
+        "den": 31
       },
       "Vixxen": {
         "num": 3920,
         "den": 3920
       },
-      "Perennial Sport & Turf": {
-        "num": 5,
-        "den": 5
+      "Jock Freight - SECA": {
+        "num": 2,
+        "den": 2
+      },
+      "Made Group NZ": {
+        "num": 1,
+        "den": 1
+      },
+      "Oricom": {
+        "num": 612,
+        "den": 612
+      },
+      "Flo & Frankie": {
+        "num": 393,
+        "den": 393
+      },
+      "Coromandel Mountains Company Limited": {
+        "num": 51,
+        "den": 51
+      },
+      "Gym Equip": {
+        "num": 23,
+        "den": 23
+      },
+      "Baking Tech": {
+        "num": 2,
+        "den": 2
+      },
+      "Stryx": {
+        "num": 30,
+        "den": 30
       }
     },
     "Freight DIFOT": {
