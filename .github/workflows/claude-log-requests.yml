@@ -1,0 +1,45 @@
+name: Claude - log issues and exceptions
+
+# Mike (or anyone with write access to the repo) opens a GitHub issue that
+# starts with "@claude" and says in plain English what to log. Claude edits
+# pipeline/kpi_dashboard.xlsx (Exceptions tab or Issue Log tab) following the
+# rules in CLAUDE.md, then opens a pull request for review. Nothing goes live
+# until the PR is merged.
+
+on:
+  issues:
+    types: [opened, assigned]
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  id-token: write
+
+jobs:
+  claude:
+    # Only run when the issue/comment mentions @claude
+    if: |
+      (github.event_name == 'issues' && contains(github.event.issue.body, '@claude')) ||
+      (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@claude'))
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install openpyxl (used to edit the workbook)
+        run: pip install openpyxl
+
+      - uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          claude_args: |
+            --allowedTools "Read,Edit,Write,Bash(python3:*),Bash(git:*)"
