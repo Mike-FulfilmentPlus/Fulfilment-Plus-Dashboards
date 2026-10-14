@@ -111,6 +111,46 @@
         "num": 5,
         "den": 5
       },
+      "Simply Clean": {
+        "num": 1185,
+        "den": 1185
+      },
+      "Coromandel Mountains Company Limited": {
+        "num": 62,
+        "den": 62
+      },
+      "Samsung Batteries CP": {
+        "num": 3,
+        "den": 3
+      },
+      "Logwin - Sikla": {
+        "num": 1625,
+        "den": 1625
+      },
+      "Gym Equip": {
+        "num": 23,
+        "den": 23
+      },
+      "Flo & Frankie": {
+        "num": 393,
+        "den": 393
+      },
+      "Salt Shark": {
+        "num": 1103,
+        "den": 1103
+      },
+      "Vixxen": {
+        "num": 3942,
+        "den": 3942
+      },
+      "Oricom": {
+        "num": 647,
+        "den": 647
+      },
+      "Baking Tech": {
+        "num": 2,
+        "den": 2
+      },
       "EcoPallets": {
         "num": 39,
         "den": 39
@@ -119,55 +159,15 @@
         "num": 113,
         "den": 113
       },
-      "Oricom": {
-        "num": 647,
-        "den": 647
-      },
       "Made Group NZ": {
         "num": 3770,
         "den": 3770
-      },
-      "Simply Clean": {
-        "num": 1185,
-        "den": 1185
-      },
-      "Flo & Frankie": {
-        "num": 393,
-        "den": 393
-      },
-      "Logwin - Sikla": {
-        "num": 1625,
-        "den": 1625
-      },
-      "Coromandel Mountains Company Limited": {
-        "num": 62,
-        "den": 62
-      },
-      "Gym Equip": {
-        "num": 23,
-        "den": 23
-      },
-      "Salt Shark": {
-        "num": 1103,
-        "den": 1103
-      },
-      "Jock Freight - SECA": {
-        "num": 2,
-        "den": 2
-      },
-      "Samsung Batteries CP": {
-        "num": 3,
-        "den": 3
-      },
-      "Vixxen": {
-        "num": 3942,
-        "den": 3942
       },
       "Interior Images": {
         "num": 31,
         "den": 31
       },
-      "Baking Tech": {
+      "Jock Freight - SECA": {
         "num": 2,
         "den": 2
       },
@@ -178,8 +178,8 @@
     },
     "Freight DIFOT": {
       "Vixxen": {
-        "num": 39,
-        "den": 40
+        "num": 40,
+        "den": 41
       },
       "Salt Shark": {
         "num": 33,
