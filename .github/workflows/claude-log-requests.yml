@@ -17,6 +17,12 @@ on:
     types: [opened, assigned]
   issue_comment:
     types: [created]
+  # One-off: committing this workflow file runs the "catch-up" job at the
+  # bottom, which merges a change Claude already made but could not push.
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/claude-log-requests.yml'
 
 permissions:
   contents: write
@@ -96,17 +102,86 @@ jobs:
             exit 0
           fi
 
-          git checkout -q -B auto-merge origin/main
-          if ! git merge --squash "origin/$BRANCH"; then
-            git merge --abort 2>/dev/null || true
-            gh issue comment "$ISSUE" --body "I could not merge this automatically because the spreadsheet changed on main in the meantime. Comment \`@claude please redo this against the latest main\` and I will try again."
-            exit 0
-          fi
-          git commit -q -m "Log from issue #${ISSUE} (auto-merged)"
-          if ! git push origin HEAD:main; then
-            gh issue comment "$ISSUE" --body "I made the change but could not push it to main (the branch may be protected). It is on branch \`$BRANCH\`."
+          # The Claude step leaves git set up to push as the Claude app, which
+          # may not be allowed to write to main. Push as this workflow instead
+          # (the same way the dashboard auto-refresh jobs do).
+          git config --local --unset-all http.https://github.com/.extraheader || true
+          git remote set-url origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+
+          # Retry a few times: the dashboard refresh jobs also push to main
+          # every hour, so main can move between our fetch and our push.
+          PUSHED=0
+          PUSH_OUT=""
+          for attempt in 1 2 3; do
+            git fetch --quiet origin main "$BRANCH"
+            git checkout -q -B auto-merge origin/main
+            if ! git merge --squash "origin/$BRANCH"; then
+              git merge --abort 2>/dev/null || true
+              gh issue comment "$ISSUE" --body "I could not merge this automatically because the spreadsheet changed on main in the meantime. Comment \`@claude please redo this against the latest main\` and I will try again."
+              exit 0
+            fi
+            git commit -q -m "Log from issue #${ISSUE} (auto-merged)"
+            if PUSH_OUT=$(git push origin HEAD:main 2>&1); then
+              PUSHED=1
+              break
+            fi
+            echo "Push attempt $attempt failed: $PUSH_OUT"
+            sleep 5
+          done
+          if [ "$PUSHED" != "1" ]; then
+            gh issue comment "$ISSUE" --body "I made the change but could not push it to main. The change is saved on branch \`$BRANCH\`. Git said: \`$(echo "$PUSH_OUT" | tail -3 | tr '\n' ' ')\`"
             exit 0
           fi
           git push origin --delete "$BRANCH" || true
           gh issue comment "$ISSUE" --body "Done. The change is merged into main automatically. The dashboards pick it up on their next refresh (within the hour)."
+          gh issue close "$ISSUE" || true
+
+  # ---------------------------------------------------------------------------
+  # ONE-OFF catch-up (safe to delete this whole job after it has run once).
+  # Merges the Coromandel Mountains Issue Log entry (issue #2) that Claude made
+  # on a branch before the auto-merge step could push it. Only runs when this
+  # workflow file itself is committed to main.
+  # ---------------------------------------------------------------------------
+  catch-up:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+      ISSUE: 2
+      BRANCH: claude/issue-2-20261014-2239
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Merge the pending Coromandel entry
+        run: |
+          set -u
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if ! git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null; then
+            echo "Branch $BRANCH no longer exists - nothing to do."
+            exit 0
+          fi
+          git fetch --quiet origin main "$BRANCH"
+          CHANGED=$(git diff --name-only "origin/main...origin/$BRANCH")
+          if [ "$CHANGED" != "pipeline/kpi_dashboard.xlsx" ]; then
+            echo "Unexpected files changed: $CHANGED - not merging."
+            exit 1
+          fi
+          PUSHED=0; PUSH_OUT=""
+          for attempt in 1 2 3; do
+            git fetch --quiet origin main
+            git checkout -q -B catch-up origin/main
+            git merge --squash "origin/$BRANCH" || { echo "merge conflict"; exit 1; }
+            git commit -q -m "Log from issue #${ISSUE} (catch-up merge)"
+            if PUSH_OUT=$(git push origin HEAD:main 2>&1); then PUSHED=1; break; fi
+            echo "Push attempt $attempt failed: $PUSH_OUT"; sleep 5
+          done
+          if [ "$PUSHED" != "1" ]; then
+            gh issue comment "$ISSUE" --body "Catch-up merge could not push to main. Git said: \`$(echo "$PUSH_OUT" | tail -3 | tr '\n' ' ')\`"
+            exit 1
+          fi
+          git push origin --delete "$BRANCH" || true
+          gh issue comment "$ISSUE" --body "Done. The Coromandel Mountains entry is merged into main. The dashboards pick it up on their next refresh (within the hour)."
           gh issue close "$ISSUE" || true
