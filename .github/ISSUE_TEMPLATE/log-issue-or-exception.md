@@ -17,4 +17,6 @@ labels: ""
 
 **For issues - units wrong:**
 
-**For exceptions - KPI and action (Count as met / Exclude from calculation):**
+**For exceptions - KPI and action (Count as met / Exclude from calculation / Move deadline to <date and time>):**
+
+**For moved deadlines - new deadline (NZ date and time) and reason:**
