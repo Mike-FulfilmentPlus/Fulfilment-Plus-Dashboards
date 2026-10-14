@@ -404,7 +404,7 @@ def load_exceptions(wb):
                 r += 1
                 continue
             if customer and reference and kpi and action_raw:
-                action = action_map.get(str(action_raw).strip().lower())
+                action, fixed_deadline = parse_exception_action(action_raw, action_map)
                 if action:
                     date_from = ws.cell(row=r, column=8).value
                     date_to = ws.cell(row=r, column=9).value
@@ -420,6 +420,7 @@ def load_exceptions(wb):
                         "action": action,
                         "date_from": date_from,
                         "date_to": date_to,
+                        "deadline": fixed_deadline,
                     })
             r += 1
 
@@ -500,6 +501,46 @@ def load_awaiting_stock_transitions(path=AWAITING_STOCK_LOG):
             except ValueError:
                 continue
     return transitions
+
+
+# ── Order-level "move this order's deadline" exceptions ───────────────────────
+# Order-Level Exceptions Action column accepts, besides "Count as met" and
+# "Exclude from calculation", a fixed deadline for that one order:
+#     Fixed (YYYY-MM-DD HH:MM)      e.g.  Fixed (2026-10-16 13:00)
+# The time is NZ local time. It REPLACES the order's computed Order Cut Off
+# deadline (so it can extend OR tighten), and applies only to orders matching
+# the row's Customer / Order Reference (`*` = every order for that customer) /
+# Month or Date From-To scope.
+_FIXED_ACTION_RE = re.compile(
+    r"^fixed\s*\(\s*(\d{4})-(\d{2})-(\d{2})[ t](\d{1,2}):(\d{2})\s*\)$"
+)
+
+
+def parse_exception_action(action_raw, action_map):
+    """Returns (action, fixed_deadline). action is "exclude", "count_as_met",
+    "set_deadline" (fixed_deadline then holds the NZ-aware datetime) or None
+    if the text isn't recognised (row is ignored, as before)."""
+    text = str(action_raw).strip().lower()
+    action = action_map.get(text)
+    if action:
+        return action, None
+    m = _FIXED_ACTION_RE.match(text)
+    if m:
+        y, mo, d, h, mi = (int(x) for x in m.groups())
+        try:
+            return "set_deadline", datetime.datetime(y, mo, d, h, mi, tzinfo=NZ_TZ)
+        except ValueError:
+            return None, None
+    return None, None
+
+
+def find_order_deadline_exception(exceptions_list, customer, reference, order_date, month_str=None):
+    """Fixed deadline (NZ-aware datetime) for this order from a
+    `Fixed (...)` Order-Level Exception, or None."""
+    candidates = [e for e in exceptions_list if e.get("action") == "set_deadline"]
+    exc = find_order_exception(candidates, customer, reference, order_date, month_str)
+    return exc["deadline"] if exc else None
+
 
 
 def get_cutoff_override(overrides, customer, order_date):
@@ -614,6 +655,10 @@ def compute_order_cut_off_mtd(outbound_orders, exceptions, now, month_str):
     content_overrides = exceptions.get("content_overrides", {})
     holidays = exceptions.get("public_holidays", set())
     stock_transitions = load_awaiting_stock_transitions()
+    deadline_exceptions = [
+        e for e in exceptions.get("order_exceptions", [])
+        if e["kpi"] == "Order Cut Off" and e.get("action") == "set_deadline"
+    ]
 
     order_results = []
     for o in outbound_orders:
@@ -687,6 +732,13 @@ def compute_order_cut_off_mtd(outbound_orders, exceptions, now, month_str):
                 content_deadline = deadline_for_rule(created_dt, content_override["rule"], holidays)
                 deadline = max(deadline, content_deadline)
 
+        fixed_deadline = find_order_deadline_exception(
+            deadline_exceptions, cust,
+            str(o.get("references", {}).get("numericId", "")), raw_created_date, month_str,
+        )
+        if fixed_deadline:
+            deadline = fixed_deadline
+
         use_packed = override.get("use_packed_timestamp", False) if override else False
         dispatch_time = (
             o.get("timestamps", {}).get("packed", {}).get("time")
@@ -705,7 +757,8 @@ def compute_order_cut_off_mtd(outbound_orders, exceptions, now, month_str):
         order_results.append({"customer": cust, "reference": str(reference), "met": met, "date": raw_created_date})
 
     cut_off_exceptions = [
-        e for e in exceptions["order_exceptions"] if e["kpi"] == "Order Cut Off"
+        e for e in exceptions["order_exceptions"]
+        if e["kpi"] == "Order Cut Off" and e.get("action") != "set_deadline"
     ]
 
     stats = {}
