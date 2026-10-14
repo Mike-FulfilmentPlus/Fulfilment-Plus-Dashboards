@@ -3,8 +3,14 @@ name: Claude - log issues and exceptions
 # Mike (or anyone with write access to the repo) opens a GitHub issue that
 # starts with "@claude" and says in plain English what to log. Claude edits
 # pipeline/kpi_dashboard.xlsx (Exceptions tab or Issue Log tab) following the
-# rules in CLAUDE.md, then opens a pull request for review. Nothing goes live
-# until the PR is merged.
+# rules in CLAUDE.md on a branch called claude/issue-N-<timestamp>.
+#
+# The final step then merges that branch into main automatically, so nobody
+# has to click anything - BUT only if the branch changed nothing except
+# pipeline/kpi_dashboard.xlsx. If it touched any other file, or the merge
+# conflicts, it is left alone and a comment is posted on the issue instead.
+# Every change is still recorded as a commit on main ("Log from issue #N")
+# and in the issue thread, so anything wrong can be reverted in one click.
 
 on:
   issues:
@@ -17,6 +23,12 @@ permissions:
   pull-requests: write
   issues: write
   id-token: write
+
+# One run at a time, so two quick requests can't overwrite each other's edits
+# to the spreadsheet.
+concurrency:
+  group: claude-log-requests
+  cancel-in-progress: false
 
 jobs:
   claude:
@@ -38,13 +50,58 @@ jobs:
       - name: Install openpyxl (used to edit the workbook)
         run: pip install openpyxl
 
-      - uses: anthropics/claude-code-action@v1
+      - name: Run Claude
+        id: claude
+        uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          # Temporary: shows the full error if the API rejects the request.
-          # Remove this line once logging works.
-          show_full_output: true
           claude_args: |
             --model claude-sonnet-5-5
             --max-turns 15
             --allowedTools "Read,Edit,Write,Bash(python3:*),Bash(git:*)"
+
+      - name: Merge Claude's change into main automatically
+        if: always() && steps.claude.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE: ${{ github.event.issue.number }}
+        run: |
+          set -u
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Newest branch Claude made for this issue (names end in a timestamp).
+          BRANCH=$(git ls-remote --heads origin "claude/issue-${ISSUE}-*" \
+                   | sed 's|.*refs/heads/||' | sort | tail -1)
+          if [ -z "$BRANCH" ]; then
+            echo "No branch for issue #${ISSUE} (Claude probably asked a question). Nothing to merge."
+            exit 0
+          fi
+          echo "Branch: $BRANCH"
+
+          git fetch --quiet origin main "$BRANCH"
+          CHANGED=$(git diff --name-only "origin/main...origin/$BRANCH")
+          echo "Files changed on branch:"; echo "$CHANGED"
+          if [ -z "$CHANGED" ]; then
+            echo "Branch has no changes. Nothing to merge."
+            exit 0
+          fi
+          if [ "$CHANGED" != "pipeline/kpi_dashboard.xlsx" ]; then
+            gh issue comment "$ISSUE" --body "I did not merge this automatically because the change touches files other than the spreadsheet ($CHANGED). Please review branch \`$BRANCH\`."
+            exit 0
+          fi
+
+          git checkout -q -B auto-merge origin/main
+          if ! git merge --squash "origin/$BRANCH"; then
+            git merge --abort 2>/dev/null || true
+            gh issue comment "$ISSUE" --body "I could not merge this automatically because the spreadsheet changed on main in the meantime. Comment \`@claude please redo this against the latest main\` and I will try again."
+            exit 0
+          fi
+          git commit -q -m "Log from issue #${ISSUE} (auto-merged)"
+          if ! git push origin HEAD:main; then
+            gh issue comment "$ISSUE" --body "I made the change but could not push it to main (the branch may be protected). It is on branch \`$BRANCH\`."
+            exit 0
+          fi
+          git push origin --delete "$BRANCH" || true
+          gh issue comment "$ISSUE" --body "Done. The change is merged into main automatically. The dashboards pick it up on their next refresh (within the hour)."
+          gh issue close "$ISSUE" || true
