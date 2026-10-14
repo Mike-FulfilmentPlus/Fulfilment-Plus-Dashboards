@@ -41,7 +41,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          # Full history is needed so the merge step can compare Claude's
+          # branch with main (a shallow checkout has no common ancestor).
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
@@ -80,7 +82,10 @@ jobs:
           echo "Branch: $BRANCH"
 
           git fetch --quiet origin main "$BRANCH"
-          CHANGED=$(git diff --name-only "origin/main...origin/$BRANCH")
+          if ! CHANGED=$(git diff --name-only "origin/main...origin/$BRANCH"); then
+            gh issue comment "$ISSUE" --body "I could not compare branch \`$BRANCH\` with main, so I did not merge it automatically."
+            exit 1
+          fi
           echo "Files changed on branch:"; echo "$CHANGED"
           if [ -z "$CHANGED" ]; then
             echo "Branch has no changes. Nothing to merge."
