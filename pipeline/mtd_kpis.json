@@ -107,21 +107,37 @@
       }
     },
     "Order Accuracy by Unit": {
+      "Gym Equip": {
+        "num": 23,
+        "den": 23
+      },
       "Flo & Frankie": {
         "num": 393,
         "den": 393
       },
-      "Salt Shark": {
-        "num": 1103,
-        "den": 1103
+      "Stryx": {
+        "num": 32,
+        "den": 32
       },
-      "Samsung Batteries CP": {
-        "num": 3,
-        "den": 3
+      "EcoPallets": {
+        "num": 39,
+        "den": 39
+      },
+      "Jock Freight - SECA": {
+        "num": 2,
+        "den": 2
+      },
+      "Baking Tech": {
+        "num": 2,
+        "den": 2
       },
       "Perennial Sport & Turf": {
         "num": 5,
         "den": 5
+      },
+      "Interior Images": {
+        "num": 31,
+        "den": 31
       },
       "Oricom": {
         "num": 647,
@@ -135,45 +151,29 @@
         "num": 113,
         "den": 113
       },
-      "Baking Tech": {
-        "num": 2,
-        "den": 2
-      },
-      "Logwin - Sikla": {
-        "num": 1625,
-        "den": 1625
-      },
-      "Interior Images": {
-        "num": 31,
-        "den": 31
+      "Made Group NZ": {
+        "num": 3770,
+        "den": 3770
       },
       "Vixxen": {
         "num": 3942,
         "den": 3942
       },
-      "Made Group NZ": {
-        "num": 3770,
-        "den": 3770
-      },
       "Coromandel Mountains Company Limited": {
         "num": 62,
         "den": 62
       },
-      "Stryx": {
-        "num": 32,
-        "den": 32
+      "Samsung Batteries CP": {
+        "num": 3,
+        "den": 3
       },
-      "Jock Freight - SECA": {
-        "num": 2,
-        "den": 2
+      "Logwin - Sikla": {
+        "num": 1625,
+        "den": 1625
       },
-      "Gym Equip": {
-        "num": 23,
-        "den": 23
-      },
-      "EcoPallets": {
-        "num": 39,
-        "den": 39
+      "Salt Shark": {
+        "num": 1103,
+        "den": 1103
       }
     },
     "Freight DIFOT": {
@@ -194,8 +194,8 @@
         "den": 29
       },
       "Stryx": {
-        "num": 6,
-        "den": 6
+        "num": 7,
+        "den": 7
       },
       "Coromandel Mountains Company Limited": {
         "num": 28,
