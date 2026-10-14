@@ -107,13 +107,37 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Flo & Frankie": {
-        "num": 393,
-        "den": 393
+      "Samsung Batteries CP": {
+        "num": 3,
+        "den": 3
+      },
+      "Salt Shark": {
+        "num": 1103,
+        "den": 1103
       },
       "Logwin - Sikla": {
         "num": 1625,
         "den": 1625
+      },
+      "Stryx": {
+        "num": 32,
+        "den": 32
+      },
+      "EcoPallets": {
+        "num": 39,
+        "den": 39
+      },
+      "Flo & Frankie": {
+        "num": 393,
+        "den": 393
+      },
+      "Jock Freight - SECA": {
+        "num": 2,
+        "den": 2
+      },
+      "Oricom": {
+        "num": 647,
+        "den": 647
       },
       "Perennial Sport & Turf": {
         "num": 5,
@@ -123,23 +147,11 @@
         "num": 23,
         "den": 23
       },
-      "Coromandel Mountains Company Limited": {
-        "num": 62,
-        "den": 62
-      },
-      "Baking Tech": {
-        "num": 2,
-        "den": 2
-      },
       "Vixxen": {
         "num": 3942,
         "den": 3942
       },
-      "Purify Me": {
-        "num": 113,
-        "den": 113
-      },
-      "Jock Freight - SECA": {
+      "Baking Tech": {
         "num": 2,
         "den": 2
       },
@@ -155,31 +167,19 @@
         "num": 3770,
         "den": 3770
       },
-      "EcoPallets": {
-        "num": 39,
-        "den": 39
+      "Purify Me": {
+        "num": 113,
+        "den": 113
       },
-      "Stryx": {
-        "num": 32,
-        "den": 32
-      },
-      "Salt Shark": {
-        "num": 1103,
-        "den": 1103
-      },
-      "Samsung Batteries CP": {
-        "num": 3,
-        "den": 3
-      },
-      "Oricom": {
-        "num": 647,
-        "den": 647
+      "Coromandel Mountains Company Limited": {
+        "num": 62,
+        "den": 62
       }
     },
     "Freight DIFOT": {
       "Vixxen": {
-        "num": 37,
-        "den": 38
+        "num": 39,
+        "den": 40
       },
       "Salt Shark": {
         "num": 33,
