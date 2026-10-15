@@ -111,21 +111,33 @@
       }
     },
     "Order Accuracy by Unit": {
+      "Stryx": {
+        "num": 32,
+        "den": 32
+      },
+      "Gym Equip": {
+        "num": 23,
+        "den": 23
+      },
       "EcoPallets": {
         "num": 39,
         "den": 39
       },
-      "Purify Me": {
-        "num": 123,
-        "den": 123
+      "Flo & Frankie": {
+        "num": 393,
+        "den": 393
       },
-      "Samsung Batteries CP": {
-        "num": 3,
-        "den": 3
+      "Jock Freight - SECA": {
+        "num": 2,
+        "den": 2
       },
-      "Simply Clean": {
-        "num": 1185,
-        "den": 1185
+      "Salt Shark": {
+        "num": 1103,
+        "den": 1103
+      },
+      "Made Group NZ": {
+        "num": 5380,
+        "den": 5380
       },
       "Baking Tech": {
         "num": 152,
@@ -135,38 +147,6 @@
         "num": 5,
         "den": 5
       },
-      "Gym Equip": {
-        "num": 23,
-        "den": 23
-      },
-      "Salt Shark": {
-        "num": 1103,
-        "den": 1103
-      },
-      "Flo & Frankie": {
-        "num": 393,
-        "den": 393
-      },
-      "Coromandel Mountains Company Limited": {
-        "num": 49,
-        "den": 67
-      },
-      "Oricom": {
-        "num": 689,
-        "den": 689
-      },
-      "Made Group NZ": {
-        "num": 5380,
-        "den": 5380
-      },
-      "Logwin - Sikla": {
-        "num": 1625,
-        "den": 1625
-      },
-      "Stryx": {
-        "num": 32,
-        "den": 32
-      },
       "Interior Images": {
         "num": 31,
         "den": 31
@@ -175,9 +155,29 @@
         "num": 3975,
         "den": 3975
       },
-      "Jock Freight - SECA": {
-        "num": 2,
-        "den": 2
+      "Coromandel Mountains Company Limited": {
+        "num": 49,
+        "den": 67
+      },
+      "Logwin - Sikla": {
+        "num": 1625,
+        "den": 1625
+      },
+      "Oricom": {
+        "num": 689,
+        "den": 689
+      },
+      "Simply Clean": {
+        "num": 1185,
+        "den": 1185
+      },
+      "Purify Me": {
+        "num": 123,
+        "den": 123
+      },
+      "Samsung Batteries CP": {
+        "num": 3,
+        "den": 3
       }
     },
     "Freight DIFOT": {
