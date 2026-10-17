@@ -119,53 +119,17 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Vixxen": {
-        "num": 3989,
-        "den": 3989
+      "Stryx": {
+        "num": 32,
+        "den": 32
       },
-      "Flo & Frankie": {
-        "num": 408,
-        "den": 408
-      },
-      "Interior Images": {
-        "num": 31,
-        "den": 31
-      },
-      "Coromandel Mountains Company Limited": {
-        "num": 53,
-        "den": 71
-      },
-      "Simply Clean": {
-        "num": 1186,
-        "den": 1186
-      },
-      "Logwin - Sikla": {
-        "num": 1625,
-        "den": 1625
-      },
-      "Jock Freight - SECA": {
-        "num": 2,
-        "den": 2
-      },
-      "EcoPallets": {
-        "num": 39,
-        "den": 39
+      "Gym Equip": {
+        "num": 28,
+        "den": 28
       },
       "Samsung Batteries CP": {
         "num": 3,
         "den": 3
-      },
-      "Baking Tech": {
-        "num": 152,
-        "den": 152
-      },
-      "Salt Shark": {
-        "num": 1103,
-        "den": 1103
-      },
-      "Made Group NZ": {
-        "num": 5380,
-        "den": 5380
       },
       "Oricom": {
         "num": 699,
@@ -175,17 +139,53 @@
         "num": 5,
         "den": 5
       },
+      "EcoPallets": {
+        "num": 39,
+        "den": 39
+      },
+      "Interior Images": {
+        "num": 31,
+        "den": 31
+      },
+      "Simply Clean": {
+        "num": 1186,
+        "den": 1186
+      },
+      "Baking Tech": {
+        "num": 152,
+        "den": 152
+      },
+      "Logwin - Sikla": {
+        "num": 1625,
+        "den": 1625
+      },
+      "Made Group NZ": {
+        "num": 5380,
+        "den": 5380
+      },
       "Purify Me": {
         "num": 130,
         "den": 130
       },
-      "Gym Equip": {
-        "num": 28,
-        "den": 28
+      "Coromandel Mountains Company Limited": {
+        "num": 53,
+        "den": 71
       },
-      "Stryx": {
-        "num": 32,
-        "den": 32
+      "Salt Shark": {
+        "num": 1103,
+        "den": 1103
+      },
+      "Vixxen": {
+        "num": 3989,
+        "den": 3989
+      },
+      "Jock Freight - SECA": {
+        "num": 2,
+        "den": 2
+      },
+      "Flo & Frankie": {
+        "num": 408,
+        "den": 408
       }
     },
     "Freight DIFOT": {
