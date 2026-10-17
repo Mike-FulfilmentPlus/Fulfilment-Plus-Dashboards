@@ -119,41 +119,17 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Salt Shark": {
-        "num": 1103,
-        "den": 1103
+      "Vixxen": {
+        "num": 3989,
+        "den": 3989
       },
       "Flo & Frankie": {
         "num": 408,
         "den": 408
       },
-      "Stryx": {
-        "num": 32,
-        "den": 32
-      },
-      "Jock Freight - SECA": {
-        "num": 2,
-        "den": 2
-      },
-      "Perennial Sport & Turf": {
-        "num": 5,
-        "den": 5
-      },
-      "Purify Me": {
-        "num": 130,
-        "den": 130
-      },
-      "Logwin - Sikla": {
-        "num": 1625,
-        "den": 1625
-      },
-      "Samsung Batteries CP": {
-        "num": 3,
-        "den": 3
-      },
-      "Oricom": {
-        "num": 699,
-        "den": 699
+      "Interior Images": {
+        "num": 31,
+        "den": 31
       },
       "Coromandel Mountains Company Limited": {
         "num": 53,
@@ -163,29 +139,53 @@
         "num": 1186,
         "den": 1186
       },
+      "Logwin - Sikla": {
+        "num": 1625,
+        "den": 1625
+      },
+      "Jock Freight - SECA": {
+        "num": 2,
+        "den": 2
+      },
       "EcoPallets": {
         "num": 39,
         "den": 39
       },
-      "Gym Equip": {
-        "num": 28,
-        "den": 28
-      },
-      "Interior Images": {
-        "num": 31,
-        "den": 31
-      },
-      "Vixxen": {
-        "num": 3989,
-        "den": 3989
+      "Samsung Batteries CP": {
+        "num": 3,
+        "den": 3
       },
       "Baking Tech": {
         "num": 152,
         "den": 152
       },
+      "Salt Shark": {
+        "num": 1103,
+        "den": 1103
+      },
       "Made Group NZ": {
         "num": 5380,
         "den": 5380
+      },
+      "Oricom": {
+        "num": 699,
+        "den": 699
+      },
+      "Perennial Sport & Turf": {
+        "num": 5,
+        "den": 5
+      },
+      "Purify Me": {
+        "num": 130,
+        "den": 130
+      },
+      "Gym Equip": {
+        "num": 28,
+        "den": 28
+      },
+      "Stryx": {
+        "num": 32,
+        "den": 32
       }
     },
     "Freight DIFOT": {
