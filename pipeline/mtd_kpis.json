@@ -111,9 +111,41 @@
       }
     },
     "Order Accuracy by Unit": {
-      "Stryx": {
-        "num": 32,
-        "den": 32
+      "Coromandel Mountains Company Limited": {
+        "num": 53,
+        "den": 71
+      },
+      "Samsung Batteries CP": {
+        "num": 3,
+        "den": 3
+      },
+      "Salt Shark": {
+        "num": 1103,
+        "den": 1103
+      },
+      "Logwin - Sikla": {
+        "num": 1625,
+        "den": 1625
+      },
+      "Vixxen": {
+        "num": 3989,
+        "den": 3989
+      },
+      "Perennial Sport & Turf": {
+        "num": 5,
+        "den": 5
+      },
+      "Interior Images": {
+        "num": 31,
+        "den": 31
+      },
+      "Jock Freight - SECA": {
+        "num": 2,
+        "den": 2
+      },
+      "Simply Clean": {
+        "num": 1186,
+        "den": 1186
       },
       "Oricom": {
         "num": 699,
@@ -123,61 +155,29 @@
         "num": 5380,
         "den": 5380
       },
-      "Interior Images": {
-        "num": 31,
-        "den": 31
-      },
-      "Purify Me": {
-        "num": 130,
-        "den": 130
-      },
-      "Perennial Sport & Turf": {
-        "num": 5,
-        "den": 5
-      },
-      "Flo & Frankie": {
-        "num": 408,
-        "den": 408
-      },
       "Baking Tech": {
         "num": 152,
         "den": 152
       },
-      "Logwin - Sikla": {
-        "num": 1625,
-        "den": 1625
-      },
-      "Salt Shark": {
-        "num": 1103,
-        "den": 1103
-      },
-      "Vixxen": {
-        "num": 3989,
-        "den": 3989
-      },
-      "Coromandel Mountains Company Limited": {
-        "num": 53,
-        "den": 71
-      },
-      "Jock Freight - SECA": {
-        "num": 2,
-        "den": 2
+      "Stryx": {
+        "num": 32,
+        "den": 32
       },
       "Gym Equip": {
         "num": 28,
         "den": 28
       },
-      "Simply Clean": {
-        "num": 1186,
-        "den": 1186
-      },
-      "Samsung Batteries CP": {
-        "num": 3,
-        "den": 3
+      "Flo & Frankie": {
+        "num": 408,
+        "den": 408
       },
       "EcoPallets": {
         "num": 39,
         "den": 39
+      },
+      "Purify Me": {
+        "num": 130,
+        "den": 130
       }
     },
     "Freight DIFOT": {
